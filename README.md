@@ -1,3 +1,20 @@
+> **Data is not included in this repository.** The competition files (about 2.4 GB; the
+> larger ones are ~500 MB each, over GitHub's 100 MB file limit) must be downloaded from
+> the ML Challenge 2026 portal and placed like this before running anything:
+>
+> ```
+> dataset/
+> ├── train/  train_source1.tsv  train_source2.tsv  train_source3.tsv  train_ground_truth.tsv
+> └── test/   test_source1.tsv   test_source2.tsv   test_source3.tsv
+> ```
+>
+> The pipeline's working cache (`cache/`, ~21 GB of normalised tables, blocking indexes and
+> feature arrays) is rebuilt from that data; only the trained models, metrics and logs are
+> versioned. `output/` holds the submitted files, which were produced by the fast exact-key
+> fallback (`code/business_entity_resolution/src/fast_fallback.py`, macro F0.5 0.774 on the
+> training data), not by the full pipeline (0.974 out-of-fold on a 30% sample of the training S1). See
+> `code/business_entity_resolution/README.md` for how to run it.
+
 # ML Challenge 2026 Problem Statement
 
 ## Business Entity Resolution Challenge
