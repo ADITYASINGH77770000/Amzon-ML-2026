@@ -1,0 +1,2 @@
+# submission / data files keep LF line endings on every platform
+*.tsv text eol=lf
