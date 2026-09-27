@@ -1,0 +1,83 @@
+17:55:22 MODE=FINAL  fraction=1.0  folds=2  subset_seed=2026  cache=D:\Amzon ML\Dataset\student_resource\cache
+17:55:22 TRAIN: S1 entities=2,206,821  S2 entities=5,034,616  S3 entities=5,285,603  true pairs=7,638,365  singletons=123,247
+17:55:26 TEST: S1 entities=1,732,544  S2 entities=4,887,273  S3 entities=5,082,316
+17:55:26 ==== step cands_train_resume  (disk free 91.9 GB)
+17:55:37 train candidates resume: keeping 220 finished chunks (2,193,633 S1), 13,188 to go
+17:55:39 country India: 13,188 S1 rows vs 4,133,346 right rows
+17:55:39   index A: 16,795,639 nnz, 0s
+17:55:39   index B: 5,262,656 nnz, 0s
+17:55:40   index D: 47,127,396 nnz, 0s
+17:55:40   index E: 23,489,361 nnz, 0s
+17:55:40   index P: 15,569,099 nnz, 0s
+17:55:40   index X: 3,652,719 nnz, 0s
+17:55:40   index N: 16,512,905 nnz, 0s
+17:55:41   index G: 3,666,996 nnz, 0s
+17:55:41   index W: 16,955,866 nnz, 0s
+17:55:58   reverse RA: 122,794 right rows -> 46,986 hits, 17s
+17:56:00   signatures for India: 64 + 298 MB, 1s
+17:56:28   block 13,188/13,188: queries 28s
+17:57:52   S1 10,000/13,188: raw 4,062,188 -> kept 4,062,188 pairs, 85s
+17:58:15   S1 13,188/13,188: raw 1,302,710 -> kept 1,302,710 pairs, 23s
+17:58:54 train: candidate parts train_fin=222
+17:58:54 ==== step assemble_train  (disk free 91.9 GB)
+18:03:15   train_fin final candidates, all 2,206,821 labelled S1 (candidate-oracle F0.5): {'US': {'oracle': 0.99629, 'cands': 9.23, 'p95_cands': 15.0, 'recall': 0.98803}, 'India': {'oracle': 0.99447, 'cands': 10.87, 'p95_cands': 15.0, 'recall': 0.98197}, 'all': {'oracle': 0.99556, 'cands': 9.89, 'p95_cands': 15.0, 'recall': 0.9856}}
+18:03:15 train_fin: assembled 21,823,948 candidate pairs (candidate parts kept in D:\Amzon ML\Dataset\student_resource\cache\work\train_fin_cands)
+18:03:15 ==== step subsample_asm  (disk free 88.8 GB)
+18:03:48   sample: 662,026 S1 (30%), 6,550,397 candidate pairs; candidate-oracle F0.5: {'US': {'oracle': 0.99627, 'cands': 9.24, 'p95_cands': 15.0, 'recall': 0.98804}, 'India': {'oracle': 0.99449, 'cands': 10.87, 'p95_cands': 15.0, 'recall': 0.98185}, 'all': {'oracle': 0.99556, 'cands': 9.89, 'p95_cands': 15.0, 'recall': 0.98555}}
+18:03:48 ==== step feats_sub  (disk free 87.9 GB)
+18:09:29   train_sub features 400,000/6,550,397  (227 us/pair)
+18:11:18   train_sub features 800,000/6,550,397  (249 us/pair)
+18:12:26   train_sub features 1,200,000/6,550,397  (224 us/pair)
+18:15:13   train_sub features 1,600,000/6,550,397  (272 us/pair)
+18:16:57   train_sub features 2,000,000/6,550,397  (270 us/pair)
+18:18:08   train_sub features 2,400,000/6,550,397  (254 us/pair)
+18:19:06   train_sub features 2,800,000/6,550,397  (239 us/pair)
+18:20:03   train_sub features 3,200,000/6,550,397  (227 us/pair)
+18:20:58   train_sub features 3,600,000/6,550,397  (217 us/pair)
+18:22:25   train_sub features 4,000,000/6,550,397  (217 us/pair)
+18:23:24   train_sub features 4,400,000/6,550,397  (210 us/pair)
+18:24:18   train_sub features 4,800,000/6,550,397  (204 us/pair)
+18:25:13   train_sub features 5,200,000/6,550,397  (199 us/pair)
+18:26:07   train_sub features 5,600,000/6,550,397  (195 us/pair)
+18:27:01   train_sub features 6,000,000/6,550,397  (190 us/pair)
+18:27:55   train_sub features 6,400,000/6,550,397  (187 us/pair)
+18:28:17   train_sub features 6,550,397/6,550,397  (186 us/pair)
+18:28:17 ==== step stage3_sub  (disk free 85.2 GB)
+18:28:37 Stage 3 cross-validation (GroupKFold by S1, 2 folds): 6,550,397 pairs, 102 features; fold rows {0: [0, 3276545], 1: [3276545, 6550397]}
+[200]	valid_0's binary_logloss: 0.0486655
+[400]	valid_0's binary_logloss: 0.044207
+[600]	valid_0's binary_logloss: 0.0431261
+[800]	valid_0's binary_logloss: 0.0424781
+[1000]	valid_0's binary_logloss: 0.0421417
+[1200]	valid_0's binary_logloss: 0.0419345
+[1400]	valid_0's binary_logloss: 0.0417391
+[1600]	valid_0's binary_logloss: 0.0416054
+[1800]	valid_0's binary_logloss: 0.0415305
+[2000]	valid_0's binary_logloss: 0.0414871
+18:46:25   Stage 3 fold model 0 (scores fold 0): 2047 trees (best 2047) in 1068s
+[200]	valid_0's binary_logloss: 0.0488866
+[400]	valid_0's binary_logloss: 0.0442048
+[600]	valid_0's binary_logloss: 0.0431726
+[800]	valid_0's binary_logloss: 0.0426629
+[1000]	valid_0's binary_logloss: 0.0423097
+[1200]	valid_0's binary_logloss: 0.042061
+[1400]	valid_0's binary_logloss: 0.0419192
+[1600]	valid_0's binary_logloss: 0.0418462
+[1800]	valid_0's binary_logloss: 0.0417656
+[2000]	valid_0's binary_logloss: 0.0417368
+[2200]	valid_0's binary_logloss: 0.041712
+19:18:15   Stage 3 fold model 1 (scores fold 1): 2116 trees (best 2116) in 1234s
+19:35:19   top-25 features (gain): {'p1': 19245694.0, 'p0': 4632896.0, 'c1_gap_r': 690628.0, 'c1_rank_r': 572366.0, 'name_norm_tset': 380872.0, 'name_ntok_b': 292832.0, 'c1_second_gap_l': 213186.0, 'c1_gap_l': 213068.0, 'nums_jacc': 212641.0, 'c1_sum_l': 176194.0, 'addr_tset': 168547.0, 'name_idf_ovl': 166889.0, 'name_idf_ovl_min': 147494.0, 'c1_n_r': 146534.0, 'name_core_tsort': 127914.0, 'house_lev': 122494.0, 'name_len_b': 120405.0, 'sig_len_ratio': 117707.0, 'c1_lead_l': 116093.0, 'name_idf_max': 109103.0, 'score_RA': 107549.0, 'name_idf_jacc': 99261.0, 'addr_ntok_b': 98504.0, 'name_idf_min': 96871.0, 'score_D': 84755.0}
+19:48:11   STAGE 3 global assign=False: macro F0.5 0.97357 with {'t_open': 0.61, 't_add': 0.71, 'rel': 0.0, 'assign': False}
+20:01:19   STAGE 3 global assign=True: macro F0.5 0.97359 with {'t_open': 0.61, 't_add': 0.7, 'rel': 0.0, 'assign': True}
+20:08:11   STAGE 3 US assign=False: macro F0.5 0.97630 with {'t_open': 0.63, 't_add': 0.7, 'rel': 0.0, 'assign': False}
+20:15:36   STAGE 3 US assign=True: macro F0.5 0.97633 with {'t_open': 0.63, 't_add': 0.7, 'rel': 0.0, 'assign': True}
+20:22:01   STAGE 3 India assign=False: macro F0.5 0.96953 with {'t_open': 0.61, 't_add': 0.72, 'rel': 0.0, 'assign': False}
+20:26:57   STAGE 3 India assign=True: macro F0.5 0.96955 with {'t_open': 0.61, 't_add': 0.72, 'rel': 0.0, 'assign': True}
+20:26:59   STAGE 3 out-of-fold, global thresholds: {'US': {'f05': 0.97631, 'n_s1': 396613, 'singleton_acc': 0.96809, 'f_matched': 0.9768, 'pair_precision': 0.99259, 'pair_recall': 0.95039}, 'India': {'f05': 0.96953, 'n_s1': 265413, 'singleton_acc': 0.94199, 'f_matched': 0.97112, 'pair_precision': 0.98665, 'pair_recall': 0.94412}, 'all': {'f05': 0.97359, 'n_s1': 662026, 'singleton_acc': 0.95775, 'f_matched': 0.97452, 'pair_precision': 0.9902, 'pair_recall': 0.94787}}
+20:27:00   STAGE 3 out-of-fold, per-country thresholds: {'US': {'f05': 0.97633, 'n_s1': 396613, 'singleton_acc': 0.9703, 'f_matched': 0.97669, 'pair_precision': 0.99263, 'pair_recall': 0.95036}, 'India': {'f05': 0.96955, 'n_s1': 265413, 'singleton_acc': 0.94199, 'f_matched': 0.97114, 'pair_precision': 0.98733, 'pair_recall': 0.9424}, 'all': {'f05': 0.97361, 'n_s1': 662026, 'singleton_acc': 0.95909, 'f_matched': 0.97446, 'pair_precision': 0.9905, 'pair_recall': 0.94716}}
+20:27:00   STAGE 3: per-country thresholds adopted; out-of-fold macro F0.5 = 0.97361
+20:27:00   STAGE 3 out-of-fold errors: 20,819 false positives, 88,010 false negatives (inside candidates)
+20:27:11    FP categories: {'right_addr_empty': 0.246, 'right_web': 0.007, 'right_native': 0.089, 'generic_name (name_idf_min<8)': 0.006, 'same_core_name': 0.677, 'house_conflict': 0.446}
+20:27:34    FN categories: {'right_addr_empty': 0.469, 'right_web': 0.005, 'right_native': 0.039, 'generic_name (name_idf_min<8)': 0.005, 'same_core_name': 0.627, 'house_conflict': 0.405}
+exit code 0 

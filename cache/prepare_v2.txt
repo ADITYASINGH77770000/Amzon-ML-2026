@@ -1,0 +1,6 @@
+﻿train_source1 normalised in 205 s
+train_source2 normalised in 383 s
+train_source3 normalised in 449 s
+test_source1 normalised in 176 s
+test_source2 normalised in 387 s
+test_source3 normalised in 397 s

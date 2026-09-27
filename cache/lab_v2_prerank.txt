@@ -1,0 +1,141 @@
+﻿country   M  oracle  recall  cands
+     US  20 0.99243  0.9768   20.0
+     US  30 0.99334  0.9800   30.0
+     US  50 0.99440  0.9828   50.0
+     US  80 0.99502  0.9846   79.8
+     US 120 0.99557  0.9861  119.5
+     US all 0.99655  0.9893  315.8
+  India  20 0.98724  0.9609   20.0
+  India  30 0.98878  0.9654   30.0
+  India  50 0.98982  0.9694   50.0
+  India  80 0.99085  0.9724   80.0
+  India 120 0.99210  0.9761  120.0
+  India all 0.99526  0.9836  393.5
+
+US: 448 missed true pairs of 41,809
+  share by category: {'right_addr_empty': 0.531, 'right_web': 0.105, 'right_native': 0.0, 'name_tset>=90': 0.451, 'name_tset<50': 0.161}
+  addr empty & name>=90: 0.319  addr empty & name<90: 0.212
+  S1: vision clinic | 703 72 nd st e st louis il
+   R: vision clinic | 72 th st e st lous il   (tset 100)
+  S1: bastion taxable | 4111 drinkwater bd unit unit 403 scottsdale az
+   R: bastion taahxte |    (tset 80)
+  S1: conway demarco charleston | 1050 7 th st unit b charleston il
+   R: onyxlyra | seventh st charleston il   (tset 24)
+  S1: global montessori school | 212 ter dr oskaloosa ia
+   R: lyralum | 212 ter dr oskaloosa ia   (tset 26)
+  S1: 4656 fifth avenue mgmt | harlingen tx 1007 a st
+   R: 46s6fifthavenue | 1007 1009 a st harlingen tx   (tset 49)
+  S1: vision clinic | 703 72 nd st e st louis il
+   R: vision clinic |    (tset 100)
+  S1: cornerstone jaws | 2 todd av jamestown ny
+   R: cornerstone ctr |    (tset 85)
+  S1: flos rapid iron works | 731 third st warren oh
+   R: viovantage | 3 th st oh waarren   (tset 26)
+  S1: smith agnc | 38 n st ware ma
+   R: ectobrixgild | 38 n st ware ma   (tset 18)
+  S1: f h arreola sun | 301 cir dr rd montgomery in
+   R: ctr f h sun | 301 1 2 cir dr rd monttgomery in   (tset 78)
+  S1: pediatric dental allied clinic | oh cleveland 16511 talford av
+   R: pediatric dental clinic allied |    (tset 100)
+  S1: rt pacific physical | 818 cr 246 berryville ar
+   R: gildzeph | berryville ar cr 246   (tset 22)
+  S1: bright pilates | 2120 4 th st ontario oh
+   R: bright pilates | 2120 fourth st manfsield oh   (tset 100)
+  S1: lethia palmer battery | 601 9 th av winfield ks
+   R: nexvantage | 9 st av winfield ks   (tset 26)
+  S1: birch | 131 4 th st oswego ny
+   R: bdrch | 131 fourth st oswego ny   (tset 80)
+  S1: urgent care group | montgomery 9220 autumnbrooke way al
+   R: urgent care ent |    (tset 85)
+  S1: family physicians | 3815 10 th st lincoln ne
+   R: family physicians id | 3815 3819 10 th st lincolln ne   (tset 100)
+  S1: verdin floating | 1259 w av buffalo ny
+   R: rizanyla | 1259 w av buffalo ny   (tset 26)
+  S1: rivera taxable | 1279 86 st brooklyn ny
+   R: rivera svc |    (tset 75)
+  S1: rivas best holdings | ma 46 pine st attleboro unit 118
+   R: rivas partners holdings |    (tset 85)
+  S1: global institute | 2980 8900 magna city ut
+   R: global svc trading |    (tset 59)
+  S1: cardiology assoc whitman | 66 pond st whitman ma
+   R: cardiology assoc |    (tset 100)
+  S1: straight edge book store | bow wa 15489 col rd
+   R: straightedgebook | wa skagit county 15489 col rd   (tset 40)
+  S1: optimal entertainment | 6404 brandon av fairfax county va
+   R: optimal enntletainent | 6404 brnadon av fairfax county va   (tset 90)
+  S1: primary care specialists | 2706 126 th av vancouver wa
+   R: primary care specialists ent |    (tset 100)
+  S1: physical therapy care | mobile al 5606 90
+   R: physical therapy care |    (tset 100)
+  S1: downtown tavern | 124 20 th st camp hill borough pa
+   R: downtown tavem |    (tset 90)
+  S1: dermatology clinic | 138 oneta rd irondequoit ny
+   R: dermatology clniic |    (tset 94)
+  S1: womens health care | 4321 78 th st sacramento ca
+   R: womens health health care |    (tset 100)
+  S1: womens health physicians | 1526 howard av utica ny
+   R: womens health ent |    (tset 87)
+
+India: 450 missed true pairs of 27,437
+  share by category: {'right_addr_empty': 0.291, 'right_web': 0.136, 'right_native': 0.069, 'name_tset>=90': 0.327, 'name_tset<50': 0.173}
+  addr empty & name>=90: 0.129  addr empty & name<90: 0.162
+  S1: life estate | g 32 vinayak tower central spine vidyadhar ngr jaipur rj
+   R: life etcgbe | jaipur g 32 rj   (tset 73)
+  S1: krishna investment | k 97 sarita vihar nr apollo hopspital sarita vihar new delhi s delhi delhi
+   R: krishna investment prsicaaet |    (tset 100)
+  S1: infra aditi agrotech | vimaltowerplotno 4 chandragupta society behindmaharaja complex paudroad ko thrud pune mh
+   R: iaagrotech | vimaltowerplotno 4 pune mh   (tset 60)
+  S1: pune labs | s no 31 2 1 fl no a 407 venkatesh graffiti keshavn pune mh
+   R: pune lbr |    (tset 82)
+  S1: infra ashoka radiators | tf 65 a sun twilight rep 2 a sec 27 gautam budh ngr gautam buddha ngr up
+   R: solkelo | tf 65 a gautam budh ngr up   (tset 28)
+  S1: shakti constructions | hyderabad sy no 129 tg hyderabad 176 177 f no 408 pristine pl apts blk 3 gajularamaram qutub ullapur m
+   R: shakti constructions ctr |    (tset 100)
+  S1: future software | h no 3 12 38 1 302 rock town plot no 17 sri laxmi ngr l b ngr hyderabad rangareddy tg
+   R: sri future software |    (tset 100)
+  S1: future products | 7 munshi shaddrudin ln aafreen plz 4 th fl kolkata howrah wb
+   R: prihvaet future products | 7 kolkata girish park bengal   (tset 100)
+  S1: jay impex | flat no 21 2 nd fl 53 b brindavan society thane w thane mh
+   R: dr jay impex | flat no 21 2 nd fl thane mh   (tset 100)
+  S1: mumbai sol | 701 plot no 2 madona swastik chs ltd rd no 1 vile pa rle w mumbai mumbai city mh
+   R: mumbai sol | 701 mumbai ii mh   (tset 100)
+  S1: crosslink healthcare | b 102 aqsa palace 1 st gaothan ln andheri w mumbai thane mh
+   R: chprivate | b 102 mumbai mh   (tset 41)
+  S1: unique systems | chennai 60014 chennai tn mamatha complex ii fl 13 whites rd 7
+   R: sri unique systems | 7 chennai 60014 tn chennai   (tset 100)
+  S1: deccan academy | 234 2 fl no 4 visava appt hanumman ngr pachgaon karvir kolhapur mh
+   R: deccan agadgy |    (tset 81)
+  S1: swastik investments | mh 127 g wing 1 st fl jai ganesh samrajya spine rd bhosari pune
+   R: swastik idvsenms | pmt chowk pune nashik hwy mh 127 pune   (tset 80)
+  S1: siva industrial | wz 60 a ground fl chaukhandi extn tilak ngr w delhi delhi
+   R: privateindustrialsiva | 603 wz 60 a tilak ngr w delhi delhi   (tset 78)
+  S1: darkin | h no 8 aradhna ngr kotra sultanbad bhoapl bhopal mp
+   R: dgrkian | door no 8 bhoapl divreportingcircle mp   (tset 77)
+  S1: cachet farmer | 10 135 a 9 h no 6 noel ivy creek chittethukara p o kakka nad kochi ernakulam kl
+   R: gildnex | 10 13 ernakulam kakkanad kl   (tset 10)
+  S1: hotel ent | 22 n s rd po g p o kolkata kolkata howrah wb
+   R: jaxsyn | 2 2 n s rd po g p o kolkata howrah kolkata wb   (tset 13)
+  S1: pulse foundation | h no 2969 r 2 nd fl nhbc hr panipat
+   R: smt calofaye | 2969 r panipat hr panipat   (tset 29)
+  S1: subhshree traders | 6 fl grd plot 360 364 jai laxmi bldg kalbadevi rd swadeshi mkt mumbai mumbai city mh
+   R: kelocira | 7 mh mumbai city mumbai   (tset 24)
+  S1: high systems | h 21 badvai nalwa ghatiya ujjain mp
+   R: sri high systems |    (tset 100)
+  S1: agro matchwell smart | 8 2 293 82 j iii 214 plot no 214 iii rd no 82 jubilee hills hyderabad tg
+   R: agro mthcecl mthcecl smart |    (tset 84)
+  S1: innovative ent | no 35 6 5 sri krishna res 2 nd fl langfordroadcross bangalore ka
+   R: innovative ent svc | no 5 6 5 bangalore ka   (tset 100)
+  S1: kt music | h no 23 ground fl gagan vihar shahdara delhi
+   R: kmusic | h no 23 shahdara delhi   (tset 86)
+  S1: new delhi advisory | l 60 b malviya ngr new delhi s delhi delhi
+   R: quocira | h no 767 l 60 b malviya ngr s s delhi dl   (tset 16)
+  S1: pune engineering | sec 16 plot no 34 fl no 6 ganraj res pune mh
+   R: ariasyn | sec 16 pune mh   (tset 26)
+  S1: laxmi construction | plot no 2145 vill kolasi panchayat simaria katihar br
+   R: fluxkelo | h no 2145 katihar br   (tset 15)
+  S1: pune city svc | flat no b 504 millennium atlas sr no 63 6 pune pune city pune mh
+   R: pune city partners | flat no b 504 pune city pune mh   (tset 82)
+  S1: maa tech | fl 2 plot 70 dr v b gandhi marg ft mumbai mh
+   R: pisvae maa tech | fl 2 mumbai mh   (tset 100)
+  S1: sree investment | 2601 2 fl 26 plot 63 74 tower b ashok tower dr s s rao rd parel mumbai mumbai city mh
+   R: dr sree investment | no 2601 fl mumbai mh mumbai city   (tset 100)

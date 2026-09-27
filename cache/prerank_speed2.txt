@@ -1,0 +1,4 @@
+﻿lr0.1 L31 x200   early_stop=False predict 7.30 us/row  US@30=0.99644 US@60=0.99653 US@120=0.99655 India@30=0.99344 India@60=0.99422 India@120=0.99499
+lr0.1 L31 x200   early_stop=12.0  predict 1.23 us/row  US@30=0.99568 US@60=0.99579 US@120=0.99586 India@30=0.98911 India@60=0.99035 India@120=0.99143
+lr0.1 L31 x200   early_stop=16.0  predict 2.45 us/row  US@30=0.99642 US@60=0.99650 US@120=0.99652 India@30=0.99319 India@60=0.99381 India@120=0.99412
+lr0.1 L31 x200   early_stop=20.0  predict 4.24 us/row  US@30=0.99644 US@60=0.99653 US@120=0.99655 India@30=0.99344 India@60=0.99422 India@120=0.99498

@@ -1,0 +1,20 @@
+# competition data (2.4 GB) and submission files are not versioned
+dataset/
+output/
+
+# cache: only trained models, metrics and logs are versioned; the rest
+# (normalised tables, blocking indexes, signatures, feature arrays, ~21 GB) is rebuilt by the pipeline
+/cache/*
+!/cache/*.txt
+!/cache/translit_dict.json
+!/cache/models/
+!/cache/runs/
+/cache/runs/*/*
+!/cache/runs/*/models/
+!/cache/runs/*/*.txt
+steps_done/
+code/cache/
+
+__pycache__/
+*.pyc
+.DS_Store

@@ -1,0 +1,40 @@
+﻿current (k25, floors)        {'US': {'recall': np.float64(0.9743), 'oracle': 0.99168, 'cands': 56.8}, 'India': {'recall': np.float64(0.9579), 'oracle': 0.98653, 'cands': 65.4}, 'all': {'recall': np.float64(0.9678), 'oracle': 0.98964}}
+current k100 no floor        {'US': {'recall': np.float64(0.9825), 'oracle': 0.99464, 'cands': 206.2}, 'India': {'recall': np.float64(0.9749), 'oracle': 0.99247, 'cands': 286.3}, 'all': {'recall': np.float64(0.9795), 'oracle': 0.99378}}
+current k100 + P             {'US': {'recall': np.float64(0.9831), 'oracle': 0.99482, 'cands': 245.4}, 'India': {'recall': np.float64(0.9759), 'oracle': 0.99273, 'cands': 324.6}, 'all': {'recall': np.float64(0.9803), 'oracle': 0.99399}}
+current k100 + X             {'US': {'recall': np.float64(0.9848), 'oracle': 0.99518, 'cands': 244.2}, 'India': {'recall': np.float64(0.9761), 'oracle': 0.99275, 'cands': 306.0}, 'all': {'recall': np.float64(0.9813), 'oracle': 0.99421}}
+current k100 + N             {'US': {'recall': np.float64(0.9825), 'oracle': 0.99464, 'cands': 213.8}, 'India': {'recall': np.float64(0.9752), 'oracle': 0.99263, 'cands': 305.1}, 'all': {'recall': np.float64(0.9796), 'oracle': 0.99384}}
+current k100 + G             {'US': {'recall': np.float64(0.9828), 'oracle': 0.99469, 'cands': 207.4}, 'India': {'recall': np.float64(0.9756), 'oracle': 0.99272, 'cands': 287.5}, 'all': {'recall': np.float64(0.98), 'oracle': 0.99391}}
+current k100 + W             {'US': {'recall': np.float64(0.9857), 'oracle': 0.99557, 'cands': 229.4}, 'India': {'recall': np.float64(0.9799), 'oracle': 0.99424, 'cands': 315.0}, 'all': {'recall': np.float64(0.9834), 'oracle': 0.99504}}
+current k100 + RA            {'US': {'recall': np.float64(0.9834), 'oracle': 0.99486, 'cands': 206.8}, 'India': {'recall': np.float64(0.9759), 'oracle': 0.99269, 'cands': 286.7}, 'all': {'recall': np.float64(0.9804), 'oracle': 0.994}}
+all passes k100              {'US': {'recall': np.float64(0.9885), 'oracle': 0.99628, 'cands': 314.2}, 'India': {'recall': np.float64(0.9827), 'oracle': 0.995, 'cands': 392.2}, 'all': {'recall': np.float64(0.9862), 'oracle': 0.99577}}
+all passes k50               {'US': {'recall': np.float64(0.9865), 'oracle': 0.99546, 'cands': 185.3}, 'India': {'recall': np.float64(0.9785), 'oracle': 0.9937, 'cands': 226.0}, 'all': {'recall': np.float64(0.9833), 'oracle': 0.99477}}
+all, RA k30                  {'US': {'recall': np.float64(0.9893), 'oracle': 0.99655, 'cands': 315.8}, 'India': {'recall': np.float64(0.9836), 'oracle': 0.99526, 'cands': 393.5}, 'all': {'recall': np.float64(0.987), 'oracle': 0.99604}}
+  all without A: {'recall': np.float64(0.9854), 'oracle': 0.99544}
+  all without B: {'recall': np.float64(0.9804), 'oracle': 0.99371}
+  all without D: {'recall': np.float64(0.9811), 'oracle': 0.99394}
+  all without E: {'recall': np.float64(0.9822), 'oracle': 0.99447}
+  all without P: {'recall': np.float64(0.9858), 'oracle': 0.99564}
+  all without X: {'recall': np.float64(0.985), 'oracle': 0.99549}
+  all without N: {'recall': np.float64(0.9861), 'oracle': 0.99574}
+  all without G: {'recall': np.float64(0.9859), 'oracle': 0.9957}
+  all without W: {'recall': np.float64(0.9831), 'oracle': 0.99471}
+  all without RA: {'recall': np.float64(0.9857), 'oracle': 0.99564}
+
+Stage 1.5 pre-ranker (pass scores/ranks only) on all passes k100:
+python : Traceback (most recent call last):
+At line:1 char:422
++ ... NG="utf-8"; python recall_lab.py report *> "D:\Amzon ML\Dataset\stude ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "D:\Amzon ML\Dataset\student_resource\code\business_entity_resolution\src\recall_lab.py", line 242, in <module>
+    report()
+    ~~~~~~^^
+  File "D:\Amzon ML\Dataset\student_resource\code\business_entity_resolution\src\recall_lab.py", line 231, in report
+    prerank(wide, left, true_s1, n_true, dev)
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Amzon ML\Dataset\student_resource\code\business_entity_resolution\src\recall_lab.py", line 188, in prerank
+    fold = (W["l"].values * 2654435761 % 2 ** 32) % 2
+            ~~~~~~~~~~~~~~^~~~~~~~~~~~
+OverflowError: Python int too large to convert to C long

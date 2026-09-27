@@ -1,0 +1,51 @@
+﻿20:39:10 ==== step stage12
+20:39:25 Stage 1.5: raw union for 12,000 train S1
+20:39:26 country US: 7,217 S1 rows vs 6,186,873 right rows
+20:39:26   index A: 27,503,220 nnz, 0s
+20:39:27   index B: 6,528,833 nnz, 0s
+20:39:27   index D: 46,478,077 nnz, 0s
+20:39:27   index E: 9,542,853 nnz, 0s
+20:39:27   index P: 24,598,470 nnz, 0s
+20:39:27   index X: 9,404,828 nnz, 0s
+20:39:27   index N: 13,904,288 nnz, 0s
+20:39:28   index G: 5,271,993 nnz, 0s
+20:39:28   index W: 18,880,017 nnz, 0s
+20:40:29   reverse RA: 222,089 right rows -> 31,647 hits, 61s
+20:42:38   S1 7,217/7,217: raw 2,271,148 -> kept 2,271,148 pairs, 129s
+20:42:44 country India: 4,783 S1 rows vs 4,133,346 right rows
+20:42:46   index A: 16,795,639 nnz, 2s
+20:42:47   index B: 5,262,656 nnz, 1s
+20:42:48   index D: 47,127,396 nnz, 1s
+20:42:48   index E: 23,489,361 nnz, 0s
+20:42:48   index P: 15,569,099 nnz, 0s
+20:42:48   index X: 3,652,719 nnz, 0s
+20:42:49   index N: 16,512,905 nnz, 0s
+20:42:49   index G: 3,666,996 nnz, 0s
+20:42:49   index W: 16,955,866 nnz, 0s
+20:43:11   reverse RA: 122,794 right rows -> 16,703 hits, 22s
+20:46:06   S1 4,783/4,783: raw 1,882,799 -> kept 1,882,799 pairs, 175s
+20:46:10   raw union (sample A): {'US': {'oracle': 0.99692, 'cands': 314.69, 'recall': 0.98912}, 'India': {'oracle': 0.99566, 'cands': 393.64, 'recall': 0.98478}, 'all': {'oracle': 0.99642, 'cands': 346.16, 'recall': 0.9874}}
+20:48:23   fold model 0: best_iter 400, valid logloss 0.00674
+20:50:47   fold model 1: best_iter 389, valid logloss 0.00652
+20:50:51   top-20 by p0: {'US': {'oracle': 0.99602, 'cands': 20.0, 'recall': 0.98517}, 'India': {'oracle': 0.99346, 'cands': 20.0, 'recall': 0.97751}, 'all': {'oracle': 0.995, 'cands': 20.0, 'recall': 0.98213}}
+20:50:55   top-30 by p0: {'US': {'oracle': 0.99652, 'cands': 29.99, 'recall': 0.98735}, 'India': {'oracle': 0.99426, 'cands': 30.0, 'recall': 0.98008}, 'all': {'oracle': 0.99562, 'cands': 29.99, 'recall': 0.98446}}
+20:50:59   top-40 by p0: {'US': {'oracle': 0.99666, 'cands': 39.97, 'recall': 0.98791}, 'India': {'oracle': 0.9947, 'cands': 40.0, 'recall': 0.98124}, 'all': {'oracle': 0.99588, 'cands': 39.98, 'recall': 0.98526}}
+20:51:02   top-60 by p0: {'US': {'oracle': 0.99683, 'cands': 59.91, 'recall': 0.98876}, 'India': {'oracle': 0.99498, 'cands': 60.0, 'recall': 0.9824}, 'all': {'oracle': 0.99609, 'cands': 59.95, 'recall': 0.98623}}
+20:51:06   top-80 by p0: {'US': {'oracle': 0.99684, 'cands': 79.8, 'recall': 0.98884}, 'India': {'oracle': 0.9953, 'cands': 80.0, 'recall': 0.98344}, 'all': {'oracle': 0.99623, 'cands': 79.88, 'recall': 0.98669}}
+20:51:10   top-120 by p0: {'US': {'oracle': 0.99688, 'cands': 119.42, 'recall': 0.989}, 'India': {'oracle': 0.99551, 'cands': 119.99, 'recall': 0.9843}, 'all': {'oracle': 0.99634, 'cands': 119.65, 'recall': 0.98713}}
+20:51:13   top-160 by p0: {'US': {'oracle': 0.9969, 'cands': 158.49, 'recall': 0.98908}, 'India': {'oracle': 0.99562, 'cands': 159.95, 'recall': 0.9846}, 'all': {'oracle': 0.99639, 'cands': 159.07, 'recall': 0.9873}}
+20:51:17   top-200 by p0: {'US': {'oracle': 0.9969, 'cands': 196.29, 'recall': 0.98908}, 'India': {'oracle': 0.99565, 'cands': 199.73, 'recall': 0.98472}, 'all': {'oracle': 0.9964, 'cands': 197.66, 'recall': 0.98735}}
+20:51:17   chosen M per country = {'US': 30, 'India': 80} (guard: <= 0.0005 oracle loss vs raw union; unseen countries use the max)
+20:51:17 Stage 2: top-{'US': 30, 'India': 80} candidates + cheap features for 50,000 train S1
+20:51:19 country US: 29,815 S1 rows vs 6,186,873 right rows
+20:51:20   index A: 27,503,220 nnz, 0s
+20:51:20   index B: 6,528,833 nnz, 0s
+20:51:20   index D: 46,478,077 nnz, 0s
+20:51:20   index E: 9,542,853 nnz, 0s
+20:51:20   index P: 24,598,470 nnz, 0s
+20:51:20   index X: 9,404,828 nnz, 0s
+20:51:21   index N: 13,904,288 nnz, 0s
+20:51:21   index G: 5,271,993 nnz, 0s
+20:51:21   index W: 18,880,017 nnz, 0s
+20:52:25   reverse RA: 222,089 right rows -> 131,407 hits, 64s
+20:59:47   S1 20,000/29,815: raw 6,277,245 -> kept 599,823 pairs, 442s

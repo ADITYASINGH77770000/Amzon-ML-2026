@@ -1,0 +1,241 @@
+16:56:32 MODE=DEV_FAST  fraction=0.05  folds=2  subset_seed=2026  cache=D:\Amzon ML\Dataset\student_resource\cache\runs\DEV_FAST
+16:56:32 TRAIN: S1 entities=110,341  S2 entities=427,334  S3 entities=452,152  true pairs=381,792  singletons=6,130
+16:56:32 TEST: not used in this mode (only FINAL touches test_source1/2/3)
+16:56:32 ==== step prov  (disk free 94.2 GB)
+16:57:53 country US: 7,246 S1 rows vs 527,543 right rows
+16:58:12   index A: 2,804,652 nnz, 19s
+16:58:18   index B: 552,946 nnz, 6s
+16:58:45   index D: 4,035,458 nnz, 27s
+16:58:56   index E: 920,906 nnz, 10s
+16:59:22   index P: 2,644,503 nnz, 26s
+16:59:33   index X: 1,124,016 nnz, 11s
+16:59:47   index N: 1,180,029 nnz, 14s
+16:59:57   index G: 447,325 nnz, 10s
+17:00:13   index W: 1,657,271 nnz, 15s
+17:00:18   reverse RA: 21,324 right rows -> 64,748 hits, 5s
+17:00:18   signatures for US: 5 + 38 MB, 1s
+17:00:26   block 7,246/7,246: queries 7s
+17:00:29   S1 7,246/7,246: raw 1,518,293 -> kept 1,518,293 pairs, 4s
+17:00:31 country India: 4,754 S1 rows vs 351,943 right rows
+17:00:43   index A: 1,628,642 nnz, 12s
+17:00:48   index B: 524,930 nnz, 6s
+17:01:14   index D: 4,417,106 nnz, 26s
+17:01:29   index E: 2,431,920 nnz, 14s
+17:01:43   index P: 1,553,500 nnz, 15s
+17:01:51   index X: 525,082 nnz, 7s
+17:02:02   index N: 1,404,779 nnz, 11s
+17:02:10   index G: 315,568 nnz, 8s
+17:02:22   index W: 1,487,486 nnz, 12s
+17:02:25   reverse RA: 11,919 right rows -> 29,426 hits, 3s
+17:02:25   signatures for India: 3 + 25 MB, 1s
+17:02:31   block 4,754/4,754: queries 5s
+17:02:35   S1 4,754/4,754: raw 1,370,826 -> kept 1,370,826 pairs, 4s
+17:02:55   fold model 0: best_iter 60, valid logloss 0.00594
+17:03:13   fold model 1: best_iter 60, valid logloss 0.00474
+17:03:13 ==== step collect  (disk free 93.1 GB)
+17:03:17 country US: 66,182 S1 rows vs 527,543 right rows
+17:03:18   index A: 2,804,652 nnz, 0s
+17:03:18   index B: 552,946 nnz, 0s
+17:03:18   index D: 4,035,458 nnz, 0s
+17:03:18   index E: 920,906 nnz, 0s
+17:03:18   index P: 2,644,503 nnz, 0s
+17:03:18   index X: 1,124,016 nnz, 0s
+17:03:18   index N: 1,180,029 nnz, 0s
+17:03:18   index G: 447,325 nnz, 0s
+17:03:18   index W: 1,657,271 nnz, 0s
+17:03:21   reverse RA: 21,324 right rows -> 592,673 hits, 2s
+17:03:21   signatures for US: 5 + 38 MB, 0s
+17:03:49   block 30,000/66,182: queries 29s
+17:04:35   S1 10,000/66,182: raw 2,106,053 -> kept 2,106,053 pairs, 46s
+17:04:49   S1 20,000/66,182: raw 2,091,060 -> kept 2,091,060 pairs, 14s
+17:05:02   S1 30,000/66,182: raw 2,096,691 -> kept 2,096,691 pairs, 13s
+17:05:29   block 60,000/66,182: queries 27s
+17:05:42   S1 40,000/66,182: raw 2,107,613 -> kept 2,107,613 pairs, 12s
+17:05:54   S1 50,000/66,182: raw 2,097,657 -> kept 2,097,657 pairs, 13s
+17:06:07   S1 60,000/66,182: raw 2,104,243 -> kept 2,104,243 pairs, 12s
+17:06:13   block 66,182/66,182: queries 6s
+17:06:21   S1 66,182/66,182: raw 1,291,565 -> kept 1,291,565 pairs, 8s
+17:06:21 country India: 44,159 S1 rows vs 351,943 right rows
+17:06:21   index A: 1,628,642 nnz, 0s
+17:06:21   index B: 524,930 nnz, 0s
+17:06:21   index D: 4,417,106 nnz, 0s
+17:06:22   index E: 2,431,920 nnz, 0s
+17:06:22   index P: 1,553,500 nnz, 0s
+17:06:22   index X: 525,082 nnz, 0s
+17:06:22   index N: 1,404,779 nnz, 0s
+17:06:22   index G: 315,568 nnz, 0s
+17:06:22   index W: 1,487,486 nnz, 0s
+17:06:23   reverse RA: 11,919 right rows -> 284,996 hits, 1s
+17:06:23   signatures for India: 3 + 25 MB, 0s
+17:06:52   block 30,000/44,159: queries 29s
+17:07:09   S1 10,000/44,159: raw 2,876,047 -> kept 2,876,047 pairs, 17s
+17:07:27   S1 20,000/44,159: raw 2,891,078 -> kept 2,891,078 pairs, 18s
+17:07:45   S1 30,000/44,159: raw 2,891,568 -> kept 2,891,568 pairs, 17s
+17:07:58   block 44,159/44,159: queries 14s
+17:08:16   S1 40,000/44,159: raw 2,864,005 -> kept 2,864,005 pairs, 17s
+17:08:23   S1 44,159/44,159: raw 1,192,710 -> kept 1,192,710 pairs, 7s
+17:08:23 collect: 12 Stage-1.5 parts, 12 Stage-2 parts
+17:08:23 ==== step fit12  (disk free 93.0 GB)
+17:08:40 Stage 1.5 sample: 4,042,574 rows (379,967 positives) from all labelled S1
+17:10:51   Stage 1.5: 2 fold models x 300 trees on 4,042,574 sampled pairs; 131s
+17:11:11   eval-list raw union: {'US': {'oracle': 0.99845, 'cands': 209.35, 'p95_cands': 345.0, 'recall': 0.99546}, 'India': {'oracle': 0.998, 'cands': 286.43, 'p95_cands': 434.14999999999964, 'recall': 0.99371}, 'all': {'oracle': 0.99827, 'cands': 240.08, 'p95_cands': 402.0, 'recall': 0.99476}}
+17:11:13   top-20 by Stage 1.5: {'US': {'oracle': 0.9984, 'cands': 19.97, 'p95_cands': 20.0, 'recall': 0.99529}, 'India': {'oracle': 0.99778, 'cands': 19.99, 'p95_cands': 20.0, 'recall': 0.99251}, 'all': {'oracle': 0.99815, 'cands': 19.98, 'p95_cands': 20.0, 'recall': 0.99417}}
+17:11:15   top-30 by Stage 1.5: {'US': {'oracle': 0.99842, 'cands': 29.93, 'p95_cands': 30.0, 'recall': 0.99539}, 'India': {'oracle': 0.99794, 'cands': 29.98, 'p95_cands': 30.0, 'recall': 0.99334}, 'all': {'oracle': 0.99823, 'cands': 29.95, 'p95_cands': 30.0, 'recall': 0.99457}}
+17:11:17   top-40 by Stage 1.5: {'US': {'oracle': 0.99842, 'cands': 39.87, 'p95_cands': 40.0, 'recall': 0.99539}, 'India': {'oracle': 0.99796, 'cands': 39.95, 'p95_cands': 40.0, 'recall': 0.9935}, 'all': {'oracle': 0.99824, 'cands': 39.9, 'p95_cands': 40.0, 'recall': 0.99463}}
+17:11:19   top-60 by Stage 1.5: {'US': {'oracle': 0.99843, 'cands': 59.68, 'p95_cands': 60.0, 'recall': 0.99543}, 'India': {'oracle': 0.99798, 'cands': 59.82, 'p95_cands': 60.0, 'recall': 0.99361}, 'all': {'oracle': 0.99825, 'cands': 59.73, 'p95_cands': 60.0, 'recall': 0.9947}}
+17:11:21   top-80 by Stage 1.5: {'US': {'oracle': 0.99845, 'cands': 79.39, 'p95_cands': 80.0, 'recall': 0.99546}, 'India': {'oracle': 0.99799, 'cands': 79.54, 'p95_cands': 80.0, 'recall': 0.99366}, 'all': {'oracle': 0.99827, 'cands': 79.45, 'p95_cands': 80.0, 'recall': 0.99474}}
+17:11:23   top-120 by Stage 1.5: {'US': {'oracle': 0.99845, 'cands': 118.35, 'p95_cands': 120.0, 'recall': 0.99546}, 'India': {'oracle': 0.99799, 'cands': 118.51, 'p95_cands': 120.0, 'recall': 0.99366}, 'all': {'oracle': 0.99827, 'cands': 118.42, 'p95_cands': 120.0, 'recall': 0.99474}}
+17:11:25   top-160 by Stage 1.5: {'US': {'oracle': 0.99845, 'cands': 152.62, 'p95_cands': 160.0, 'recall': 0.99546}, 'India': {'oracle': 0.998, 'cands': 155.97, 'p95_cands': 160.0, 'recall': 0.99371}, 'all': {'oracle': 0.99827, 'cands': 153.96, 'p95_cands': 160.0, 'recall': 0.99476}}
+17:11:25   chosen M per country = {'US': 20, 'India': 20} (<= 0.0005 oracle loss; unseen countries use the max)
+17:11:34   eval-list top-M: {'US': {'oracle': 0.9984, 'cands': 19.97, 'p95_cands': 20.0, 'recall': 0.99529}, 'India': {'oracle': 0.99778, 'cands': 19.99, 'p95_cands': 20.0, 'recall': 0.99251}, 'all': {'oracle': 0.99815, 'cands': 19.98, 'p95_cands': 20.0, 'recall': 0.99417}}
+17:11:36 Stage 2 sample: 513,595 rows (379,967 positives)
+17:12:18   Stage 2: 2 fold models x 500 trees on 513,595 sampled pairs; 42s
+17:12:26   prune {'budget': 8, 'tau': None, 'oracle': 0.99786, 'cands': 8.0, 'p95_cands': 8.0, 'recall': 0.99221, 'US': 0.99811, 'India': 0.99746}
+17:12:26   prune {'budget': 8, 'tau': 0.0005, 'oracle': 0.99783, 'cands': 6.07, 'p95_cands': 8.0, 'recall': 0.99211, 'US': 0.99809, 'India': 0.99744}
+17:12:26   prune {'budget': 8, 'tau': 0.001, 'oracle': 0.99779, 'cands': 5.53, 'p95_cands': 8.0, 'recall': 0.99192, 'US': 0.99806, 'India': 0.99738}
+17:12:26   prune {'budget': 8, 'tau': 0.003, 'oracle': 0.99769, 'cands': 4.78, 'p95_cands': 8.0, 'recall': 0.99158, 'US': 0.99796, 'India': 0.99729}
+17:12:26   prune {'budget': 8, 'tau': 0.01, 'oracle': 0.99743, 'cands': 4.25, 'p95_cands': 8.0, 'recall': 0.99061, 'US': 0.99779, 'India': 0.9969}
+17:12:26   prune {'budget': 10, 'tau': None, 'oracle': 0.99802, 'cands': 10.0, 'p95_cands': 10.0, 'recall': 0.9936, 'US': 0.99828, 'India': 0.99763}
+17:12:26   prune {'budget': 10, 'tau': 0.0005, 'oracle': 0.99799, 'cands': 6.63, 'p95_cands': 10.0, 'recall': 0.99348, 'US': 0.99825, 'India': 0.9976}
+17:12:26   prune {'budget': 10, 'tau': 0.001, 'oracle': 0.99794, 'cands': 5.87, 'p95_cands': 10.0, 'recall': 0.9932, 'US': 0.99821, 'India': 0.99753}
+17:12:26   prune {'budget': 10, 'tau': 0.003, 'oracle': 0.99781, 'cands': 4.94, 'p95_cands': 10.0, 'recall': 0.9927, 'US': 0.99807, 'India': 0.99741}
+17:12:26   prune {'budget': 10, 'tau': 0.01, 'oracle': 0.99753, 'cands': 4.32, 'p95_cands': 8.0, 'recall': 0.99162, 'US': 0.99788, 'India': 0.99702}
+17:12:26   prune {'budget': 12, 'tau': None, 'oracle': 0.99808, 'cands': 12.0, 'p95_cands': 12.0, 'recall': 0.99394, 'US': 0.99834, 'India': 0.9977}
+17:12:26   prune {'budget': 12, 'tau': 0.0005, 'oracle': 0.99805, 'cands': 6.95, 'p95_cands': 12.0, 'recall': 0.99379, 'US': 0.99831, 'India': 0.99765}
+17:12:26   prune {'budget': 12, 'tau': 0.001, 'oracle': 0.99799, 'cands': 6.05, 'p95_cands': 12.0, 'recall': 0.99348, 'US': 0.99827, 'India': 0.99757}
+17:12:26   prune {'budget': 12, 'tau': 0.003, 'oracle': 0.99784, 'cands': 5.0, 'p95_cands': 10.0, 'recall': 0.99289, 'US': 0.99811, 'India': 0.99744}
+17:12:26   prune {'budget': 12, 'tau': 0.01, 'oracle': 0.99755, 'cands': 4.34, 'p95_cands': 8.0, 'recall': 0.99173, 'US': 0.99789, 'India': 0.99703}
+17:12:26   prune {'budget': 15, 'tau': None, 'oracle': 0.99814, 'cands': 14.99, 'p95_cands': 15.0, 'recall': 0.99413, 'US': 0.99839, 'India': 0.99776}
+17:12:26   prune {'budget': 15, 'tau': 0.0005, 'oracle': 0.99809, 'cands': 7.19, 'p95_cands': 15.0, 'recall': 0.99394, 'US': 0.99835, 'India': 0.99769}
+17:12:26   prune {'budget': 15, 'tau': 0.001, 'oracle': 0.99802, 'cands': 6.17, 'p95_cands': 13.0, 'recall': 0.9936, 'US': 0.99831, 'India': 0.9976}
+17:12:26   prune {'budget': 15, 'tau': 0.003, 'oracle': 0.99786, 'cands': 5.04, 'p95_cands': 10.0, 'recall': 0.99297, 'US': 0.99814, 'India': 0.99745}
+17:12:26   prune {'budget': 15, 'tau': 0.01, 'oracle': 0.99755, 'cands': 4.34, 'p95_cands': 8.0, 'recall': 0.99175, 'US': 0.99789, 'India': 0.99703}
+17:12:26   prune {'budget': 20, 'tau': None, 'oracle': 0.99815, 'cands': 19.98, 'p95_cands': 20.0, 'recall': 0.99417, 'US': 0.9984, 'India': 0.99778}
+17:12:26   prune {'budget': 20, 'tau': 0.0005, 'oracle': 0.99809, 'cands': 7.31, 'p95_cands': 15.0, 'recall': 0.99396, 'US': 0.99836, 'India': 0.99769}
+17:12:26   prune {'budget': 20, 'tau': 0.001, 'oracle': 0.99803, 'cands': 6.23, 'p95_cands': 13.0, 'recall': 0.99362, 'US': 0.99832, 'India': 0.9976}
+17:12:26   prune {'budget': 20, 'tau': 0.003, 'oracle': 0.99787, 'cands': 5.05, 'p95_cands': 10.0, 'recall': 0.99299, 'US': 0.99815, 'India': 0.99745}
+17:12:26   prune {'budget': 20, 'tau': 0.01, 'oracle': 0.99755, 'cands': 4.34, 'p95_cands': 8.0, 'recall': 0.99175, 'US': 0.99789, 'India': 0.99703}
+17:12:26   prune {'budget': 30, 'tau': None, 'oracle': 0.99815, 'cands': 19.98, 'p95_cands': 20.0, 'recall': 0.99417, 'US': 0.9984, 'India': 0.99778}
+17:12:26   prune {'budget': 30, 'tau': 0.0005, 'oracle': 0.99809, 'cands': 7.31, 'p95_cands': 15.0, 'recall': 0.99396, 'US': 0.99836, 'India': 0.99769}
+17:12:26   prune {'budget': 30, 'tau': 0.001, 'oracle': 0.99803, 'cands': 6.23, 'p95_cands': 13.0, 'recall': 0.99362, 'US': 0.99832, 'India': 0.9976}
+17:12:26   prune {'budget': 30, 'tau': 0.003, 'oracle': 0.99787, 'cands': 5.05, 'p95_cands': 10.0, 'recall': 0.99299, 'US': 0.99815, 'India': 0.99745}
+17:12:26   prune {'budget': 30, 'tau': 0.01, 'oracle': 0.99755, 'cands': 4.34, 'p95_cands': 8.0, 'recall': 0.99175, 'US': 0.99789, 'India': 0.99703}
+17:12:26   prune {'budget': None, 'tau': None, 'oracle': 0.99815, 'cands': 19.98, 'p95_cands': 20.0, 'recall': 0.99417, 'US': 0.9984, 'India': 0.99778}
+17:12:26   prune {'budget': None, 'tau': 0.0005, 'oracle': 0.99809, 'cands': 7.31, 'p95_cands': 15.0, 'recall': 0.99396, 'US': 0.99836, 'India': 0.99769}
+17:12:26   prune {'budget': None, 'tau': 0.001, 'oracle': 0.99803, 'cands': 6.23, 'p95_cands': 13.0, 'recall': 0.99362, 'US': 0.99832, 'India': 0.9976}
+17:12:26   prune {'budget': None, 'tau': 0.003, 'oracle': 0.99787, 'cands': 5.05, 'p95_cands': 10.0, 'recall': 0.99299, 'US': 0.99815, 'India': 0.99745}
+17:12:26   prune {'budget': None, 'tau': 0.01, 'oracle': 0.99755, 'cands': 4.34, 'p95_cands': 8.0, 'recall': 0.99175, 'US': 0.99789, 'India': 0.99703}
+17:12:26   chosen Stage-2 pruning (<= 0.0005 oracle loss vs top-M): {'budget': 8, 'tau': 0.003, 'oracle': 0.99769, 'cands': 4.78, 'p95_cands': 8.0, 'recall': 0.99158, 'US': 0.99796, 'India': 0.99729}
+17:12:26 ==== step cands_train  (disk free 92.4 GB)
+17:12:30 country US: 66,182 S1 rows vs 527,543 right rows
+17:12:30   index A: 2,804,652 nnz, 0s
+17:12:30   index B: 552,946 nnz, 0s
+17:12:31   index D: 4,035,458 nnz, 0s
+17:12:31   index E: 920,906 nnz, 0s
+17:12:31   index P: 2,644,503 nnz, 0s
+17:12:31   index X: 1,124,016 nnz, 0s
+17:12:31   index N: 1,180,029 nnz, 0s
+17:12:31   index G: 447,325 nnz, 0s
+17:12:31   index W: 1,657,271 nnz, 0s
+17:12:34   reverse RA: 21,324 right rows -> 592,673 hits, 2s
+17:12:34   signatures for US: 5 + 38 MB, 0s
+17:13:04   block 30,000/66,182: queries 30s
+17:13:29   S1 10,000/66,182: raw 2,106,053 -> kept 2,106,053 pairs, 26s
+17:13:54   S1 20,000/66,182: raw 2,091,060 -> kept 2,091,060 pairs, 25s
+17:14:19   S1 30,000/66,182: raw 2,096,691 -> kept 2,096,691 pairs, 25s
+17:14:47   block 60,000/66,182: queries 28s
+17:15:12   S1 40,000/66,182: raw 2,107,613 -> kept 2,107,613 pairs, 25s
+17:15:36   S1 50,000/66,182: raw 2,097,657 -> kept 2,097,657 pairs, 25s
+17:16:01   S1 60,000/66,182: raw 2,104,243 -> kept 2,104,243 pairs, 25s
+17:16:07   block 66,182/66,182: queries 6s
+17:16:22   S1 66,182/66,182: raw 1,291,565 -> kept 1,291,565 pairs, 15s
+17:16:22 country India: 44,159 S1 rows vs 351,943 right rows
+17:16:23   index A: 1,628,642 nnz, 0s
+17:16:23   index B: 524,930 nnz, 0s
+17:16:23   index D: 4,417,106 nnz, 0s
+17:16:23   index E: 2,431,920 nnz, 0s
+17:16:23   index P: 1,553,500 nnz, 0s
+17:16:23   index X: 525,082 nnz, 0s
+17:16:23   index N: 1,404,779 nnz, 0s
+17:16:23   index G: 315,568 nnz, 0s
+17:16:23   index W: 1,487,486 nnz, 0s
+17:16:25   reverse RA: 11,919 right rows -> 284,996 hits, 1s
+17:16:25   signatures for India: 3 + 25 MB, 0s
+17:16:53   block 30,000/44,159: queries 28s
+17:17:31   S1 10,000/44,159: raw 2,876,047 -> kept 2,876,047 pairs, 38s
+17:18:09   S1 20,000/44,159: raw 2,891,078 -> kept 2,891,078 pairs, 38s
+17:18:48   S1 30,000/44,159: raw 2,891,568 -> kept 2,891,568 pairs, 39s
+17:19:03   block 44,159/44,159: queries 15s
+17:19:44   S1 40,000/44,159: raw 2,864,005 -> kept 2,864,005 pairs, 41s
+17:20:00   S1 44,159/44,159: raw 1,192,710 -> kept 1,192,710 pairs, 16s
+17:20:01 train: candidate parts train_fin=12
+17:20:01 ==== step assemble_train  (disk free 92.4 GB)
+17:20:10   train_fin final candidates, all 110,341 labelled S1 (candidate-oracle F0.5): {'US': {'oracle': 0.99805, 'cands': 4.61, 'p95_cands': 8.0, 'recall': 0.99312}, 'India': {'oracle': 0.99748, 'cands': 5.08, 'p95_cands': 8.0, 'recall': 0.9908}, 'all': {'oracle': 0.99782, 'cands': 4.8, 'p95_cands': 8.0, 'recall': 0.99219}}
+17:20:10 train_fin: assembled 529,254 candidate pairs (candidate parts kept in D:\Amzon ML\Dataset\student_resource\cache\runs\DEV_FAST\work\train_fin_cands)
+17:20:10 ==== step feats_train  (disk free 92.3 GB)
+17:21:30   train_fin features 400,000/529,254  (139 us/pair)
+17:21:47   train_fin features 529,254/529,254  (138 us/pair)
+17:21:47 ==== step stage3  (disk free 92.1 GB)
+17:21:51 Stage 3 cross-validation (GroupKFold by S1, 2 folds): 529,254 pairs, 102 features; fold rows {0: [0, 262274], 1: [262274, 529254]}
+17:22:31   Stage 3 fold model 0 (scores fold 0): 335 trees (best 335) in 40s
+17:23:12   Stage 3 fold model 1 (scores fold 1): 345 trees (best 345) in 34s
+17:23:20   top-25 features (gain): {'p1': 1541650.0, 'p0': 396177.0, 'name_norm_tset': 29402.0, 'c1_n_r': 28088.0, 'c1_gap_l': 22521.0, 'name_ntok_b': 19785.0, 'c1_gap_r': 16780.0, 'c1_rank_r': 12988.0, 'name_len_b': 12821.0, 'c1_second_gap_l': 10614.0, 'c1_lead_l': 8841.0, 'name_max_shared_idf': 8718.0, 'nums_jacc': 8051.0, 'name_idf_min': 8005.0, 'c1_sum_l': 7329.0, 'name_core_tsort': 7253.0, 'name_idf_max': 6954.0, 'name_idf_ovl_min': 6757.0, 'addr_idf_ovl_min': 6686.0, 'score_RA': 6504.0, 'addr_max_shared_idf': 6450.0, 'name_idf_ovl': 5735.0, 'addr_idf_max': 5354.0, 'sig_len_ratio': 5314.0, 'addr_ntok_b': 5139.0}
+17:23:57   STAGE 3 global assign=False: macro F0.5 0.98642 with {'t_open': 0.6, 't_add': 0.72, 'rel': 0.0, 'assign': False}
+17:24:35   STAGE 3 global assign=True: macro F0.5 0.98648 with {'t_open': 0.5, 't_add': 0.72, 'rel': 0.0, 'assign': True}
+17:25:03   STAGE 3 US assign=False: macro F0.5 0.98746 with {'t_open': 0.6, 't_add': 0.72, 'rel': 0.0, 'assign': False}
+17:25:32   STAGE 3 US assign=True: macro F0.5 0.98748 with {'t_open': 0.5, 't_add': 0.72, 'rel': 0.0, 'assign': True}
+17:25:55   STAGE 3 India assign=False: macro F0.5 0.98497 with {'t_open': 0.54, 't_add': 0.74, 'rel': 0.0, 'assign': False}
+17:26:18   STAGE 3 India assign=True: macro F0.5 0.98505 with {'t_open': 0.54, 't_add': 0.74, 'rel': 0.0, 'assign': True}
+17:26:18   STAGE 3 out-of-fold, global thresholds: {'US': {'f05': 0.98748, 'n_s1': 66182, 'singleton_acc': 0.97035, 'f_matched': 0.98848, 'pair_precision': 0.99356, 'pair_recall': 0.97736}, 'India': {'f05': 0.98497, 'n_s1': 44159, 'singleton_acc': 0.96624, 'f_matched': 0.98609, 'pair_precision': 0.99268, 'pair_recall': 0.97056}, 'all': {'f05': 0.98648, 'n_s1': 110341, 'singleton_acc': 0.96868, 'f_matched': 0.98752, 'pair_precision': 0.99321, 'pair_recall': 0.97464}}
+17:26:18   STAGE 3 out-of-fold, per-country thresholds: {'US': {'f05': 0.98748, 'n_s1': 66182, 'singleton_acc': 0.97035, 'f_matched': 0.98848, 'pair_precision': 0.99356, 'pair_recall': 0.97736}, 'India': {'f05': 0.98505, 'n_s1': 44159, 'singleton_acc': 0.96825, 'f_matched': 0.98606, 'pair_precision': 0.99302, 'pair_recall': 0.9698}, 'all': {'f05': 0.98651, 'n_s1': 110341, 'singleton_acc': 0.96949, 'f_matched': 0.98751, 'pair_precision': 0.99335, 'pair_recall': 0.97433}}
+17:26:18   STAGE 3: per-country thresholds adopted; out-of-fold macro F0.5 = 0.98651
+17:26:18   STAGE 3 out-of-fold errors: 2,491 false positives, 6,819 false negatives (inside candidates)
+17:26:18    FP categories: {'right_addr_empty': 0.331, 'right_web': 0.017, 'right_native': 0.043, 'generic_name (name_idf_min<8)': 0.012, 'same_core_name': 0.512, 'house_conflict': 0.382}
+17:26:18    FN categories: {'right_addr_empty': 0.614, 'right_web': 0.021, 'right_native': 0.035, 'generic_name (name_idf_min<8)': 0.014, 'same_core_name': 0.401, 'house_conflict': 0.25}
+17:26:18 ==== step stack  (disk free 92.0 GB)
+17:26:24 Stacker cross-validation (2 folds): 529,254 pairs, 44 inputs
+17:26:38   stacker fold model 0 (scores fold 0): 163 trees (best 163) in 14s
+17:27:01   stacker fold model 1 (scores fold 1): 271 trees (best 271) in 21s
+17:27:42   STACKED global assign=False: macro F0.5 0.98578 with {'t_open': 0.48, 't_add': 0.73, 'rel': 0.0, 'assign': False}
+17:28:20   STACKED global assign=True: macro F0.5 0.98584 with {'t_open': 0.34, 't_add': 0.73, 'rel': 0.0, 'assign': True}
+17:28:48   STACKED US assign=False: macro F0.5 0.98678 with {'t_open': 0.51, 't_add': 0.72, 'rel': 0.0, 'assign': False}
+17:29:16   STACKED US assign=True: macro F0.5 0.98678 with {'t_open': 0.5, 't_add': 0.72, 'rel': 0.0, 'assign': True}
+17:29:46   STACKED India assign=False: macro F0.5 0.98445 with {'t_open': 0.37, 't_add': 0.76, 'rel': 0.0, 'assign': False}
+17:30:12   STACKED India assign=True: macro F0.5 0.98454 with {'t_open': 0.37, 't_add': 0.76, 'rel': 0.0, 'assign': True}
+17:30:12   STACKED out-of-fold, global thresholds: {'US': {'f05': 0.98678, 'n_s1': 66182, 'singleton_acc': 0.96678, 'f_matched': 0.98794, 'pair_precision': 0.99336, 'pair_recall': 0.97626}, 'India': {'f05': 0.98445, 'n_s1': 44159, 'singleton_acc': 0.96463, 'f_matched': 0.98563, 'pair_precision': 0.99272, 'pair_recall': 0.96892}, 'all': {'f05': 0.98584, 'n_s1': 110341, 'singleton_acc': 0.96591, 'f_matched': 0.98702, 'pair_precision': 0.99311, 'pair_recall': 0.97332}}
+17:30:12   STACKED out-of-fold, per-country thresholds: {'US': {'f05': 0.98678, 'n_s1': 66182, 'singleton_acc': 0.97254, 'f_matched': 0.98761, 'pair_precision': 0.99332, 'pair_recall': 0.97654}, 'India': {'f05': 0.98454, 'n_s1': 44159, 'singleton_acc': 0.96584, 'f_matched': 0.98566, 'pair_precision': 0.99324, 'pair_recall': 0.96758}, 'all': {'f05': 0.98588, 'n_s1': 110341, 'singleton_acc': 0.96982, 'f_matched': 0.98683, 'pair_precision': 0.99329, 'pair_recall': 0.97295}}
+17:30:12   STACKED: per-country thresholds adopted; out-of-fold macro F0.5 = 0.98588
+17:30:12   out-of-fold macro F0.5: Stage 3 0.98651 vs stacked 0.98588 -> use stacker: False
+17:30:12 auto: all steps done
+17:37:03 MODE=DEV_FAST  fraction=0.05  folds=2  subset_seed=2026  cache=D:\Amzon ML\Dataset\student_resource\cache\runs\DEV_FAST
+17:37:03 TRAIN: S1 entities=110,341  S2 entities=427,334  S3 entities=452,152  true pairs=381,792  singletons=6,130
+17:37:03 TEST: not used in this mode (only FINAL touches test_source1/2/3)
+17:37:03 ==== step stack  (disk free 92.0 GB)
+17:37:22 Stacker cross-validation (2 folds): 529,254 pairs, 52 inputs
+17:37:42   stacker fold model 0 (scores fold 0): 243 trees (best 243) in 20s
+17:38:05   stacker fold model 1 (scores fold 1): 236 trees (best 236) in 20s
+17:39:04   STACKED global assign=False: macro F0.5 0.98600 with {'t_open': 0.32, 't_add': 0.74, 'rel': 0.0, 'assign': False}
+17:39:55   STACKED global assign=True: macro F0.5 0.98608 with {'t_open': 0.32, 't_add': 0.74, 'rel': 0.0, 'assign': True}
+17:40:26   STACKED US assign=False: macro F0.5 0.98697 with {'t_open': 0.4, 't_add': 0.74, 'rel': 0.0, 'assign': False}
+17:40:56   STACKED US assign=True: macro F0.5 0.98702 with {'t_open': 0.27, 't_add': 0.74, 'rel': 0.0, 'assign': True}
+17:41:21   STACKED India assign=False: macro F0.5 0.98463 with {'t_open': 0.32, 't_add': 0.76, 'rel': 0.0, 'assign': False}
+17:41:44   STACKED India assign=True: macro F0.5 0.98471 with {'t_open': 0.32, 't_add': 0.76, 'rel': 0.0, 'assign': True}
+17:41:44   STACKED out-of-fold, global thresholds: {'US': {'f05': 0.98702, 'n_s1': 66182, 'singleton_acc': 0.96705, 'f_matched': 0.98818, 'pair_precision': 0.99379, 'pair_recall': 0.97559}, 'India': {'f05': 0.98467, 'n_s1': 44159, 'singleton_acc': 0.96624, 'f_matched': 0.98577, 'pair_precision': 0.99283, 'pair_recall': 0.96867}, 'all': {'f05': 0.98608, 'n_s1': 110341, 'singleton_acc': 0.96672, 'f_matched': 0.98722, 'pair_precision': 0.99341, 'pair_recall': 0.97282}}
+17:41:44   STACKED out-of-fold, per-country thresholds: {'US': {'f05': 0.98702, 'n_s1': 66182, 'singleton_acc': 0.96485, 'f_matched': 0.98831, 'pair_precision': 0.99376, 'pair_recall': 0.97562}, 'India': {'f05': 0.98471, 'n_s1': 44159, 'singleton_acc': 0.96624, 'f_matched': 0.98581, 'pair_precision': 0.99318, 'pair_recall': 0.96774}, 'all': {'f05': 0.9861, 'n_s1': 110341, 'singleton_acc': 0.96542, 'f_matched': 0.98731, 'pair_precision': 0.99353, 'pair_recall': 0.97246}}
+17:41:44   STACKED: per-country thresholds adopted; out-of-fold macro F0.5 = 0.98610
+17:41:44   out-of-fold macro F0.5: Stage 3 0.98651 vs stacked 0.98610 -> use stacker: False
+17:43:59   E1 baseline fold model 0 (scores fold 0): 335 trees (best 335) in 36s
+17:44:40   E1 baseline fold model 1 (scores fold 1): 345 trees (best 345) in 34s
+17:45:30   E1 baseline global assign=False: macro F0.5 0.98642 with {'t_open': 0.6, 't_add': 0.72, 'rel': 0.0, 'assign': False}
+17:46:11   E1 baseline global assign=True: macro F0.5 0.98648 with {'t_open': 0.5, 't_add': 0.72, 'rel': 0.0, 'assign': True}
+17:46:52   E1 baseline US assign=False: macro F0.5 0.98746 with {'t_open': 0.6, 't_add': 0.72, 'rel': 0.0, 'assign': False}
+17:47:20   E1 baseline US assign=True: macro F0.5 0.98748 with {'t_open': 0.5, 't_add': 0.72, 'rel': 0.0, 'assign': True}
+17:47:49   E1 baseline India assign=False: macro F0.5 0.98497 with {'t_open': 0.54, 't_add': 0.74, 'rel': 0.0, 'assign': False}
+17:48:13   E1 baseline India assign=True: macro F0.5 0.98505 with {'t_open': 0.54, 't_add': 0.74, 'rel': 0.0, 'assign': True}
+17:48:13   E1 baseline out-of-fold, global thresholds: {'US': {'f05': 0.98748, 'n_s1': 66182, 'singleton_acc': 0.97035, 'f_matched': 0.98848, 'pair_precision': 0.99356, 'pair_recall': 0.97736}, 'India': {'f05': 0.98497, 'n_s1': 44159, 'singleton_acc': 0.96624, 'f_matched': 0.98609, 'pair_precision': 0.99268, 'pair_recall': 0.97056}, 'all': {'f05': 0.98648, 'n_s1': 110341, 'singleton_acc': 0.96868, 'f_matched': 0.98752, 'pair_precision': 0.99321, 'pair_recall': 0.97464}}
+17:48:13   E1 baseline out-of-fold, per-country thresholds: {'US': {'f05': 0.98748, 'n_s1': 66182, 'singleton_acc': 0.97035, 'f_matched': 0.98848, 'pair_precision': 0.99356, 'pair_recall': 0.97736}, 'India': {'f05': 0.98505, 'n_s1': 44159, 'singleton_acc': 0.96825, 'f_matched': 0.98606, 'pair_precision': 0.99302, 'pair_recall': 0.9698}, 'all': {'f05': 0.98651, 'n_s1': 110341, 'singleton_acc': 0.96949, 'f_matched': 0.98751, 'pair_precision': 0.99335, 'pair_recall': 0.97433}}
+17:48:13   E1 baseline: per-country thresholds adopted; out-of-fold macro F0.5 = 0.98651
+17:48:51   E2 +transitivity(ref by p1) fold model 0 (scores fold 0): 341 trees (best 341) in 38s
+17:49:36   E2 +transitivity(ref by p1) fold model 1 (scores fold 1): 321 trees (best 321) in 38s
+17:50:20   E2 +transitivity(ref by p1) global assign=False: macro F0.5 0.98644 with {'t_open': 0.56, 't_add': 0.77, 'rel': 0.0, 'assign': False}
+17:50:59   E2 +transitivity(ref by p1) global assign=True: macro F0.5 0.98648 with {'t_open': 0.56, 't_add': 0.76, 'rel': 0.0, 'assign': True}

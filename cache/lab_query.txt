@@ -1,0 +1,16 @@
+﻿US A: index 0s, query 16s for 12,074 rows, 91.4 hits/row
+US B: index 0s, query 3s for 12,074 rows, 9.4 hits/row
+US D: index 405s, query 6s for 12,074 rows, 86.8 hits/row
+US E: index 0s, query 3s for 12,074 rows, 28.4 hits/row
+US P: index 429s, query 8s for 12,074 rows, 84.3 hits/row
+US X: index 170s, query 40s for 12,074 rows, 51.7 hits/row
+US N: index 331s, query 6s for 12,074 rows, 10.2 hits/row
+US G: index 160s, query 2s for 12,074 rows, 3.5 hits/row
+India A: index 0s, query 7s for 7,926 rows, 90.6 hits/row
+India B: index 0s, query 2s for 7,926 rows, 30.5 hits/row
+India D: index 404s, query 8s for 7,926 rows, 99.0 hits/row
+India E: index 0s, query 9s for 7,926 rows, 86.2 hits/row
+India P: index 268s, query 4s for 7,926 rows, 89.9 hits/row
+India X: index 69s, query 1s for 7,926 rows, 26.3 hits/row
+India N: index 133s, query 2s for 7,926 rows, 30.3 hits/row
+India G: index 86s, query 1s for 7,926 rows, 2.5 hits/row

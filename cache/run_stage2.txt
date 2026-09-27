@@ -1,0 +1,51 @@
+﻿14:59:08 ==== step stage2
+14:59:43 Stage 2: raw blocking on sample A = 87,919 train S1 rows
+14:59:47 country US: 52,898 S1 rows vs 6,186,873 right rows
+15:05:31   index A: 27,735,857 nnz, 344s
+15:05:31   index B: 6,725,158 nnz, 0s
+15:05:31   index D: 34,422,794 nnz, 0s
+15:05:31   index E: 9,749,826 nnz, 0s
+15:09:14   S1 52,898/52,898: 2,972,161 pairs kept, 222s
+15:09:16 country India: 35,021 S1 rows vs 4,133,346 right rows
+15:11:46   index A: 16,954,962 nnz, 150s
+15:12:48   index B: 5,267,246 nnz, 62s
+15:19:41   index D: 33,749,323 nnz, 413s
+15:23:06   index E: 25,852,159 nnz, 205s
+15:24:39   S1 35,021/35,021: 2,432,760 pairs kept, 93s
+15:24:43 raw union: {'pairs': 5404921, 'pair_recall': 0.96143, 'avg_cands': 61.48, 'p95_cands': 90.0, 'zero_cand_share': 1e-05, 'oracle_f05': 0.98586}
+15:24:43   pass A alone: {'pairs': 1743880, 'pair_recall': 0.60798, 'avg_cands': 19.84, 'p95_cands': 25.0, 'zero_cand_share': 0.00753, 'oracle_f05': 0.75357}
+15:24:44   without pass A: {'pairs': 3893473, 'pair_recall': 0.91617, 'avg_cands': 44.28, 'p95_cands': 69.0, 'zero_cand_share': 0.00082, 'oracle_f05': 0.96877}
+15:24:44   pass B alone: {'pairs': 822809, 'pair_recall': 0.64805, 'avg_cands': 9.36, 'p95_cands': 25.0, 'zero_cand_share': 0.1265, 'oracle_f05': 0.77952}
+15:24:45   without pass B: {'pairs': 4835792, 'pair_recall': 0.9463, 'avg_cands': 55.0, 'p95_cands': 72.0, 'zero_cand_share': 3e-05, 'oracle_f05': 0.98002}
+15:24:45   pass D alone: {'pairs': 2109613, 'pair_recall': 0.83293, 'avg_cands': 23.99, 'p95_cands': 25.0, 'zero_cand_share': 0.00396, 'oracle_f05': 0.93512}
+15:24:46   without pass D: {'pairs': 3641567, 'pair_recall': 0.92806, 'avg_cands': 41.42, 'p95_cands': 70.0, 'zero_cand_share': 0.00019, 'oracle_f05': 0.96968}
+15:24:46   pass E alone: {'pairs': 1466168, 'pair_recall': 0.65676, 'avg_cands': 16.68, 'p95_cands': 25.0, 'zero_cand_share': 0.13374, 'oracle_f05': 0.77111}
+15:24:47   without pass E: {'pairs': 4256647, 'pair_recall': 0.95172, 'avg_cands': 48.42, 'p95_cands': 71.0, 'zero_cand_share': 1e-05, 'oracle_f05': 0.98273}
+15:26:05   fold 0: best_iter 144, valid logloss 0.02146
+15:27:08   fold 1: best_iter 114, valid logloss 0.02121
+15:28:22   fold 2: best_iter 140, valid logloss 0.02118
+15:28:30   prune {'pairs': 879073, 'pair_recall': 0.95993, 'avg_cands': 10.0, 'p95_cands': 10.0, 'zero_cand_share': 1e-05, 'oracle_f05': 0.9855, 'budget': 10, 'tau': None}
+15:28:31   prune {'pairs': 631623, 'pair_recall': 0.95956, 'avg_cands': 7.18, 'p95_cands': 10.0, 'zero_cand_share': 0.00022, 'oracle_f05': 0.98537, 'budget': 10, 'tau': 0.001}
+15:28:32   prune {'pairs': 518520, 'pair_recall': 0.95837, 'avg_cands': 5.9, 'p95_cands': 10.0, 'zero_cand_share': 0.00089, 'oracle_f05': 0.98497, 'budget': 10, 'tau': 0.005}
+15:28:32   prune {'pairs': 455010, 'pair_recall': 0.95515, 'avg_cands': 5.18, 'p95_cands': 10.0, 'zero_cand_share': 0.00272, 'oracle_f05': 0.98396, 'budget': 10, 'tau': 0.02}
+15:28:40   prune {'pairs': 1054815, 'pair_recall': 0.96045, 'avg_cands': 12.0, 'p95_cands': 12.0, 'zero_cand_share': 1e-05, 'oracle_f05': 0.98562, 'budget': 12, 'tau': None}
+15:28:41   prune {'pairs': 675242, 'pair_recall': 0.96, 'avg_cands': 7.68, 'p95_cands': 12.0, 'zero_cand_share': 0.00022, 'oracle_f05': 0.98547, 'budget': 12, 'tau': 0.001}
+15:28:42   prune {'pairs': 534839, 'pair_recall': 0.95872, 'avg_cands': 6.08, 'p95_cands': 12.0, 'zero_cand_share': 0.00089, 'oracle_f05': 0.98503, 'budget': 12, 'tau': 0.005}
+15:28:43   prune {'pairs': 462055, 'pair_recall': 0.95539, 'avg_cands': 5.26, 'p95_cands': 10.0, 'zero_cand_share': 0.00272, 'oracle_f05': 0.984, 'budget': 12, 'tau': 0.02}
+15:28:50   prune {'pairs': 1318335, 'pair_recall': 0.96087, 'avg_cands': 14.99, 'p95_cands': 15.0, 'zero_cand_share': 1e-05, 'oracle_f05': 0.98572, 'budget': 15, 'tau': None}
+15:28:51   prune {'pairs': 718359, 'pair_recall': 0.96031, 'avg_cands': 8.17, 'p95_cands': 15.0, 'zero_cand_share': 0.00022, 'oracle_f05': 0.98554, 'budget': 15, 'tau': 0.001}
+15:28:52   prune {'pairs': 549944, 'pair_recall': 0.95896, 'avg_cands': 6.26, 'p95_cands': 14.0, 'zero_cand_share': 0.00089, 'oracle_f05': 0.98508, 'budget': 15, 'tau': 0.005}
+15:28:53   prune {'pairs': 468176, 'pair_recall': 0.95553, 'avg_cands': 5.33, 'p95_cands': 10.0, 'zero_cand_share': 0.00272, 'oracle_f05': 0.98403, 'budget': 15, 'tau': 0.02}
+15:29:02   prune {'pairs': 1757058, 'pair_recall': 0.96115, 'avg_cands': 19.98, 'p95_cands': 20.0, 'zero_cand_share': 1e-05, 'oracle_f05': 0.98578, 'budget': 20, 'tau': None}
+15:29:03   prune {'pairs': 757868, 'pair_recall': 0.96052, 'avg_cands': 8.62, 'p95_cands': 20.0, 'zero_cand_share': 0.00022, 'oracle_f05': 0.98558, 'budget': 20, 'tau': 0.001}
+15:29:04   prune {'pairs': 562972, 'pair_recall': 0.95907, 'avg_cands': 6.4, 'p95_cands': 14.0, 'zero_cand_share': 0.00089, 'oracle_f05': 0.98511, 'budget': 20, 'tau': 0.005}
+15:29:05   prune {'pairs': 472990, 'pair_recall': 0.95559, 'avg_cands': 5.38, 'p95_cands': 10.0, 'zero_cand_share': 0.00272, 'oracle_f05': 0.98404, 'budget': 20, 'tau': 0.02}
+15:29:12   prune {'pairs': 2194748, 'pair_recall': 0.96129, 'avg_cands': 24.96, 'p95_cands': 25.0, 'zero_cand_share': 1e-05, 'oracle_f05': 0.98583, 'budget': 25, 'tau': None}
+15:29:14   prune {'pairs': 776753, 'pair_recall': 0.96058, 'avg_cands': 8.83, 'p95_cands': 21.0, 'zero_cand_share': 0.00022, 'oracle_f05': 0.98561, 'budget': 25, 'tau': 0.001}
+15:29:14   prune {'pairs': 568334, 'pair_recall': 0.9591, 'avg_cands': 6.46, 'p95_cands': 14.0, 'zero_cand_share': 0.00089, 'oracle_f05': 0.98512, 'budget': 25, 'tau': 0.005}
+15:29:15   prune {'pairs': 474622, 'pair_recall': 0.95561, 'avg_cands': 5.4, 'p95_cands': 10.0, 'zero_cand_share': 0.00272, 'oracle_f05': 0.98406, 'budget': 25, 'tau': 0.02}
+15:29:15   prune {'pairs': 5404921, 'pair_recall': 0.96143, 'avg_cands': 61.48, 'p95_cands': 90.0, 'zero_cand_share': 1e-05, 'oracle_f05': 0.98586, 'budget': None, 'tau': None}
+15:29:16   prune {'pairs': 789814, 'pair_recall': 0.9606, 'avg_cands': 8.98, 'p95_cands': 21.0, 'zero_cand_share': 0.00022, 'oracle_f05': 0.98561, 'budget': None, 'tau': 0.001}
+15:29:16   prune {'pairs': 570759, 'pair_recall': 0.95911, 'avg_cands': 6.49, 'p95_cands': 14.0, 'zero_cand_share': 0.00089, 'oracle_f05': 0.98512, 'budget': None, 'tau': 0.005}
+15:29:16   prune {'pairs': 475044, 'pair_recall': 0.95562, 'avg_cands': 5.4, 'p95_cands': 10.0, 'zero_cand_share': 0.00272, 'oracle_f05': 0.98406, 'budget': None, 'tau': 0.02}
+15:29:16 chosen pruning setting (oracle guard 0.003): {'pairs': 455010, 'pair_recall': 0.95515, 'avg_cands': 5.18, 'p95_cands': 10.0, 'zero_cand_share': 0.00272, 'oracle_f05': 0.98396, 'budget': 10, 'tau': 0.02}

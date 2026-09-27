@@ -1,0 +1,466 @@
+{
+  "M": {
+    "US": 20,
+    "India": 20
+  },
+  "budget": 8,
+  "tau": 0.003,
+  "raw_eval": {
+    "US": {
+      "oracle": 0.99845,
+      "cands": 209.35,
+      "p95_cands": 345.0,
+      "recall": 0.99546
+    },
+    "India": {
+      "oracle": 0.998,
+      "cands": 286.43,
+      "p95_cands": 434.14999999999964,
+      "recall": 0.99371
+    },
+    "all": {
+      "oracle": 0.99827,
+      "cands": 240.08,
+      "p95_cands": 402.0,
+      "recall": 0.99476
+    }
+  },
+  "stage15_grid": [
+    {
+      "M": 20,
+      "US": 0.9984,
+      "India": 0.99778,
+      "all": 0.99815
+    },
+    {
+      "M": 30,
+      "US": 0.99842,
+      "India": 0.99794,
+      "all": 0.99823
+    },
+    {
+      "M": 40,
+      "US": 0.99842,
+      "India": 0.99796,
+      "all": 0.99824
+    },
+    {
+      "M": 60,
+      "US": 0.99843,
+      "India": 0.99798,
+      "all": 0.99825
+    },
+    {
+      "M": 80,
+      "US": 0.99845,
+      "India": 0.99799,
+      "all": 0.99827
+    },
+    {
+      "M": 120,
+      "US": 0.99845,
+      "India": 0.99799,
+      "all": 0.99827
+    },
+    {
+      "M": 160,
+      "US": 0.99845,
+      "India": 0.998,
+      "all": 0.99827
+    }
+  ],
+  "topM_eval": {
+    "US": {
+      "oracle": 0.9984,
+      "cands": 19.97,
+      "p95_cands": 20.0,
+      "recall": 0.99529
+    },
+    "India": {
+      "oracle": 0.99778,
+      "cands": 19.99,
+      "p95_cands": 20.0,
+      "recall": 0.99251
+    },
+    "all": {
+      "oracle": 0.99815,
+      "cands": 19.98,
+      "p95_cands": 20.0,
+      "recall": 0.99417
+    }
+  },
+  "stage2_grid": [
+    {
+      "budget": 8,
+      "tau": null,
+      "oracle": 0.99786,
+      "cands": 8.0,
+      "p95_cands": 8.0,
+      "recall": 0.99221,
+      "US": 0.99811,
+      "India": 0.99746
+    },
+    {
+      "budget": 8,
+      "tau": 0.0005,
+      "oracle": 0.99783,
+      "cands": 6.07,
+      "p95_cands": 8.0,
+      "recall": 0.99211,
+      "US": 0.99809,
+      "India": 0.99744
+    },
+    {
+      "budget": 8,
+      "tau": 0.001,
+      "oracle": 0.99779,
+      "cands": 5.53,
+      "p95_cands": 8.0,
+      "recall": 0.99192,
+      "US": 0.99806,
+      "India": 0.99738
+    },
+    {
+      "budget": 8,
+      "tau": 0.003,
+      "oracle": 0.99769,
+      "cands": 4.78,
+      "p95_cands": 8.0,
+      "recall": 0.99158,
+      "US": 0.99796,
+      "India": 0.99729
+    },
+    {
+      "budget": 8,
+      "tau": 0.01,
+      "oracle": 0.99743,
+      "cands": 4.25,
+      "p95_cands": 8.0,
+      "recall": 0.99061,
+      "US": 0.99779,
+      "India": 0.9969
+    },
+    {
+      "budget": 10,
+      "tau": null,
+      "oracle": 0.99802,
+      "cands": 10.0,
+      "p95_cands": 10.0,
+      "recall": 0.9936,
+      "US": 0.99828,
+      "India": 0.99763
+    },
+    {
+      "budget": 10,
+      "tau": 0.0005,
+      "oracle": 0.99799,
+      "cands": 6.63,
+      "p95_cands": 10.0,
+      "recall": 0.99348,
+      "US": 0.99825,
+      "India": 0.9976
+    },
+    {
+      "budget": 10,
+      "tau": 0.001,
+      "oracle": 0.99794,
+      "cands": 5.87,
+      "p95_cands": 10.0,
+      "recall": 0.9932,
+      "US": 0.99821,
+      "India": 0.99753
+    },
+    {
+      "budget": 10,
+      "tau": 0.003,
+      "oracle": 0.99781,
+      "cands": 4.94,
+      "p95_cands": 10.0,
+      "recall": 0.9927,
+      "US": 0.99807,
+      "India": 0.99741
+    },
+    {
+      "budget": 10,
+      "tau": 0.01,
+      "oracle": 0.99753,
+      "cands": 4.32,
+      "p95_cands": 8.0,
+      "recall": 0.99162,
+      "US": 0.99788,
+      "India": 0.99702
+    },
+    {
+      "budget": 12,
+      "tau": null,
+      "oracle": 0.99808,
+      "cands": 12.0,
+      "p95_cands": 12.0,
+      "recall": 0.99394,
+      "US": 0.99834,
+      "India": 0.9977
+    },
+    {
+      "budget": 12,
+      "tau": 0.0005,
+      "oracle": 0.99805,
+      "cands": 6.95,
+      "p95_cands": 12.0,
+      "recall": 0.99379,
+      "US": 0.99831,
+      "India": 0.99765
+    },
+    {
+      "budget": 12,
+      "tau": 0.001,
+      "oracle": 0.99799,
+      "cands": 6.05,
+      "p95_cands": 12.0,
+      "recall": 0.99348,
+      "US": 0.99827,
+      "India": 0.99757
+    },
+    {
+      "budget": 12,
+      "tau": 0.003,
+      "oracle": 0.99784,
+      "cands": 5.0,
+      "p95_cands": 10.0,
+      "recall": 0.99289,
+      "US": 0.99811,
+      "India": 0.99744
+    },
+    {
+      "budget": 12,
+      "tau": 0.01,
+      "oracle": 0.99755,
+      "cands": 4.34,
+      "p95_cands": 8.0,
+      "recall": 0.99173,
+      "US": 0.99789,
+      "India": 0.99703
+    },
+    {
+      "budget": 15,
+      "tau": null,
+      "oracle": 0.99814,
+      "cands": 14.99,
+      "p95_cands": 15.0,
+      "recall": 0.99413,
+      "US": 0.99839,
+      "India": 0.99776
+    },
+    {
+      "budget": 15,
+      "tau": 0.0005,
+      "oracle": 0.99809,
+      "cands": 7.19,
+      "p95_cands": 15.0,
+      "recall": 0.99394,
+      "US": 0.99835,
+      "India": 0.99769
+    },
+    {
+      "budget": 15,
+      "tau": 0.001,
+      "oracle": 0.99802,
+      "cands": 6.17,
+      "p95_cands": 13.0,
+      "recall": 0.9936,
+      "US": 0.99831,
+      "India": 0.9976
+    },
+    {
+      "budget": 15,
+      "tau": 0.003,
+      "oracle": 0.99786,
+      "cands": 5.04,
+      "p95_cands": 10.0,
+      "recall": 0.99297,
+      "US": 0.99814,
+      "India": 0.99745
+    },
+    {
+      "budget": 15,
+      "tau": 0.01,
+      "oracle": 0.99755,
+      "cands": 4.34,
+      "p95_cands": 8.0,
+      "recall": 0.99175,
+      "US": 0.99789,
+      "India": 0.99703
+    },
+    {
+      "budget": 20,
+      "tau": null,
+      "oracle": 0.99815,
+      "cands": 19.98,
+      "p95_cands": 20.0,
+      "recall": 0.99417,
+      "US": 0.9984,
+      "India": 0.99778
+    },
+    {
+      "budget": 20,
+      "tau": 0.0005,
+      "oracle": 0.99809,
+      "cands": 7.31,
+      "p95_cands": 15.0,
+      "recall": 0.99396,
+      "US": 0.99836,
+      "India": 0.99769
+    },
+    {
+      "budget": 20,
+      "tau": 0.001,
+      "oracle": 0.99803,
+      "cands": 6.23,
+      "p95_cands": 13.0,
+      "recall": 0.99362,
+      "US": 0.99832,
+      "India": 0.9976
+    },
+    {
+      "budget": 20,
+      "tau": 0.003,
+      "oracle": 0.99787,
+      "cands": 5.05,
+      "p95_cands": 10.0,
+      "recall": 0.99299,
+      "US": 0.99815,
+      "India": 0.99745
+    },
+    {
+      "budget": 20,
+      "tau": 0.01,
+      "oracle": 0.99755,
+      "cands": 4.34,
+      "p95_cands": 8.0,
+      "recall": 0.99175,
+      "US": 0.99789,
+      "India": 0.99703
+    },
+    {
+      "budget": 30,
+      "tau": null,
+      "oracle": 0.99815,
+      "cands": 19.98,
+      "p95_cands": 20.0,
+      "recall": 0.99417,
+      "US": 0.9984,
+      "India": 0.99778
+    },
+    {
+      "budget": 30,
+      "tau": 0.0005,
+      "oracle": 0.99809,
+      "cands": 7.31,
+      "p95_cands": 15.0,
+      "recall": 0.99396,
+      "US": 0.99836,
+      "India": 0.99769
+    },
+    {
+      "budget": 30,
+      "tau": 0.001,
+      "oracle": 0.99803,
+      "cands": 6.23,
+      "p95_cands": 13.0,
+      "recall": 0.99362,
+      "US": 0.99832,
+      "India": 0.9976
+    },
+    {
+      "budget": 30,
+      "tau": 0.003,
+      "oracle": 0.99787,
+      "cands": 5.05,
+      "p95_cands": 10.0,
+      "recall": 0.99299,
+      "US": 0.99815,
+      "India": 0.99745
+    },
+    {
+      "budget": 30,
+      "tau": 0.01,
+      "oracle": 0.99755,
+      "cands": 4.34,
+      "p95_cands": 8.0,
+      "recall": 0.99175,
+      "US": 0.99789,
+      "India": 0.99703
+    },
+    {
+      "budget": null,
+      "tau": null,
+      "oracle": 0.99815,
+      "cands": 19.98,
+      "p95_cands": 20.0,
+      "recall": 0.99417,
+      "US": 0.9984,
+      "India": 0.99778
+    },
+    {
+      "budget": null,
+      "tau": 0.0005,
+      "oracle": 0.99809,
+      "cands": 7.31,
+      "p95_cands": 15.0,
+      "recall": 0.99396,
+      "US": 0.99836,
+      "India": 0.99769
+    },
+    {
+      "budget": null,
+      "tau": 0.001,
+      "oracle": 0.99803,
+      "cands": 6.23,
+      "p95_cands": 13.0,
+      "recall": 0.99362,
+      "US": 0.99832,
+      "India": 0.9976
+    },
+    {
+      "budget": null,
+      "tau": 0.003,
+      "oracle": 0.99787,
+      "cands": 5.05,
+      "p95_cands": 10.0,
+      "recall": 0.99299,
+      "US": 0.99815,
+      "India": 0.99745
+    },
+    {
+      "budget": null,
+      "tau": 0.01,
+      "oracle": 0.99755,
+      "cands": 4.34,
+      "p95_cands": 8.0,
+      "recall": 0.99175,
+      "US": 0.99789,
+      "India": 0.99703
+    }
+  ],
+  "choice": {
+    "budget": 8,
+    "tau": 0.003,
+    "oracle": 0.99769,
+    "cands": 4.78,
+    "p95_cands": 8.0,
+    "recall": 0.99158,
+    "US": 0.99796,
+    "India": 0.99729
+  },
+  "passes": [
+    "A",
+    "B",
+    "D",
+    "E",
+    "P",
+    "X",
+    "N",
+    "G",
+    "W",
+    "RA"
+  ]
+}

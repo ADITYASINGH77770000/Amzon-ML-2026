@@ -1,0 +1,144 @@
+﻿current (k25, floors)        {'US': {'recall': np.float64(0.9738), 'oracle': 0.99156, 'cands': 56.6}, 'India': {'recall': np.float64(0.9567), 'oracle': 0.98598, 'cands': 63.6}, 'all': {'recall': np.float64(0.967), 'oracle': 0.98935}}
+current k100 no floor        {'US': {'recall': np.float64(0.9823), 'oracle': 0.9946, 'cands': 205.7}, 'India': {'recall': np.float64(0.9743), 'oracle': 0.99231, 'cands': 291.2}, 'all': {'recall': np.float64(0.9791), 'oracle': 0.99369}}
+current k100 + P             {'US': {'recall': np.float64(0.9828), 'oracle': 0.99477, 'cands': 244.7}, 'India': {'recall': np.float64(0.9754), 'oracle': 0.9926, 'cands': 329.2}, 'all': {'recall': np.float64(0.9799), 'oracle': 0.99391}}
+current k100 + X             {'US': {'recall': np.float64(0.9845), 'oracle': 0.99515, 'cands': 243.7}, 'India': {'recall': np.float64(0.9755), 'oracle': 0.99257, 'cands': 310.9}, 'all': {'recall': np.float64(0.9809), 'oracle': 0.99413}}
+current k100 + N             {'US': {'recall': np.float64(0.9823), 'oracle': 0.99461, 'cands': 213.3}, 'India': {'recall': np.float64(0.9747), 'oracle': 0.99249, 'cands': 314.9}, 'all': {'recall': np.float64(0.9793), 'oracle': 0.99377}}
+current k100 + G             {'US': {'recall': np.float64(0.9825), 'oracle': 0.99464, 'cands': 206.8}, 'India': {'recall': np.float64(0.9748), 'oracle': 0.99251, 'cands': 292.3}, 'all': {'recall': np.float64(0.9794), 'oracle': 0.9938}}
+all passes k100              {'US': {'recall': np.float64(0.9852), 'oracle': 0.99534, 'cands': 290.8}, 'India': {'recall': np.float64(0.9771), 'oracle': 0.99312, 'cands': 373.4}, 'all': {'recall': np.float64(0.982), 'oracle': 0.99446}}
+all passes k50               {'US': {'recall': np.float64(0.9816), 'oracle': 0.99402, 'cands': 166.0}, 'India': {'recall': np.float64(0.9711), 'oracle': 0.99122, 'cands': 208.9}, 'all': {'recall': np.float64(0.9774), 'oracle': 0.99291}}
+  all without A: {'recall': np.float64(0.9798), 'oracle': 0.99368}
+  all without B: {'recall': np.float64(0.9736), 'oracle': 0.99155}
+  all without D: {'recall': np.float64(0.9744), 'oracle': 0.99185}
+  all without E: {'recall': np.float64(0.976), 'oracle': 0.99256}
+  all without P: {'recall': np.float64(0.9814), 'oracle': 0.99428}
+  all without X: {'recall': np.float64(0.9803), 'oracle': 0.99407}
+  all without N: {'recall': np.float64(0.9819), 'oracle': 0.99442}
+  all without G: {'recall': np.float64(0.9817), 'oracle': 0.99438}
+
+US: 620 missed true pairs of 41,809
+  share by category: {'right_addr_empty': 0.539, 'right_web': 0.127, 'right_native': 0.0, 'name_tset>=90': 0.468, 'name_tset<50': 0.156}
+  addr empty & name>=90: 0.361  addr empty & name<90: 0.177
+  S1: lonee harding crystal return | 13314 atlasta ln houston tx
+   R: loneeharding | 13314 atlasda ln houston tx   (tset 40)
+  S1: family physicians | 3815 10 th st lincoln ne
+   R: family physicians id 35924 | 3815 3819 10 th st lincolln ne   (tset 100)
+  S1: foundry | 712 main st pinckneyville il
+   R: fcnry | il 712 main st pinckneyville   (tset 67)
+  S1: n 3 green seafood | 4000 galantis dr unit 107 morehead city nc
+   R: nexbelotavo | 4000 galdntis dr morehead city nc   (tset 29)
+  S1: trudi eisen modern machine works | 224 fairhaven dr ofallon mo
+   R: trudieisenmoderncom | 224 faiihaven dr ofallon mo   (tset 47)
+  S1: wildlife federation | unit 1029 16025 50 th st az phoenix
+   R: wildlife wildlife federation | 16025 c 50 th st pecos 1029 az   (tset 100)
+  S1: division aging | 1835 waverly way montgomery il
+   R: division aging federation |    (tset 100)
+  S1: nolen fisher stivers | 2614 i st sacramento ca
+   R: fluxnyla | 2614 i stret sacramento ca   (tset 21)
+  S1: urban ice cream | 4939 kalenda av albertville mn
+   R: urban ice | 4939 kllenda av po box 806 ablertville city mn   (tset 100)
+  S1: red tavern | 400 highland dr clinton tn
+   R: red tavern |    (tset 100)
+  S1: auryn pennymac | 604 av j killeen tx
+   R: auryn pagyrmac | 60 av j klileen city tx   (tset 79)
+  S1: thayer worldwide | 375 main st unit 89 woburn ma
+   R: thayer wlirdwde |    (tset 84)
+  S1: bright massage | 3208 leyland trl woodbury mn
+   R: bright massage |    (tset 100)
+  S1: barnes carman reed | 133 shawnee dr sardinia oh
+   R: bc | 133 shawnbe dr franklin twp oh   (tset 20)
+  S1: sc pattana | 46 state rte 492 morganfield ky
+   R: sc prttnca |    (tset 80)
+  S1: federal fresh currencyshares | 181 brewington dr dudley nc
+   R: federal currencyshares svc |    (tset 92)
+  S1: carr regional group | 108 liberty st centreville md
+   R: carr group ctr |    (tset 83)
+  S1: verdin floating | 1259 w av buffalo ny
+   R: rizanyla | 1259 w av buffalo ny   (tset 26)
+  S1: citadel | 32547 694 rd wagoner ok
+   R: ctfasrdel | 22547 694 rd wagoner ok   (tset 75)
+  S1: rivas best holdings | ma 46 pine st attleboro unit 118
+   R: rivas partners holdings |    (tset 85)
+  S1: womens health medicine chicago | 2973 47 th st chicago il
+   R: womenshealth | 47 th st chicago il   (tset 33)
+  S1: cardiology assoc whitman | 66 pond st whitman ma
+   R: cardiology assoc |    (tset 100)
+  S1: foundry | 712 main st pinckneyville il
+   R: fouodyr | 712 marn st pinckneyville il   (tset 71)
+  S1: universal consumer ent | 2365 bolling brook dr atlanta ga
+   R: universalconsumerenterprises | atl ga 2365 boling brook dr   (tset 56)
+  S1: smith agnc | 38 n st ware ma
+   R: vantageevo | 38 n st ware ma   (tset 30)
+  S1: dental clinic | brooklyn ny 148 st johns pl
+   R: dental clinic | 148 st jshns pl brookly city ny   (tset 100)
+  S1: womens health ctr | 6741 165 th ln ramsey mn
+   R: womens womens health ctr |    (tset 100)
+  S1: blue pub | 239 gibson ln sagaponack ny
+   R: blue pub trading |    (tset 100)
+  S1: gulf system | 4586 everhart dr canton oh
+   R: gulfsystemcom | everhart dr green oh   (tset 83)
+  S1: knack mcleod thompson environmental svc | 1400 hopewell rd valley al
+   R: knackmcleodthompson | al 1400 hopewenl rd valley   (tset 66)
+
+India: 628 missed true pairs of 27,437
+  share by category: {'right_addr_empty': 0.346, 'right_web': 0.126, 'right_native': 0.099, 'name_tset>=90': 0.441, 'name_tset<50': 0.137}
+  addr empty & name>=90: 0.207  addr empty & name<90: 0.139
+  S1: compu law chambers | plot no 891 mcr complex flat no 201 sa society ayyappa society khanamet mad hapur hyderabad rangareddy telangana
+   R: pyrafluxvio | no 891 rangareddy hyderabad tg   (tset 14)
+  S1: guru svc | 4 24 a ab h second fl asaf ali rd new delhi central delhi delhi
+   R: guru svc |    (tset 100)
+  S1: galaxy global | 5 30 2 nd st sri thiruvengadam ngr alamelu manga puram ganapathypudur coimbatore tamil nadu
+   R: galaxyglobal | tn hn 939 5 30 coimbatore   (tset 96)
+  S1: jaipur modern | g 1 28 poddar pigment cir sitapura industrial area jaipur rajasthan
+   R: jaipur svc |    (tset 75)
+  S1: laxmi infra | b 70 first fl surya ngr meerut uttar pradesh
+   R: laxmi infra |    (tset 100)
+  S1: digital intl | 107 sun mill compound n m joshi marg lower parel w mumbai mumbai city maharashtra
+   R: digital svc ent |    (tset 74)
+  S1: shiva intl | a 301 gujarat rajkot altosa olivia mavdi kankot rd mavdi rajkot
+   R: shiv intl | a 301 rajkot pal gujarat   (tset 95)
+  S1: innovative ent | no 35 6 5 sri krishna res 2 nd fl langfordroadcross bangalore karnataka
+   R: innovative ent svc | no 5 6 5 bangalore ka   (tset 100)
+  S1: creative logistics | shop no 7 8 first fl orchid mall boring patliputra rd srikrishnapuri patna bihar
+   R: creative ctr | br patna shop no 7 8   (tset 80)
+  S1: red business | 336 asiad vill new delhi central delhi delhi
+   R: red business |    (tset 100)
+  S1: shyam infotech | 8 2 686 b 6 ph space no 1 c 1 st fl 12 th sq complex mall rd no 12 banj ara hills telangana hyderabad
+   R: shyam infoch | no 2 686 b 6 ph hyderabad telangana   (tset 92)
+  S1: sun advisors | thillainagar shastri rd thillainagar tiruchirappalli tamil nadu no 11 a 1 tiruchirappalli
+   R: sun ctr |    (tset 60)
+  S1: sai svc | h no 3 382 bommanahal bommanahal v mandal ananthapur andhra pradesh
+   R: sai svc |    (tset 100)
+  S1: shiv it | office no 28 maruti arcade j n rd mulund w mumbai mumbai city maharashtra
+   R: shiv lt | office no 28 mumbai mumbai city mh   (tset 86)
+  S1: surya power | 50 51 ugf ansal plz ii chiranjeev vihar ghaziabad uttar pradesh
+   R: surya pbdwer | 50 ghaziabad uttar pradesh   (tset 87)
+  S1: city finance | a 28 4 mayapuri ph 1 new delhi s w delhi delhi
+   R: city city finance | new delhi dl a 28 4 s w delhi   (tset 100)
+  S1: star healthcare | c o harendra nath ghosh sehara pourhouse oppsite sehara bazar burdwan bardhaman w bengal
+   R: sri star partners |    (tset 50)
+  S1: hotel ent | 22 n s rd po g p o kolkata kolkata howrah w bengal
+   R: jaxsyn | 2 2 n s rd po g p o kolkata howrah kolkata w bengal   (tset 13)
+  S1: pulse foundation | h no 2969 r 2 nd fl nhbc haryana panipat
+   R: smt calofaye | 2969 r panipat hr panipat   (tset 29)
+  S1: subhshree traders | 6 fl grd plot 360 364 jai laxmi bldg kalbadevi rd swadeshi mkt mumbai mumbai city maharashtra
+   R: kelocira | 7 maharashtra mumbai city mumbai   (tset 24)
+  S1: swastik investments | maharashtra 127 g wing 1 st fl jai ganesh samrajya spine rd bhosari pune
+   R: swastik ctr ent |    (tset 71)
+  S1: aditya foundation | no 306 first fl ashok ngr 2 gandhi ngr vadakuthu panchayat kuringipadi thaluk neyveli cuddalore tamil nadu
+   R: aditya foundation |    (tset 100)
+  S1: silver food | plot 761 sub plot 19 a dumu duma plotted scheme 0 ps kha bhubaneswar khordha orissa
+   R: smt silver food | plot 61 khordha bhubaneswar orissa   (tset 100)
+  S1: kolkata structures ctr | 175 r b c rd po ps dum dum kolkata kolkata howrah w bengal
+   R: kolkatastructurescenter | 1 75 r b c rd po ps dum dum kolkata kolkata w bengal   (tset 76)
+  S1: gujarat construction | office no 1 a 4 first fl h no 285 kh no 136 2 rohini jail rd delhi n w delhi delhi
+   R: gujarat construction partners 26757 | a 667 office no 1 n w delhi delhi dl   (tset 100)
+  S1: pune engineering | sec 16 plot no 34 fl no 6 ganraj res pune maharashtra
+   R: ariasyn | sec 16 pune maharashtra   (tset 26)
+  S1: unique tech | plot no 139 room no d 2 shiv shakti chs ltd gorai 2 borivali w mumbai bandra suburban maharashtra
+   R: unique tech | 140 mumbai bandra suburban mh   (tset 100)
+  S1: ss engineering | 24 hemanta basu sarani mangalam a unit no 304 3 rd fl kolkata kolkata howrah w bengal
+   R: ss engineering 21535 | dor no 400 24 kolkata howrah wb   (tset 100)
+  S1: sarastech box | 401 surgicare sardar patel col naranpura ahmedabad gujarat
+   R: sarastechboxprivate | 401 naranpura ahmedabad gj   (tset 56)
+  S1: lakshmi tech | 303 plot no 25 a the ghatkopar nilkanth chsl jethabhai ln cts no 5084 a ghatkopar e mumbai maharashtra
+   R: laxmi tech | c 303 mumbai mh   (tset 82)

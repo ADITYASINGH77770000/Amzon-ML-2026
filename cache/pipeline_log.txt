@@ -1,0 +1,962 @@
+13:54:50 ==== step stage2
+13:55:03 Stage 2: raw blocking on sample A = 87,919 train S1 rows
+13:55:04 country US: 52,898 S1 rows vs 6,186,873 right rows
+13:57:23   index A: 16,495,164 nnz, 139s
+13:58:34   index B: 6,725,158 nnz, 71s
+14:02:21   index C: 26,550,730 nnz, 227s
+14:59:08 ==== step stage2
+14:59:43 Stage 2: raw blocking on sample A = 87,919 train S1 rows
+14:59:47 country US: 52,898 S1 rows vs 6,186,873 right rows
+15:05:31   index A: 27,735,857 nnz, 344s
+15:05:31   index B: 6,725,158 nnz, 0s
+15:05:31   index D: 34,422,794 nnz, 0s
+15:05:31   index E: 9,749,826 nnz, 0s
+15:09:14   S1 52,898/52,898: 2,972,161 pairs kept, 222s
+15:09:16 country India: 35,021 S1 rows vs 4,133,346 right rows
+15:11:46   index A: 16,954,962 nnz, 150s
+15:12:48   index B: 5,267,246 nnz, 62s
+15:19:41   index D: 33,749,323 nnz, 413s
+15:23:06   index E: 25,852,159 nnz, 205s
+15:24:39   S1 35,021/35,021: 2,432,760 pairs kept, 93s
+15:24:43 raw union: {'pairs': 5404921, 'pair_recall': 0.96143, 'avg_cands': 61.48, 'p95_cands': 90.0, 'zero_cand_share': 1e-05, 'oracle_f05': 0.98586}
+15:24:43   pass A alone: {'pairs': 1743880, 'pair_recall': 0.60798, 'avg_cands': 19.84, 'p95_cands': 25.0, 'zero_cand_share': 0.00753, 'oracle_f05': 0.75357}
+15:24:44   without pass A: {'pairs': 3893473, 'pair_recall': 0.91617, 'avg_cands': 44.28, 'p95_cands': 69.0, 'zero_cand_share': 0.00082, 'oracle_f05': 0.96877}
+15:24:44   pass B alone: {'pairs': 822809, 'pair_recall': 0.64805, 'avg_cands': 9.36, 'p95_cands': 25.0, 'zero_cand_share': 0.1265, 'oracle_f05': 0.77952}
+15:24:45   without pass B: {'pairs': 4835792, 'pair_recall': 0.9463, 'avg_cands': 55.0, 'p95_cands': 72.0, 'zero_cand_share': 3e-05, 'oracle_f05': 0.98002}
+15:24:45   pass D alone: {'pairs': 2109613, 'pair_recall': 0.83293, 'avg_cands': 23.99, 'p95_cands': 25.0, 'zero_cand_share': 0.00396, 'oracle_f05': 0.93512}
+15:24:46   without pass D: {'pairs': 3641567, 'pair_recall': 0.92806, 'avg_cands': 41.42, 'p95_cands': 70.0, 'zero_cand_share': 0.00019, 'oracle_f05': 0.96968}
+15:24:46   pass E alone: {'pairs': 1466168, 'pair_recall': 0.65676, 'avg_cands': 16.68, 'p95_cands': 25.0, 'zero_cand_share': 0.13374, 'oracle_f05': 0.77111}
+15:24:47   without pass E: {'pairs': 4256647, 'pair_recall': 0.95172, 'avg_cands': 48.42, 'p95_cands': 71.0, 'zero_cand_share': 1e-05, 'oracle_f05': 0.98273}
+15:26:05   fold 0: best_iter 144, valid logloss 0.02146
+15:27:08   fold 1: best_iter 114, valid logloss 0.02121
+15:28:22   fold 2: best_iter 140, valid logloss 0.02118
+15:28:30   prune {'pairs': 879073, 'pair_recall': 0.95993, 'avg_cands': 10.0, 'p95_cands': 10.0, 'zero_cand_share': 1e-05, 'oracle_f05': 0.9855, 'budget': 10, 'tau': None}
+15:28:31   prune {'pairs': 631623, 'pair_recall': 0.95956, 'avg_cands': 7.18, 'p95_cands': 10.0, 'zero_cand_share': 0.00022, 'oracle_f05': 0.98537, 'budget': 10, 'tau': 0.001}
+15:28:32   prune {'pairs': 518520, 'pair_recall': 0.95837, 'avg_cands': 5.9, 'p95_cands': 10.0, 'zero_cand_share': 0.00089, 'oracle_f05': 0.98497, 'budget': 10, 'tau': 0.005}
+15:28:32   prune {'pairs': 455010, 'pair_recall': 0.95515, 'avg_cands': 5.18, 'p95_cands': 10.0, 'zero_cand_share': 0.00272, 'oracle_f05': 0.98396, 'budget': 10, 'tau': 0.02}
+15:28:40   prune {'pairs': 1054815, 'pair_recall': 0.96045, 'avg_cands': 12.0, 'p95_cands': 12.0, 'zero_cand_share': 1e-05, 'oracle_f05': 0.98562, 'budget': 12, 'tau': None}
+15:28:41   prune {'pairs': 675242, 'pair_recall': 0.96, 'avg_cands': 7.68, 'p95_cands': 12.0, 'zero_cand_share': 0.00022, 'oracle_f05': 0.98547, 'budget': 12, 'tau': 0.001}
+15:28:42   prune {'pairs': 534839, 'pair_recall': 0.95872, 'avg_cands': 6.08, 'p95_cands': 12.0, 'zero_cand_share': 0.00089, 'oracle_f05': 0.98503, 'budget': 12, 'tau': 0.005}
+15:28:43   prune {'pairs': 462055, 'pair_recall': 0.95539, 'avg_cands': 5.26, 'p95_cands': 10.0, 'zero_cand_share': 0.00272, 'oracle_f05': 0.984, 'budget': 12, 'tau': 0.02}
+15:28:50   prune {'pairs': 1318335, 'pair_recall': 0.96087, 'avg_cands': 14.99, 'p95_cands': 15.0, 'zero_cand_share': 1e-05, 'oracle_f05': 0.98572, 'budget': 15, 'tau': None}
+15:28:51   prune {'pairs': 718359, 'pair_recall': 0.96031, 'avg_cands': 8.17, 'p95_cands': 15.0, 'zero_cand_share': 0.00022, 'oracle_f05': 0.98554, 'budget': 15, 'tau': 0.001}
+15:28:52   prune {'pairs': 549944, 'pair_recall': 0.95896, 'avg_cands': 6.26, 'p95_cands': 14.0, 'zero_cand_share': 0.00089, 'oracle_f05': 0.98508, 'budget': 15, 'tau': 0.005}
+15:28:53   prune {'pairs': 468176, 'pair_recall': 0.95553, 'avg_cands': 5.33, 'p95_cands': 10.0, 'zero_cand_share': 0.00272, 'oracle_f05': 0.98403, 'budget': 15, 'tau': 0.02}
+15:29:02   prune {'pairs': 1757058, 'pair_recall': 0.96115, 'avg_cands': 19.98, 'p95_cands': 20.0, 'zero_cand_share': 1e-05, 'oracle_f05': 0.98578, 'budget': 20, 'tau': None}
+15:29:03   prune {'pairs': 757868, 'pair_recall': 0.96052, 'avg_cands': 8.62, 'p95_cands': 20.0, 'zero_cand_share': 0.00022, 'oracle_f05': 0.98558, 'budget': 20, 'tau': 0.001}
+15:29:04   prune {'pairs': 562972, 'pair_recall': 0.95907, 'avg_cands': 6.4, 'p95_cands': 14.0, 'zero_cand_share': 0.00089, 'oracle_f05': 0.98511, 'budget': 20, 'tau': 0.005}
+15:29:05   prune {'pairs': 472990, 'pair_recall': 0.95559, 'avg_cands': 5.38, 'p95_cands': 10.0, 'zero_cand_share': 0.00272, 'oracle_f05': 0.98404, 'budget': 20, 'tau': 0.02}
+15:29:12   prune {'pairs': 2194748, 'pair_recall': 0.96129, 'avg_cands': 24.96, 'p95_cands': 25.0, 'zero_cand_share': 1e-05, 'oracle_f05': 0.98583, 'budget': 25, 'tau': None}
+15:29:14   prune {'pairs': 776753, 'pair_recall': 0.96058, 'avg_cands': 8.83, 'p95_cands': 21.0, 'zero_cand_share': 0.00022, 'oracle_f05': 0.98561, 'budget': 25, 'tau': 0.001}
+15:29:14   prune {'pairs': 568334, 'pair_recall': 0.9591, 'avg_cands': 6.46, 'p95_cands': 14.0, 'zero_cand_share': 0.00089, 'oracle_f05': 0.98512, 'budget': 25, 'tau': 0.005}
+15:29:15   prune {'pairs': 474622, 'pair_recall': 0.95561, 'avg_cands': 5.4, 'p95_cands': 10.0, 'zero_cand_share': 0.00272, 'oracle_f05': 0.98406, 'budget': 25, 'tau': 0.02}
+15:29:15   prune {'pairs': 5404921, 'pair_recall': 0.96143, 'avg_cands': 61.48, 'p95_cands': 90.0, 'zero_cand_share': 1e-05, 'oracle_f05': 0.98586, 'budget': None, 'tau': None}
+15:29:16   prune {'pairs': 789814, 'pair_recall': 0.9606, 'avg_cands': 8.98, 'p95_cands': 21.0, 'zero_cand_share': 0.00022, 'oracle_f05': 0.98561, 'budget': None, 'tau': 0.001}
+15:29:16   prune {'pairs': 570759, 'pair_recall': 0.95911, 'avg_cands': 6.49, 'p95_cands': 14.0, 'zero_cand_share': 0.00089, 'oracle_f05': 0.98512, 'budget': None, 'tau': 0.005}
+15:29:16   prune {'pairs': 475044, 'pair_recall': 0.95562, 'avg_cands': 5.4, 'p95_cands': 10.0, 'zero_cand_share': 0.00272, 'oracle_f05': 0.98406, 'budget': None, 'tau': 0.02}
+15:29:16 chosen pruning setting (oracle guard 0.003): {'pairs': 455010, 'pair_recall': 0.95515, 'avg_cands': 5.18, 'p95_cands': 10.0, 'zero_cand_share': 0.00272, 'oracle_f05': 0.98396, 'budget': 10, 'tau': 0.02}
+20:39:10 ==== step stage12
+20:39:25 Stage 1.5: raw union for 12,000 train S1
+20:39:26 country US: 7,217 S1 rows vs 6,186,873 right rows
+20:39:26   index A: 27,503,220 nnz, 0s
+20:39:27   index B: 6,528,833 nnz, 0s
+20:39:27   index D: 46,478,077 nnz, 0s
+20:39:27   index E: 9,542,853 nnz, 0s
+20:39:27   index P: 24,598,470 nnz, 0s
+20:39:27   index X: 9,404,828 nnz, 0s
+20:39:27   index N: 13,904,288 nnz, 0s
+20:39:28   index G: 5,271,993 nnz, 0s
+20:39:28   index W: 18,880,017 nnz, 0s
+20:40:29   reverse RA: 222,089 right rows -> 31,647 hits, 61s
+20:42:38   S1 7,217/7,217: raw 2,271,148 -> kept 2,271,148 pairs, 129s
+20:42:44 country India: 4,783 S1 rows vs 4,133,346 right rows
+20:42:46   index A: 16,795,639 nnz, 2s
+20:42:47   index B: 5,262,656 nnz, 1s
+20:42:48   index D: 47,127,396 nnz, 1s
+20:42:48   index E: 23,489,361 nnz, 0s
+20:42:48   index P: 15,569,099 nnz, 0s
+20:42:48   index X: 3,652,719 nnz, 0s
+20:42:49   index N: 16,512,905 nnz, 0s
+20:42:49   index G: 3,666,996 nnz, 0s
+20:42:49   index W: 16,955,866 nnz, 0s
+20:43:11   reverse RA: 122,794 right rows -> 16,703 hits, 22s
+20:46:06   S1 4,783/4,783: raw 1,882,799 -> kept 1,882,799 pairs, 175s
+20:46:10   raw union (sample A): {'US': {'oracle': 0.99692, 'cands': 314.69, 'recall': 0.98912}, 'India': {'oracle': 0.99566, 'cands': 393.64, 'recall': 0.98478}, 'all': {'oracle': 0.99642, 'cands': 346.16, 'recall': 0.9874}}
+20:48:23   fold model 0: best_iter 400, valid logloss 0.00674
+20:50:47   fold model 1: best_iter 389, valid logloss 0.00652
+20:50:51   top-20 by p0: {'US': {'oracle': 0.99602, 'cands': 20.0, 'recall': 0.98517}, 'India': {'oracle': 0.99346, 'cands': 20.0, 'recall': 0.97751}, 'all': {'oracle': 0.995, 'cands': 20.0, 'recall': 0.98213}}
+20:50:55   top-30 by p0: {'US': {'oracle': 0.99652, 'cands': 29.99, 'recall': 0.98735}, 'India': {'oracle': 0.99426, 'cands': 30.0, 'recall': 0.98008}, 'all': {'oracle': 0.99562, 'cands': 29.99, 'recall': 0.98446}}
+20:50:59   top-40 by p0: {'US': {'oracle': 0.99666, 'cands': 39.97, 'recall': 0.98791}, 'India': {'oracle': 0.9947, 'cands': 40.0, 'recall': 0.98124}, 'all': {'oracle': 0.99588, 'cands': 39.98, 'recall': 0.98526}}
+20:51:02   top-60 by p0: {'US': {'oracle': 0.99683, 'cands': 59.91, 'recall': 0.98876}, 'India': {'oracle': 0.99498, 'cands': 60.0, 'recall': 0.9824}, 'all': {'oracle': 0.99609, 'cands': 59.95, 'recall': 0.98623}}
+20:51:06   top-80 by p0: {'US': {'oracle': 0.99684, 'cands': 79.8, 'recall': 0.98884}, 'India': {'oracle': 0.9953, 'cands': 80.0, 'recall': 0.98344}, 'all': {'oracle': 0.99623, 'cands': 79.88, 'recall': 0.98669}}
+20:51:10   top-120 by p0: {'US': {'oracle': 0.99688, 'cands': 119.42, 'recall': 0.989}, 'India': {'oracle': 0.99551, 'cands': 119.99, 'recall': 0.9843}, 'all': {'oracle': 0.99634, 'cands': 119.65, 'recall': 0.98713}}
+20:51:13   top-160 by p0: {'US': {'oracle': 0.9969, 'cands': 158.49, 'recall': 0.98908}, 'India': {'oracle': 0.99562, 'cands': 159.95, 'recall': 0.9846}, 'all': {'oracle': 0.99639, 'cands': 159.07, 'recall': 0.9873}}
+20:51:17   top-200 by p0: {'US': {'oracle': 0.9969, 'cands': 196.29, 'recall': 0.98908}, 'India': {'oracle': 0.99565, 'cands': 199.73, 'recall': 0.98472}, 'all': {'oracle': 0.9964, 'cands': 197.66, 'recall': 0.98735}}
+20:51:17   chosen M per country = {'US': 30, 'India': 80} (guard: <= 0.0005 oracle loss vs raw union; unseen countries use the max)
+20:51:17 Stage 2: top-{'US': 30, 'India': 80} candidates + cheap features for 50,000 train S1
+20:51:19 country US: 29,815 S1 rows vs 6,186,873 right rows
+20:51:20   index A: 27,503,220 nnz, 0s
+20:51:20   index B: 6,528,833 nnz, 0s
+20:51:20   index D: 46,478,077 nnz, 0s
+20:51:20   index E: 9,542,853 nnz, 0s
+20:51:20   index P: 24,598,470 nnz, 0s
+20:51:20   index X: 9,404,828 nnz, 0s
+20:51:21   index N: 13,904,288 nnz, 0s
+20:51:21   index G: 5,271,993 nnz, 0s
+20:51:21   index W: 18,880,017 nnz, 0s
+20:52:25   reverse RA: 222,089 right rows -> 131,407 hits, 64s
+20:59:47   S1 20,000/29,815: raw 6,277,245 -> kept 599,823 pairs, 442s
+21:30:04 ==== step prov
+21:30:25 country US: 7,169 S1 rows vs 6,186,873 right rows
+21:30:25   index A: 27,503,220 nnz, 0s
+21:30:25   index B: 6,528,833 nnz, 0s
+21:30:26   index D: 46,478,077 nnz, 0s
+21:30:26   index E: 9,542,853 nnz, 0s
+21:30:26   index P: 24,598,470 nnz, 0s
+21:30:26   index X: 9,404,828 nnz, 0s
+21:30:26   index N: 13,904,288 nnz, 0s
+21:30:27   index G: 5,271,993 nnz, 0s
+21:30:27   index W: 18,880,017 nnz, 0s
+21:31:36   reverse RA: 222,089 right rows -> 32,131 hits, 69s
+21:34:18   S1 7,169/7,169: raw 2,264,534 -> kept 2,264,534 pairs, 161s
+21:34:20 country India: 4,831 S1 rows vs 4,133,346 right rows
+21:34:20   index A: 16,795,639 nnz, 0s
+21:34:20   index B: 5,262,656 nnz, 0s
+21:34:20   index D: 47,127,396 nnz, 0s
+21:34:20   index E: 23,489,361 nnz, 0s
+21:34:21   index P: 15,569,099 nnz, 0s
+21:34:21   index X: 3,652,719 nnz, 0s
+21:34:21   index N: 16,512,905 nnz, 0s
+21:34:21   index G: 3,666,996 nnz, 0s
+21:34:21   index W: 16,955,866 nnz, 0s
+21:34:46   reverse RA: 122,794 right rows -> 17,872 hits, 25s
+21:37:43   S1 4,831/4,831: raw 1,902,752 -> kept 1,902,752 pairs, 177s
+21:38:10   fold model 0: best_iter 60, valid logloss 0.01330
+21:38:34   fold model 1: best_iter 60, valid logloss 0.01252
+21:38:35 ==== step collect
+21:38:55 country US: 1,323,633 S1 rows vs 6,186,873 right rows
+21:38:55   index A: 27,503,220 nnz, 0s
+21:38:56   index B: 6,528,833 nnz, 0s
+21:38:56   index D: 46,478,077 nnz, 0s
+21:38:56   index E: 9,542,853 nnz, 0s
+21:38:56   index P: 24,598,470 nnz, 0s
+21:38:56   index X: 9,404,828 nnz, 0s
+21:38:57   index N: 13,904,288 nnz, 0s
+21:38:57   index G: 5,271,993 nnz, 0s
+21:38:57   index W: 18,880,017 nnz, 0s
+22:02:06 ==== step prov
+22:02:21 country US: 7,169 S1 rows vs 6,186,873 right rows
+22:02:21   index A: 27,503,220 nnz, 0s
+22:02:21   index B: 6,528,833 nnz, 0s
+22:02:21   index D: 46,478,077 nnz, 0s
+22:02:22   index E: 9,542,853 nnz, 0s
+22:02:22   index P: 24,598,470 nnz, 0s
+22:02:22   index X: 9,404,828 nnz, 0s
+22:02:22   index N: 13,904,288 nnz, 0s
+22:02:22   index G: 5,271,993 nnz, 0s
+22:02:22   index W: 18,880,017 nnz, 0s
+22:03:43   reverse RA: 222,089 right rows -> 31,922 hits, 81s
+22:04:03   signatures for US: 95 + 445 MB, 20s
+22:04:25   block 7,169/7,169: queries 21s
+22:04:33   S1 7,169/7,169: raw 2,308,417 -> kept 2,308,417 pairs, 9s
+22:04:35 country India: 4,831 S1 rows vs 4,133,346 right rows
+22:04:35   index A: 16,795,639 nnz, 0s
+22:04:35   index B: 5,262,656 nnz, 0s
+22:04:35   index D: 47,127,396 nnz, 0s
+22:04:36   index E: 23,489,361 nnz, 0s
+22:04:36   index P: 15,569,099 nnz, 0s
+22:04:36   index X: 3,652,719 nnz, 0s
+22:04:36   index N: 16,512,905 nnz, 0s
+22:04:36   index G: 3,666,996 nnz, 0s
+22:04:36   index W: 16,955,866 nnz, 0s
+22:04:54   reverse RA: 122,794 right rows -> 17,790 hits, 18s
+22:04:56   signatures for India: 64 + 298 MB, 1s
+22:05:09   block 4,831/4,831: queries 13s
+22:05:15   S1 4,831/4,831: raw 1,955,091 -> kept 1,955,091 pairs, 7s
+22:05:45   fold model 0: best_iter 60, valid logloss 0.01333
+22:06:10   fold model 1: best_iter 60, valid logloss 0.01337
+22:06:11 ==== step collect
+22:06:33 country US: 1,323,633 S1 rows vs 6,186,873 right rows
+22:06:33   index A: 27,503,220 nnz, 0s
+22:06:33   index B: 6,528,833 nnz, 0s
+22:06:33   index D: 46,478,077 nnz, 0s
+22:06:34   index E: 9,542,853 nnz, 0s
+22:06:34   index P: 24,598,470 nnz, 0s
+22:06:34   index X: 9,404,828 nnz, 0s
+22:06:34   index N: 13,904,288 nnz, 0s
+22:06:34   index G: 5,271,993 nnz, 0s
+22:06:34   index W: 18,880,017 nnz, 0s
+22:07:18   reverse RA: 222,089 right rows -> 5,858,135 hits, 44s
+22:07:20   signatures for US: 95 + 445 MB, 2s
+22:08:21   block 30,000/1,323,633: queries 61s
+22:09:28   S1 10,000/1,323,633: raw 3,219,930 -> kept 3,219,930 pairs, 68s
+22:09:52   S1 20,000/1,323,633: raw 3,221,202 -> kept 3,221,202 pairs, 23s
+22:10:17   S1 30,000/1,323,633: raw 3,222,160 -> kept 3,222,160 pairs, 25s
+22:11:08   block 60,000/1,323,633: queries 51s
+22:11:32   S1 40,000/1,323,633: raw 3,212,380 -> kept 3,212,380 pairs, 25s
+22:11:55   S1 50,000/1,323,633: raw 3,192,163 -> kept 3,192,163 pairs, 22s
+22:12:16   S1 60,000/1,323,633: raw 3,209,360 -> kept 3,209,360 pairs, 21s
+22:13:04   block 90,000/1,323,633: queries 49s
+22:13:30   S1 70,000/1,323,633: raw 3,218,918 -> kept 3,218,918 pairs, 25s
+22:13:50   S1 80,000/1,323,633: raw 3,210,833 -> kept 3,210,833 pairs, 21s
+22:14:12   S1 90,000/1,323,633: raw 3,204,554 -> kept 3,204,554 pairs, 21s
+22:15:01   block 120,000/1,323,633: queries 49s
+22:15:26   S1 100,000/1,323,633: raw 3,212,837 -> kept 3,212,837 pairs, 25s
+22:15:52   S1 110,000/1,323,633: raw 3,209,574 -> kept 3,209,574 pairs, 26s
+22:16:15   S1 120,000/1,323,633: raw 3,214,224 -> kept 3,214,224 pairs, 23s
+22:17:06   block 150,000/1,323,633: queries 51s
+22:17:31   S1 130,000/1,323,633: raw 3,218,181 -> kept 3,218,181 pairs, 25s
+22:17:59   S1 140,000/1,323,633: raw 3,217,530 -> kept 3,217,530 pairs, 27s
+22:18:32   S1 150,000/1,323,633: raw 3,211,521 -> kept 3,211,521 pairs, 33s
+22:19:30   block 180,000/1,323,633: queries 58s
+22:20:33   S1 160,000/1,323,633: raw 3,216,757 -> kept 3,216,757 pairs, 63s
+22:20:55   S1 170,000/1,323,633: raw 3,209,064 -> kept 3,209,064 pairs, 22s
+22:21:19   S1 180,000/1,323,633: raw 3,227,990 -> kept 3,227,990 pairs, 24s
+22:22:14   block 210,000/1,323,633: queries 54s
+22:22:37   S1 190,000/1,323,633: raw 3,213,756 -> kept 3,213,756 pairs, 23s
+22:22:58   S1 200,000/1,323,633: raw 3,204,383 -> kept 3,204,383 pairs, 21s
+22:23:25   S1 210,000/1,323,633: raw 3,206,355 -> kept 3,206,355 pairs, 27s
+22:24:17   block 240,000/1,323,633: queries 52s
+22:24:42   S1 220,000/1,323,633: raw 3,216,488 -> kept 3,216,488 pairs, 25s
+22:25:08   S1 230,000/1,323,633: raw 3,205,497 -> kept 3,205,497 pairs, 25s
+22:25:30   S1 240,000/1,323,633: raw 3,208,373 -> kept 3,208,373 pairs, 22s
+22:26:31   block 270,000/1,323,633: queries 61s
+22:27:01   S1 250,000/1,323,633: raw 3,222,958 -> kept 3,222,958 pairs, 31s
+22:27:27   S1 260,000/1,323,633: raw 3,201,405 -> kept 3,201,405 pairs, 25s
+22:27:52   S1 270,000/1,323,633: raw 3,204,475 -> kept 3,204,475 pairs, 26s
+22:29:20   block 300,000/1,323,633: queries 87s
+22:29:48   S1 280,000/1,323,633: raw 3,233,209 -> kept 3,233,209 pairs, 28s
+22:31:05   S1 290,000/1,323,633: raw 3,202,736 -> kept 3,202,736 pairs, 77s
+22:31:32   S1 300,000/1,323,633: raw 3,200,622 -> kept 3,200,622 pairs, 27s
+22:32:27   block 330,000/1,323,633: queries 55s
+22:32:52   S1 310,000/1,323,633: raw 3,208,129 -> kept 3,208,129 pairs, 25s
+22:33:15   S1 320,000/1,323,633: raw 3,210,131 -> kept 3,210,131 pairs, 23s
+22:33:39   S1 330,000/1,323,633: raw 3,222,897 -> kept 3,222,897 pairs, 24s
+22:34:35   block 360,000/1,323,633: queries 56s
+22:35:18   S1 340,000/1,323,633: raw 3,211,792 -> kept 3,211,792 pairs, 43s
+22:35:43   S1 350,000/1,323,633: raw 3,208,606 -> kept 3,208,606 pairs, 25s
+22:36:07   S1 360,000/1,323,633: raw 3,219,558 -> kept 3,219,558 pairs, 23s
+22:36:58   block 390,000/1,323,633: queries 52s
+22:37:25   S1 370,000/1,323,633: raw 3,211,211 -> kept 3,211,211 pairs, 27s
+22:37:52   S1 380,000/1,323,633: raw 3,214,385 -> kept 3,214,385 pairs, 27s
+22:38:21   S1 390,000/1,323,633: raw 3,208,698 -> kept 3,208,698 pairs, 29s
+22:39:21   block 420,000/1,323,633: queries 60s
+22:39:45   S1 400,000/1,323,633: raw 3,210,522 -> kept 3,210,522 pairs, 24s
+22:40:07   S1 410,000/1,323,633: raw 3,211,045 -> kept 3,211,045 pairs, 22s
+22:41:07   S1 420,000/1,323,633: raw 3,211,136 -> kept 3,211,136 pairs, 60s
+22:41:59   block 450,000/1,323,633: queries 52s
+22:42:24   S1 430,000/1,323,633: raw 3,203,877 -> kept 3,203,877 pairs, 25s
+22:42:49   S1 440,000/1,323,633: raw 3,205,389 -> kept 3,205,389 pairs, 25s
+22:43:22   S1 450,000/1,323,633: raw 3,203,019 -> kept 3,203,019 pairs, 32s
+22:44:21   block 480,000/1,323,633: queries 59s
+22:45:33   S1 460,000/1,323,633: raw 3,210,329 -> kept 3,210,329 pairs, 72s
+22:46:02   S1 470,000/1,323,633: raw 3,212,521 -> kept 3,212,521 pairs, 29s
+22:46:27   S1 480,000/1,323,633: raw 3,215,518 -> kept 3,215,518 pairs, 24s
+22:47:25   block 510,000/1,323,633: queries 59s
+22:48:37   S1 490,000/1,323,633: raw 3,227,893 -> kept 3,227,893 pairs, 72s
+22:49:07   S1 500,000/1,323,633: raw 3,217,177 -> kept 3,217,177 pairs, 30s
+22:49:33   S1 510,000/1,323,633: raw 3,209,071 -> kept 3,209,071 pairs, 26s
+22:50:30   block 540,000/1,323,633: queries 57s
+22:50:59   S1 520,000/1,323,633: raw 3,218,150 -> kept 3,218,150 pairs, 29s
+22:51:26   S1 530,000/1,323,633: raw 3,223,166 -> kept 3,223,166 pairs, 27s
+22:51:50   S1 540,000/1,323,633: raw 3,212,194 -> kept 3,212,194 pairs, 24s
+22:53:08   block 570,000/1,323,633: queries 78s
+22:53:45   S1 550,000/1,323,633: raw 3,212,091 -> kept 3,212,091 pairs, 36s
+22:54:30   S1 560,000/1,323,633: raw 3,206,784 -> kept 3,206,784 pairs, 46s
+22:55:13   S1 570,000/1,323,633: raw 3,208,532 -> kept 3,208,532 pairs, 43s
+22:56:35   block 600,000/1,323,633: queries 81s
+22:58:25   S1 580,000/1,323,633: raw 3,199,334 -> kept 3,199,334 pairs, 110s
+22:59:17   S1 590,000/1,323,633: raw 3,223,254 -> kept 3,223,254 pairs, 52s
+23:00:01   S1 600,000/1,323,633: raw 3,213,196 -> kept 3,213,196 pairs, 44s
+23:01:21   block 630,000/1,323,633: queries 81s
+23:02:14   S1 610,000/1,323,633: raw 3,232,852 -> kept 3,232,852 pairs, 52s
+23:03:33   S1 620,000/1,323,633: raw 3,206,154 -> kept 3,206,154 pairs, 79s
+23:04:15   S1 630,000/1,323,633: raw 3,202,608 -> kept 3,202,608 pairs, 42s
+23:05:40   block 660,000/1,323,633: queries 85s
+23:06:44   S1 640,000/1,323,633: raw 3,201,096 -> kept 3,201,096 pairs, 63s
+23:07:20   S1 650,000/1,323,633: raw 3,204,909 -> kept 3,204,909 pairs, 37s
+23:07:52   S1 660,000/1,323,633: raw 3,215,130 -> kept 3,215,130 pairs, 31s
+23:08:56   block 690,000/1,323,633: queries 65s
+23:09:36   S1 670,000/1,323,633: raw 3,209,539 -> kept 3,209,539 pairs, 40s
+23:10:11   S1 680,000/1,323,633: raw 3,207,896 -> kept 3,207,896 pairs, 35s
+23:10:47   S1 690,000/1,323,633: raw 3,216,126 -> kept 3,216,126 pairs, 36s
+23:11:56   block 720,000/1,323,633: queries 69s
+23:12:24   S1 700,000/1,323,633: raw 3,212,588 -> kept 3,212,588 pairs, 28s
+23:12:45   S1 710,000/1,323,633: raw 3,220,297 -> kept 3,220,297 pairs, 21s
+23:13:37   S1 720,000/1,323,633: raw 3,206,413 -> kept 3,206,413 pairs, 52s
+23:14:26   block 750,000/1,323,633: queries 48s
+23:14:52   S1 730,000/1,323,633: raw 3,204,626 -> kept 3,204,626 pairs, 26s
+23:15:14   S1 740,000/1,323,633: raw 3,210,417 -> kept 3,210,417 pairs, 22s
+23:15:39   S1 750,000/1,323,633: raw 3,223,598 -> kept 3,223,598 pairs, 25s
+23:16:33   block 780,000/1,323,633: queries 54s
+23:17:30   S1 760,000/1,323,633: raw 3,199,800 -> kept 3,199,800 pairs, 57s
+23:17:52   S1 770,000/1,323,633: raw 3,199,166 -> kept 3,199,166 pairs, 23s
+23:18:14   S1 780,000/1,323,633: raw 3,227,080 -> kept 3,227,080 pairs, 22s
+23:19:02   block 810,000/1,323,633: queries 47s
+23:19:24   S1 790,000/1,323,633: raw 3,227,599 -> kept 3,227,599 pairs, 23s
+23:19:47   S1 800,000/1,323,633: raw 3,223,901 -> kept 3,223,901 pairs, 23s
+23:20:13   S1 810,000/1,323,633: raw 3,213,983 -> kept 3,213,983 pairs, 25s
+23:21:24   block 840,000/1,323,633: queries 72s
+23:21:48   S1 820,000/1,323,633: raw 3,213,563 -> kept 3,213,563 pairs, 24s
+23:22:49   S1 830,000/1,323,633: raw 3,207,536 -> kept 3,207,536 pairs, 61s
+23:23:20   S1 840,000/1,323,633: raw 3,193,102 -> kept 3,193,102 pairs, 31s
+23:24:19   block 870,000/1,323,633: queries 58s
+23:24:49   S1 850,000/1,323,633: raw 3,228,376 -> kept 3,228,376 pairs, 30s
+23:25:27   S1 860,000/1,323,633: raw 3,200,534 -> kept 3,200,534 pairs, 39s
+23:25:52   S1 870,000/1,323,633: raw 3,228,771 -> kept 3,228,771 pairs, 25s
+23:26:50   block 900,000/1,323,633: queries 58s
+23:27:21   S1 880,000/1,323,633: raw 3,208,333 -> kept 3,208,333 pairs, 31s
+23:27:45   S1 890,000/1,323,633: raw 3,209,108 -> kept 3,209,108 pairs, 24s
+09:03:26 ==== step collect_resume  (disk free 94.5 GB)
+09:03:41 collect resume: keeping 89 finished chunks (890,000 S1), 1,316,821 S1 to go
+09:03:42 country US: 433,633 S1 rows vs 6,186,873 right rows
+09:03:42   index A: 27,503,220 nnz, 0s
+09:03:43   index B: 6,528,833 nnz, 0s
+09:03:43   index D: 46,478,077 nnz, 0s
+09:03:43   index E: 9,542,853 nnz, 0s
+09:03:43   index P: 24,598,470 nnz, 0s
+09:03:43   index X: 9,404,828 nnz, 0s
+09:03:44   index N: 13,904,288 nnz, 0s
+09:03:44   index G: 5,271,993 nnz, 0s
+09:03:44   index W: 18,880,017 nnz, 0s
+09:04:21   reverse RA: 222,089 right rows -> 1,979,447 hits, 37s
+09:04:23   signatures for US: 95 + 445 MB, 2s
+09:05:18   block 30,000/433,633: queries 56s
+09:06:41   S1 10,000/433,633: raw 3,208,895 -> kept 3,208,895 pairs, 82s
+09:07:09   S1 20,000/433,633: raw 3,216,849 -> kept 3,216,849 pairs, 28s
+09:07:31   S1 30,000/433,633: raw 3,217,683 -> kept 3,217,683 pairs, 22s
+09:08:20   block 60,000/433,633: queries 49s
+09:08:43   S1 40,000/433,633: raw 3,198,355 -> kept 3,198,355 pairs, 23s
+09:09:05   S1 50,000/433,633: raw 3,225,922 -> kept 3,225,922 pairs, 22s
+09:09:27   S1 60,000/433,633: raw 3,206,686 -> kept 3,206,686 pairs, 22s
+09:10:15   block 90,000/433,633: queries 48s
+09:10:37   S1 70,000/433,633: raw 3,194,523 -> kept 3,194,523 pairs, 22s
+09:10:59   S1 80,000/433,633: raw 3,204,023 -> kept 3,204,023 pairs, 22s
+09:11:21   S1 90,000/433,633: raw 3,211,421 -> kept 3,211,421 pairs, 22s
+09:12:08   block 120,000/433,633: queries 47s
+09:12:30   S1 100,000/433,633: raw 3,208,794 -> kept 3,208,794 pairs, 22s
+09:12:53   S1 110,000/433,633: raw 3,220,877 -> kept 3,220,877 pairs, 22s
+09:13:15   S1 120,000/433,633: raw 3,215,231 -> kept 3,215,231 pairs, 23s
+09:14:04   block 150,000/433,633: queries 49s
+09:14:27   S1 130,000/433,633: raw 3,212,952 -> kept 3,212,952 pairs, 23s
+09:14:50   S1 140,000/433,633: raw 3,223,282 -> kept 3,223,282 pairs, 23s
+09:15:12   S1 150,000/433,633: raw 3,202,865 -> kept 3,202,865 pairs, 22s
+09:15:59   block 180,000/433,633: queries 47s
+09:16:21   S1 160,000/433,633: raw 3,213,610 -> kept 3,213,610 pairs, 22s
+09:16:43   S1 170,000/433,633: raw 3,211,555 -> kept 3,211,555 pairs, 22s
+09:17:07   S1 180,000/433,633: raw 3,218,090 -> kept 3,218,090 pairs, 24s
+09:17:54   block 210,000/433,633: queries 47s
+09:18:17   S1 190,000/433,633: raw 3,225,302 -> kept 3,225,302 pairs, 23s
+09:18:40   S1 200,000/433,633: raw 3,213,042 -> kept 3,213,042 pairs, 22s
+09:19:02   S1 210,000/433,633: raw 3,207,352 -> kept 3,207,352 pairs, 22s
+09:19:48   block 240,000/433,633: queries 46s
+09:20:10   S1 220,000/433,633: raw 3,215,882 -> kept 3,215,882 pairs, 22s
+09:20:31   S1 230,000/433,633: raw 3,214,105 -> kept 3,214,105 pairs, 22s
+09:20:53   S1 240,000/433,633: raw 3,203,998 -> kept 3,203,998 pairs, 22s
+09:21:39   block 270,000/433,633: queries 46s
+09:22:01   S1 250,000/433,633: raw 3,186,720 -> kept 3,186,720 pairs, 22s
+09:22:23   S1 260,000/433,633: raw 3,218,285 -> kept 3,218,285 pairs, 22s
+09:22:45   S1 270,000/433,633: raw 3,234,600 -> kept 3,234,600 pairs, 22s
+09:23:31   block 300,000/433,633: queries 46s
+09:23:53   S1 280,000/433,633: raw 3,241,416 -> kept 3,241,416 pairs, 22s
+09:24:15   S1 290,000/433,633: raw 3,226,468 -> kept 3,226,468 pairs, 22s
+09:24:36   S1 300,000/433,633: raw 3,216,857 -> kept 3,216,857 pairs, 22s
+09:25:22   block 330,000/433,633: queries 46s
+09:25:45   S1 310,000/433,633: raw 3,230,528 -> kept 3,230,528 pairs, 23s
+09:26:07   S1 320,000/433,633: raw 3,205,068 -> kept 3,205,068 pairs, 23s
+09:26:30   S1 330,000/433,633: raw 3,210,022 -> kept 3,210,022 pairs, 22s
+09:27:17   block 360,000/433,633: queries 47s
+09:27:40   S1 340,000/433,633: raw 3,220,206 -> kept 3,220,206 pairs, 23s
+09:28:02   S1 350,000/433,633: raw 3,208,448 -> kept 3,208,448 pairs, 22s
+09:28:24   S1 360,000/433,633: raw 3,228,782 -> kept 3,228,782 pairs, 21s
+09:29:12   block 390,000/433,633: queries 48s
+09:29:35   S1 370,000/433,633: raw 3,215,533 -> kept 3,215,533 pairs, 23s
+09:29:57   S1 380,000/433,633: raw 3,199,661 -> kept 3,199,661 pairs, 22s
+09:30:18   S1 390,000/433,633: raw 3,206,081 -> kept 3,206,081 pairs, 21s
+09:31:05   block 420,000/433,633: queries 47s
+09:31:27   S1 400,000/433,633: raw 3,213,526 -> kept 3,213,526 pairs, 22s
+09:31:49   S1 410,000/433,633: raw 3,226,054 -> kept 3,226,054 pairs, 22s
+09:32:11   S1 420,000/433,633: raw 3,214,943 -> kept 3,214,943 pairs, 22s
+09:32:34   block 433,633/433,633: queries 22s
+09:32:56   S1 430,000/433,633: raw 3,221,056 -> kept 3,221,056 pairs, 22s
+09:33:04   S1 433,633/433,633: raw 1,172,276 -> kept 1,172,276 pairs, 8s
+09:33:07 country India: 883,188 S1 rows vs 4,133,346 right rows
+09:33:07   index A: 16,795,639 nnz, 0s
+09:33:07   index B: 5,262,656 nnz, 0s
+09:33:07   index D: 47,127,396 nnz, 0s
+09:33:08   index E: 23,489,361 nnz, 0s
+09:33:08   index P: 15,569,099 nnz, 0s
+09:33:08   index X: 3,652,719 nnz, 0s
+09:33:08   index N: 16,512,905 nnz, 0s
+09:33:08   index G: 3,666,996 nnz, 0s
+09:33:09   index W: 16,955,866 nnz, 0s
+09:33:22   reverse RA: 122,794 right rows -> 3,097,029 hits, 14s
+09:33:23   signatures for India: 64 + 298 MB, 1s
+09:34:10   block 30,000/883,188: queries 47s
+09:34:42   S1 10,000/883,188: raw 4,048,358 -> kept 4,048,358 pairs, 32s
+09:35:13   S1 20,000/883,188: raw 4,044,484 -> kept 4,044,484 pairs, 30s
+09:35:43   S1 30,000/883,188: raw 4,047,226 -> kept 4,047,226 pairs, 30s
+09:36:27   block 60,000/883,188: queries 44s
+09:37:02   S1 40,000/883,188: raw 4,046,359 -> kept 4,046,359 pairs, 35s
+09:37:32   S1 50,000/883,188: raw 4,052,895 -> kept 4,052,895 pairs, 30s
+09:38:02   S1 60,000/883,188: raw 4,048,948 -> kept 4,048,948 pairs, 30s
+09:38:46   block 90,000/883,188: queries 44s
+09:39:41   S1 70,000/883,188: raw 4,032,310 -> kept 4,032,310 pairs, 55s
+09:40:12   S1 80,000/883,188: raw 4,046,183 -> kept 4,046,183 pairs, 31s
+09:40:43   S1 90,000/883,188: raw 4,049,052 -> kept 4,049,052 pairs, 31s
+09:41:26   block 120,000/883,188: queries 43s
+09:41:58   S1 100,000/883,188: raw 4,047,162 -> kept 4,047,162 pairs, 32s
+09:42:29   S1 110,000/883,188: raw 4,036,823 -> kept 4,036,823 pairs, 31s
+09:43:00   S1 120,000/883,188: raw 4,045,712 -> kept 4,045,712 pairs, 31s
+09:43:45   block 150,000/883,188: queries 45s
+09:44:18   S1 130,000/883,188: raw 4,059,191 -> kept 4,059,191 pairs, 33s
+09:44:52   S1 140,000/883,188: raw 4,053,155 -> kept 4,053,155 pairs, 33s
+09:45:23   S1 150,000/883,188: raw 4,054,275 -> kept 4,054,275 pairs, 32s
+09:46:35   block 180,000/883,188: queries 72s
+09:47:09   S1 160,000/883,188: raw 4,034,166 -> kept 4,034,166 pairs, 33s
+09:47:41   S1 170,000/883,188: raw 4,048,995 -> kept 4,048,995 pairs, 33s
+09:48:13   S1 180,000/883,188: raw 4,047,533 -> kept 4,047,533 pairs, 31s
+09:48:57   block 210,000/883,188: queries 44s
+09:49:29   S1 190,000/883,188: raw 4,035,420 -> kept 4,035,420 pairs, 32s
+09:50:01   S1 200,000/883,188: raw 4,054,360 -> kept 4,054,360 pairs, 32s
+09:50:33   S1 210,000/883,188: raw 4,044,809 -> kept 4,044,809 pairs, 32s
+09:51:16   block 240,000/883,188: queries 43s
+09:51:48   S1 220,000/883,188: raw 4,040,813 -> kept 4,040,813 pairs, 32s
+09:52:20   S1 230,000/883,188: raw 4,036,653 -> kept 4,036,653 pairs, 31s
+09:52:52   S1 240,000/883,188: raw 4,039,363 -> kept 4,039,363 pairs, 32s
+09:53:35   block 270,000/883,188: queries 43s
+09:54:07   S1 250,000/883,188: raw 4,049,646 -> kept 4,049,646 pairs, 32s
+09:54:38   S1 260,000/883,188: raw 4,048,721 -> kept 4,048,721 pairs, 31s
+09:55:10   S1 270,000/883,188: raw 4,048,961 -> kept 4,048,961 pairs, 32s
+09:55:54   block 300,000/883,188: queries 44s
+09:56:29   S1 280,000/883,188: raw 4,062,026 -> kept 4,062,026 pairs, 35s
+09:57:03   S1 290,000/883,188: raw 4,042,760 -> kept 4,042,760 pairs, 34s
+09:57:34   S1 300,000/883,188: raw 4,065,860 -> kept 4,065,860 pairs, 31s
+09:58:19   block 330,000/883,188: queries 44s
+09:58:51   S1 310,000/883,188: raw 4,045,437 -> kept 4,045,437 pairs, 32s
+09:59:22   S1 320,000/883,188: raw 4,056,603 -> kept 4,056,603 pairs, 32s
+09:59:53   S1 330,000/883,188: raw 4,040,115 -> kept 4,040,115 pairs, 31s
+10:00:36   block 360,000/883,188: queries 43s
+10:01:10   S1 340,000/883,188: raw 4,046,574 -> kept 4,046,574 pairs, 34s
+10:01:42   S1 350,000/883,188: raw 4,044,961 -> kept 4,044,961 pairs, 32s
+10:02:15   S1 360,000/883,188: raw 4,047,426 -> kept 4,047,426 pairs, 33s
+10:03:00   block 390,000/883,188: queries 45s
+10:03:33   S1 370,000/883,188: raw 4,067,986 -> kept 4,067,986 pairs, 33s
+10:04:04   S1 380,000/883,188: raw 4,045,474 -> kept 4,045,474 pairs, 32s
+10:04:36   S1 390,000/883,188: raw 4,057,693 -> kept 4,057,693 pairs, 32s
+10:05:21   block 420,000/883,188: queries 44s
+10:05:53   S1 400,000/883,188: raw 4,044,300 -> kept 4,044,300 pairs, 32s
+10:06:27   S1 410,000/883,188: raw 4,048,385 -> kept 4,048,385 pairs, 34s
+10:06:59   S1 420,000/883,188: raw 4,047,398 -> kept 4,047,398 pairs, 32s
+10:07:44   block 450,000/883,188: queries 45s
+10:08:16   S1 430,000/883,188: raw 4,057,681 -> kept 4,057,681 pairs, 32s
+10:08:46   S1 440,000/883,188: raw 4,038,040 -> kept 4,038,040 pairs, 30s
+10:09:16   S1 450,000/883,188: raw 4,048,005 -> kept 4,048,005 pairs, 30s
+10:09:59   block 480,000/883,188: queries 43s
+10:10:29   S1 460,000/883,188: raw 4,061,604 -> kept 4,061,604 pairs, 30s
+10:11:01   S1 470,000/883,188: raw 4,051,867 -> kept 4,051,867 pairs, 31s
+10:11:33   S1 480,000/883,188: raw 4,043,242 -> kept 4,043,242 pairs, 32s
+10:12:18   block 510,000/883,188: queries 45s
+10:12:51   S1 490,000/883,188: raw 4,043,560 -> kept 4,043,560 pairs, 32s
+10:13:21   S1 500,000/883,188: raw 4,043,508 -> kept 4,043,508 pairs, 31s
+10:13:52   S1 510,000/883,188: raw 4,048,907 -> kept 4,048,907 pairs, 31s
+10:14:37   block 540,000/883,188: queries 44s
+10:15:08   S1 520,000/883,188: raw 4,049,700 -> kept 4,049,700 pairs, 31s
+10:15:42   S1 530,000/883,188: raw 4,051,032 -> kept 4,051,032 pairs, 34s
+10:16:14   S1 540,000/883,188: raw 4,060,024 -> kept 4,060,024 pairs, 32s
+10:16:58   block 570,000/883,188: queries 44s
+10:17:31   S1 550,000/883,188: raw 4,043,685 -> kept 4,043,685 pairs, 32s
+10:18:02   S1 560,000/883,188: raw 4,057,118 -> kept 4,057,118 pairs, 31s
+10:18:33   S1 570,000/883,188: raw 4,044,716 -> kept 4,044,716 pairs, 31s
+10:19:16   block 600,000/883,188: queries 43s
+10:19:48   S1 580,000/883,188: raw 4,047,320 -> kept 4,047,320 pairs, 32s
+10:20:21   S1 590,000/883,188: raw 4,050,504 -> kept 4,050,504 pairs, 33s
+10:20:54   S1 600,000/883,188: raw 4,048,048 -> kept 4,048,048 pairs, 32s
+10:21:40   block 630,000/883,188: queries 46s
+10:22:13   S1 610,000/883,188: raw 4,040,135 -> kept 4,040,135 pairs, 33s
+10:22:44   S1 620,000/883,188: raw 4,043,154 -> kept 4,043,154 pairs, 32s
+10:23:16   S1 630,000/883,188: raw 4,054,381 -> kept 4,054,381 pairs, 32s
+10:23:59   block 660,000/883,188: queries 43s
+10:24:30   S1 640,000/883,188: raw 4,056,393 -> kept 4,056,393 pairs, 31s
+10:25:12   S1 650,000/883,188: raw 4,050,345 -> kept 4,050,345 pairs, 42s
+10:25:58   S1 660,000/883,188: raw 4,047,172 -> kept 4,047,172 pairs, 46s
+10:26:41   block 690,000/883,188: queries 43s
+10:27:13   S1 670,000/883,188: raw 4,044,336 -> kept 4,044,336 pairs, 32s
+10:27:44   S1 680,000/883,188: raw 4,059,952 -> kept 4,059,952 pairs, 31s
+10:28:17   S1 690,000/883,188: raw 4,052,054 -> kept 4,052,054 pairs, 32s
+10:29:02   block 720,000/883,188: queries 45s
+10:29:36   S1 700,000/883,188: raw 4,043,071 -> kept 4,043,071 pairs, 34s
+10:30:09   S1 710,000/883,188: raw 4,052,614 -> kept 4,052,614 pairs, 33s
+10:30:41   S1 720,000/883,188: raw 4,044,892 -> kept 4,044,892 pairs, 31s
+10:31:24   block 750,000/883,188: queries 44s
+10:32:25   S1 730,000/883,188: raw 4,058,585 -> kept 4,058,585 pairs, 60s
+10:32:58   S1 740,000/883,188: raw 4,048,197 -> kept 4,048,197 pairs, 33s
+10:33:31   S1 750,000/883,188: raw 4,042,274 -> kept 4,042,274 pairs, 33s
+10:34:18   block 780,000/883,188: queries 47s
+10:34:52   S1 760,000/883,188: raw 4,049,841 -> kept 4,049,841 pairs, 35s
+10:35:39   S1 770,000/883,188: raw 4,050,177 -> kept 4,050,177 pairs, 46s
+10:36:29   S1 780,000/883,188: raw 4,047,710 -> kept 4,047,710 pairs, 51s
+10:37:29   block 810,000/883,188: queries 60s
+10:38:06   S1 790,000/883,188: raw 4,055,108 -> kept 4,055,108 pairs, 37s
+10:38:50   S1 800,000/883,188: raw 4,052,832 -> kept 4,052,832 pairs, 44s
+10:39:23   S1 810,000/883,188: raw 4,055,881 -> kept 4,055,881 pairs, 34s
+10:40:56   block 840,000/883,188: queries 92s
+10:41:30   S1 820,000/883,188: raw 4,049,457 -> kept 4,049,457 pairs, 35s
+10:42:02   S1 830,000/883,188: raw 4,046,048 -> kept 4,046,048 pairs, 32s
+10:42:36   S1 840,000/883,188: raw 4,056,954 -> kept 4,056,954 pairs, 34s
+10:43:23   block 870,000/883,188: queries 47s
+10:57:13 ==== step collect_resume  (disk free 93.7 GB)
+11:16:04 ==== step collect_resume  (disk free 93.7 GB)
+11:16:52 collect resume: keeping 217 finished chunks (2,163,633 S1), 43,188 S1 to go
+11:16:54 country India: 43,188 S1 rows vs 4,133,346 right rows
+11:16:54   index A: 16,795,639 nnz, 0s
+11:16:54   index B: 5,262,656 nnz, 0s
+11:16:54   index D: 47,127,396 nnz, 0s
+11:16:55   index E: 23,489,361 nnz, 0s
+11:16:55   index P: 15,569,099 nnz, 0s
+11:16:55   index X: 3,652,719 nnz, 0s
+11:16:55   index N: 16,512,905 nnz, 0s
+11:16:55   index G: 3,666,996 nnz, 0s
+11:16:56   index W: 16,955,866 nnz, 0s
+11:17:13   reverse RA: 122,794 right rows -> 154,094 hits, 18s
+11:17:15   signatures for India: 64 + 298 MB, 1s
+11:18:17   block 30,000/43,188: queries 63s
+11:19:47   S1 10,000/43,188: raw 4,050,384 -> kept 4,050,384 pairs, 90s
+11:20:26   S1 20,000/43,188: raw 4,054,356 -> kept 4,054,356 pairs, 39s
+11:20:59   S1 30,000/43,188: raw 4,058,901 -> kept 4,058,901 pairs, 33s
+11:21:26   block 43,188/43,188: queries 28s
+11:22:03   S1 40,000/43,188: raw 4,062,188 -> kept 4,062,188 pairs, 36s
+11:22:14   S1 43,188/43,188: raw 1,302,710 -> kept 1,302,710 pairs, 11s
+11:22:15 collect: 222 Stage-1.5 parts, 222 Stage-2 parts
+11:22:15 ==== step fit12  (disk free 93.6 GB)
+11:26:57 Stage 1.5 sample: 32,340,362 rows (7,547,170 positives) from all labelled S1
+11:52:55   Stage 1.5: best iters [300, 300]; rows 21,345,631 / 10,994,731; 1558s
+11:54:11   eval-list raw union: {'US': {'oracle': 0.99699, 'cands': 322.2, 'recall': 0.99059}, 'India': {'oracle': 0.9961, 'cands': 405.66, 'recall': 0.98564}, 'all': {'oracle': 0.99664, 'cands': 355.03, 'recall': 0.98865}}
+11:54:18   top-20 by Stage 1.5: {'US': {'oracle': 0.99671, 'cands': 20.0, 'recall': 0.9894}, 'India': {'oracle': 0.99496, 'cands': 20.0, 'recall': 0.98172}, 'all': {'oracle': 0.99602, 'cands': 20.0, 'recall': 0.98638}}
+11:54:25   top-30 by Stage 1.5: {'US': {'oracle': 0.9969, 'cands': 30.0, 'recall': 0.99014}, 'India': {'oracle': 0.99552, 'cands': 30.0, 'recall': 0.98374}, 'all': {'oracle': 0.99635, 'cands': 30.0, 'recall': 0.98762}}
+11:54:32   top-40 by Stage 1.5: {'US': {'oracle': 0.99693, 'cands': 39.98, 'recall': 0.99034}, 'India': {'oracle': 0.99576, 'cands': 40.0, 'recall': 0.98457}, 'all': {'oracle': 0.99647, 'cands': 39.99, 'recall': 0.98807}}
+11:54:39   top-60 by Stage 1.5: {'US': {'oracle': 0.99697, 'cands': 59.93, 'recall': 0.99053}, 'India': {'oracle': 0.9959, 'cands': 60.0, 'recall': 0.98513}, 'all': {'oracle': 0.99655, 'cands': 59.96, 'recall': 0.98841}}
+11:54:47   top-80 by Stage 1.5: {'US': {'oracle': 0.99697, 'cands': 79.83, 'recall': 0.99056}, 'India': {'oracle': 0.99595, 'cands': 79.99, 'recall': 0.98533}, 'all': {'oracle': 0.99657, 'cands': 79.9, 'recall': 0.98851}}
+11:54:54   top-120 by Stage 1.5: {'US': {'oracle': 0.99698, 'cands': 119.5, 'recall': 0.99058}, 'India': {'oracle': 0.9961, 'cands': 119.97, 'recall': 0.98559}, 'all': {'oracle': 0.99663, 'cands': 119.68, 'recall': 0.98862}}
+11:55:01   top-160 by Stage 1.5: {'US': {'oracle': 0.99698, 'cands': 158.73, 'recall': 0.99058}, 'India': {'oracle': 0.9961, 'cands': 159.89, 'recall': 0.98559}, 'all': {'oracle': 0.99663, 'cands': 159.19, 'recall': 0.98862}}
+11:55:01   chosen M per country = {'US': 20, 'India': 40} (<= 0.0005 oracle loss; unseen countries use the max)
+11:55:42   eval-list top-M: {'US': {'oracle': 0.99671, 'cands': 20.0, 'recall': 0.9894}, 'India': {'oracle': 0.99576, 'cands': 40.0, 'recall': 0.98457}, 'all': {'oracle': 0.99633, 'cands': 27.87, 'recall': 0.9875}}
+11:57:15 Stage 2 sample: 10,910,763 rows (7,547,170 positives)
+12:16:00   Stage 2: best iters [500, 500]; rows 5,456,770 / 5,453,993; 1125s
+12:16:32   prune {'budget': 8, 'tau': None, 'oracle': 0.9947, 'cands': 8.0, 'recall': 0.97997, 'US': 0.99553, 'India': 0.99343}
+12:16:32   prune {'budget': 8, 'tau': 0.0005, 'oracle': 0.99468, 'cands': 7.56, 'recall': 0.97991, 'US': 0.9955, 'India': 0.99342}
+12:16:32   prune {'budget': 8, 'tau': 0.001, 'oracle': 0.99466, 'cands': 7.18, 'recall': 0.97982, 'US': 0.99549, 'India': 0.99339}
+12:16:32   prune {'budget': 8, 'tau': 0.003, 'oracle': 0.99443, 'cands': 6.55, 'recall': 0.97927, 'US': 0.99526, 'India': 0.99314}
+12:16:32   prune {'budget': 8, 'tau': 0.01, 'oracle': 0.99384, 'cands': 5.84, 'recall': 0.97766, 'US': 0.99477, 'India': 0.99242}
+12:16:32   prune {'budget': 10, 'tau': None, 'oracle': 0.9956, 'cands': 10.0, 'recall': 0.98419, 'US': 0.99624, 'India': 0.99462}
+12:16:32   prune {'budget': 10, 'tau': 0.0005, 'oracle': 0.99558, 'cands': 9.01, 'recall': 0.98412, 'US': 0.99622, 'India': 0.9946}
+12:16:32   prune {'budget': 10, 'tau': 0.001, 'oracle': 0.99552, 'cands': 8.3, 'recall': 0.98396, 'US': 0.9962, 'India': 0.99448}
+12:16:32   prune {'budget': 10, 'tau': 0.003, 'oracle': 0.99523, 'cands': 7.28, 'recall': 0.9832, 'US': 0.99594, 'India': 0.99415}
+12:16:32   prune {'budget': 10, 'tau': 0.01, 'oracle': 0.99444, 'cands': 6.22, 'recall': 0.98093, 'US': 0.99528, 'India': 0.99315}
+12:16:32   prune {'budget': 12, 'tau': None, 'oracle': 0.99595, 'cands': 12.0, 'recall': 0.98579, 'US': 0.99649, 'India': 0.99512}
+12:16:32   prune {'budget': 12, 'tau': 0.0005, 'oracle': 0.99589, 'cands': 10.19, 'recall': 0.98567, 'US': 0.99646, 'India': 0.99501}
+12:16:32   prune {'budget': 12, 'tau': 0.001, 'oracle': 0.99582, 'cands': 9.12, 'recall': 0.98547, 'US': 0.99643, 'India': 0.99487}
+12:16:32   prune {'budget': 12, 'tau': 0.003, 'oracle': 0.99549, 'cands': 7.76, 'recall': 0.98455, 'US': 0.99616, 'India': 0.99448}
+12:16:32   prune {'budget': 12, 'tau': 0.01, 'oracle': 0.99457, 'cands': 6.42, 'recall': 0.98168, 'US': 0.99537, 'India': 0.99335}
+12:16:32   prune {'budget': 15, 'tau': None, 'oracle': 0.99617, 'cands': 15.0, 'recall': 0.98679, 'US': 0.99665, 'India': 0.99543}
+12:16:32   prune {'budget': 15, 'tau': 0.0005, 'oracle': 0.9961, 'cands': 11.51, 'recall': 0.98662, 'US': 0.99662, 'India': 0.99529}
+12:16:32   prune {'budget': 15, 'tau': 0.001, 'oracle': 0.99601, 'cands': 9.94, 'recall': 0.98634, 'US': 0.99658, 'India': 0.99513}
+12:16:32   prune {'budget': 15, 'tau': 0.003, 'oracle': 0.99567, 'cands': 8.18, 'recall': 0.98532, 'US': 0.99629, 'India': 0.9947}
+12:16:32   prune {'budget': 15, 'tau': 0.01, 'oracle': 0.99465, 'cands': 6.54, 'recall': 0.98196, 'US': 0.99542, 'India': 0.99346}
+12:16:32   prune {'budget': 20, 'tau': None, 'oracle': 0.99629, 'cands': 20.0, 'recall': 0.98731, 'US': 0.99671, 'India': 0.99564}
+12:16:32   prune {'budget': 20, 'tau': 0.0005, 'oracle': 0.99621, 'cands': 12.69, 'recall': 0.98709, 'US': 0.99667, 'India': 0.99549}
+12:16:32   prune {'budget': 20, 'tau': 0.001, 'oracle': 0.99611, 'cands': 10.59, 'recall': 0.98679, 'US': 0.99663, 'India': 0.99531}
+12:16:32   prune {'budget': 20, 'tau': 0.003, 'oracle': 0.99574, 'cands': 8.47, 'recall': 0.98568, 'US': 0.99633, 'India': 0.99484}
+12:16:32   prune {'budget': 20, 'tau': 0.01, 'oracle': 0.99467, 'cands': 6.6, 'recall': 0.98203, 'US': 0.99542, 'India': 0.9935}
+12:16:32   prune {'budget': 30, 'tau': None, 'oracle': 0.99632, 'cands': 23.93, 'recall': 0.98745, 'US': 0.99671, 'India': 0.99573}
+12:16:32   prune {'budget': 30, 'tau': 0.0005, 'oracle': 0.99623, 'cands': 13.29, 'recall': 0.98716, 'US': 0.99667, 'India': 0.99554}
+12:16:32   prune {'budget': 30, 'tau': 0.001, 'oracle': 0.99613, 'cands': 10.89, 'recall': 0.98686, 'US': 0.99663, 'India': 0.99535}
+12:16:32   prune {'budget': 30, 'tau': 0.003, 'oracle': 0.99576, 'cands': 8.56, 'recall': 0.98573, 'US': 0.99633, 'India': 0.99486}
+12:16:32   prune {'budget': 30, 'tau': 0.01, 'oracle': 0.99467, 'cands': 6.61, 'recall': 0.98204, 'US': 0.99542, 'India': 0.99351}
+12:16:32   prune {'budget': None, 'tau': None, 'oracle': 0.99633, 'cands': 27.87, 'recall': 0.9875, 'US': 0.99671, 'India': 0.99576}
+12:16:32   prune {'budget': None, 'tau': 0.0005, 'oracle': 0.99623, 'cands': 13.42, 'recall': 0.98717, 'US': 0.99667, 'India': 0.99554}
+12:16:32   prune {'budget': None, 'tau': 0.001, 'oracle': 0.99613, 'cands': 10.95, 'recall': 0.98686, 'US': 0.99663, 'India': 0.99535}
+12:16:32   prune {'budget': None, 'tau': 0.003, 'oracle': 0.99576, 'cands': 8.58, 'recall': 0.98573, 'US': 0.99633, 'India': 0.99486}
+12:16:32   prune {'budget': None, 'tau': 0.01, 'oracle': 0.99467, 'cands': 6.62, 'recall': 0.98204, 'US': 0.99542, 'India': 0.99351}
+12:16:32   chosen Stage-2 pruning (<= 0.0005 oracle loss vs top-M): {'budget': 15, 'tau': 0.001, 'oracle': 0.99601, 'cands': 9.94, 'recall': 0.98634, 'US': 0.99658, 'India': 0.99513}
+12:16:34 ==== step cands_train  (disk free 95.0 GB)
+12:16:55 country US: 1,323,633 S1 rows vs 6,186,873 right rows
+12:16:55   index A: 27,503,220 nnz, 0s
+12:16:56   index B: 6,528,833 nnz, 0s
+12:16:56   index D: 46,478,077 nnz, 0s
+12:16:56   index E: 9,542,853 nnz, 0s
+12:16:56   index P: 24,598,470 nnz, 0s
+12:16:57   index X: 9,404,828 nnz, 0s
+12:16:57   index N: 13,904,288 nnz, 0s
+12:16:57   index G: 5,271,993 nnz, 0s
+12:16:58   index W: 18,880,017 nnz, 0s
+12:17:33   reverse RA: 222,089 right rows -> 5,858,135 hits, 35s
+12:17:35   signatures for US: 95 + 445 MB, 2s
+12:18:33   block 30,000/1,323,633: queries 58s
+12:20:06   S1 10,000/1,323,633: raw 3,219,930 -> kept 3,219,930 pairs, 93s
+12:20:47   S1 20,000/1,323,633: raw 3,221,202 -> kept 3,221,202 pairs, 41s
+12:21:26   S1 30,000/1,323,633: raw 3,222,160 -> kept 3,222,160 pairs, 39s
+12:22:18   block 60,000/1,323,633: queries 51s
+12:22:55   S1 40,000/1,323,633: raw 3,212,380 -> kept 3,212,380 pairs, 37s
+12:23:28   S1 50,000/1,323,633: raw 3,192,163 -> kept 3,192,163 pairs, 33s
+12:24:01   S1 60,000/1,323,633: raw 3,209,360 -> kept 3,209,360 pairs, 33s
+12:24:45   block 90,000/1,323,633: queries 44s
+12:25:19   S1 70,000/1,323,633: raw 3,218,918 -> kept 3,218,918 pairs, 33s
+12:25:51   S1 80,000/1,323,633: raw 3,210,833 -> kept 3,210,833 pairs, 33s
+12:26:25   S1 90,000/1,323,633: raw 3,204,554 -> kept 3,204,554 pairs, 34s
+12:27:09   block 120,000/1,323,633: queries 44s
+12:27:43   S1 100,000/1,323,633: raw 3,212,837 -> kept 3,212,837 pairs, 34s
+12:28:17   S1 110,000/1,323,633: raw 3,209,574 -> kept 3,209,574 pairs, 34s
+12:28:49   S1 120,000/1,323,633: raw 3,214,224 -> kept 3,214,224 pairs, 33s
+12:29:32   block 150,000/1,323,633: queries 43s
+12:30:06   S1 130,000/1,323,633: raw 3,218,181 -> kept 3,218,181 pairs, 34s
+12:30:39   S1 140,000/1,323,633: raw 3,217,530 -> kept 3,217,530 pairs, 34s
+12:31:14   S1 150,000/1,323,633: raw 3,211,521 -> kept 3,211,521 pairs, 34s
+12:31:57   block 180,000/1,323,633: queries 43s
+12:32:30   S1 160,000/1,323,633: raw 3,216,757 -> kept 3,216,757 pairs, 34s
+12:33:04   S1 170,000/1,323,633: raw 3,209,064 -> kept 3,209,064 pairs, 33s
+12:33:40   S1 180,000/1,323,633: raw 3,227,990 -> kept 3,227,990 pairs, 36s
+12:34:22   block 210,000/1,323,633: queries 42s
+12:34:56   S1 190,000/1,323,633: raw 3,213,756 -> kept 3,213,756 pairs, 34s
+12:35:30   S1 200,000/1,323,633: raw 3,204,383 -> kept 3,204,383 pairs, 34s
+12:36:03   S1 210,000/1,323,633: raw 3,206,355 -> kept 3,206,355 pairs, 33s
+12:36:45   block 240,000/1,323,633: queries 42s
+12:37:18   S1 220,000/1,323,633: raw 3,216,488 -> kept 3,216,488 pairs, 33s
+12:37:52   S1 230,000/1,323,633: raw 3,205,497 -> kept 3,205,497 pairs, 34s
+12:38:26   S1 240,000/1,323,633: raw 3,208,373 -> kept 3,208,373 pairs, 34s
+12:39:29   block 270,000/1,323,633: queries 64s
+12:40:04   S1 250,000/1,323,633: raw 3,222,958 -> kept 3,222,958 pairs, 34s
+12:40:37   S1 260,000/1,323,633: raw 3,201,405 -> kept 3,201,405 pairs, 33s
+12:41:11   S1 270,000/1,323,633: raw 3,204,475 -> kept 3,204,475 pairs, 34s
+12:41:53   block 300,000/1,323,633: queries 42s
+12:42:26   S1 280,000/1,323,633: raw 3,233,209 -> kept 3,233,209 pairs, 34s
+12:43:00   S1 290,000/1,323,633: raw 3,202,736 -> kept 3,202,736 pairs, 33s
+12:43:33   S1 300,000/1,323,633: raw 3,200,622 -> kept 3,200,622 pairs, 34s
+12:44:14   block 330,000/1,323,633: queries 41s
+12:44:47   S1 310,000/1,323,633: raw 3,208,129 -> kept 3,208,129 pairs, 33s
+12:45:21   S1 320,000/1,323,633: raw 3,210,131 -> kept 3,210,131 pairs, 33s
+12:45:54   S1 330,000/1,323,633: raw 3,222,897 -> kept 3,222,897 pairs, 33s
+12:46:35   block 360,000/1,323,633: queries 42s
+12:47:09   S1 340,000/1,323,633: raw 3,211,792 -> kept 3,211,792 pairs, 33s
+12:47:43   S1 350,000/1,323,633: raw 3,208,606 -> kept 3,208,606 pairs, 34s
+12:48:17   S1 360,000/1,323,633: raw 3,219,558 -> kept 3,219,558 pairs, 34s
+12:49:01   block 390,000/1,323,633: queries 44s
+12:49:36   S1 370,000/1,323,633: raw 3,211,211 -> kept 3,211,211 pairs, 34s
+12:50:10   S1 380,000/1,323,633: raw 3,214,385 -> kept 3,214,385 pairs, 35s
+12:50:44   S1 390,000/1,323,633: raw 3,208,698 -> kept 3,208,698 pairs, 34s
+12:51:57   block 420,000/1,323,633: queries 73s
+12:52:30   S1 400,000/1,323,633: raw 3,210,522 -> kept 3,210,522 pairs, 33s
+12:53:03   S1 410,000/1,323,633: raw 3,211,045 -> kept 3,211,045 pairs, 32s
+12:53:36   S1 420,000/1,323,633: raw 3,211,136 -> kept 3,211,136 pairs, 33s
+12:54:18   block 450,000/1,323,633: queries 42s
+12:54:54   S1 430,000/1,323,633: raw 3,203,877 -> kept 3,203,877 pairs, 36s
+12:55:26   S1 440,000/1,323,633: raw 3,205,389 -> kept 3,205,389 pairs, 33s
+12:55:59   S1 450,000/1,323,633: raw 3,203,019 -> kept 3,203,019 pairs, 33s
+12:56:42   block 480,000/1,323,633: queries 43s
+12:57:15   S1 460,000/1,323,633: raw 3,210,329 -> kept 3,210,329 pairs, 33s
+12:57:48   S1 470,000/1,323,633: raw 3,212,521 -> kept 3,212,521 pairs, 33s
+12:58:26   S1 480,000/1,323,633: raw 3,215,518 -> kept 3,215,518 pairs, 38s
+12:59:18   block 510,000/1,323,633: queries 52s
+12:59:58   S1 490,000/1,323,633: raw 3,227,893 -> kept 3,227,893 pairs, 40s
+13:00:35   S1 500,000/1,323,633: raw 3,217,177 -> kept 3,217,177 pairs, 37s
+13:01:12   S1 510,000/1,323,633: raw 3,209,071 -> kept 3,209,071 pairs, 37s
+13:02:01   block 540,000/1,323,633: queries 50s
+13:02:38   S1 520,000/1,323,633: raw 3,218,150 -> kept 3,218,150 pairs, 37s
+13:03:15   S1 530,000/1,323,633: raw 3,223,166 -> kept 3,223,166 pairs, 37s
+13:03:53   S1 540,000/1,323,633: raw 3,212,194 -> kept 3,212,194 pairs, 37s
+13:04:40   block 570,000/1,323,633: queries 48s
+13:05:19   S1 550,000/1,323,633: raw 3,212,091 -> kept 3,212,091 pairs, 39s
+13:05:56   S1 560,000/1,323,633: raw 3,206,784 -> kept 3,206,784 pairs, 37s
+13:06:34   S1 570,000/1,323,633: raw 3,208,532 -> kept 3,208,532 pairs, 37s
+13:07:22   block 600,000/1,323,633: queries 48s
+13:07:59   S1 580,000/1,323,633: raw 3,199,334 -> kept 3,199,334 pairs, 37s
+13:08:37   S1 590,000/1,323,633: raw 3,223,254 -> kept 3,223,254 pairs, 38s
+13:09:15   S1 600,000/1,323,633: raw 3,213,196 -> kept 3,213,196 pairs, 38s
+13:10:03   block 630,000/1,323,633: queries 48s
+13:10:41   S1 610,000/1,323,633: raw 3,232,852 -> kept 3,232,852 pairs, 38s
+13:11:18   S1 620,000/1,323,633: raw 3,206,154 -> kept 3,206,154 pairs, 37s
+13:11:55   S1 630,000/1,323,633: raw 3,202,608 -> kept 3,202,608 pairs, 37s
+13:12:43   block 660,000/1,323,633: queries 48s
+13:13:20   S1 640,000/1,323,633: raw 3,201,096 -> kept 3,201,096 pairs, 37s
+13:14:07   S1 650,000/1,323,633: raw 3,204,909 -> kept 3,204,909 pairs, 47s
+13:15:02   S1 660,000/1,323,633: raw 3,215,130 -> kept 3,215,130 pairs, 55s
+13:15:51   block 690,000/1,323,633: queries 50s
+13:16:27   S1 670,000/1,323,633: raw 3,209,539 -> kept 3,209,539 pairs, 35s
+13:17:02   S1 680,000/1,323,633: raw 3,207,896 -> kept 3,207,896 pairs, 35s
+13:17:35   S1 690,000/1,323,633: raw 3,216,126 -> kept 3,216,126 pairs, 33s
+13:18:19   block 720,000/1,323,633: queries 44s
+13:18:54   S1 700,000/1,323,633: raw 3,212,588 -> kept 3,212,588 pairs, 35s
+13:19:28   S1 710,000/1,323,633: raw 3,220,297 -> kept 3,220,297 pairs, 34s
+13:20:01   S1 720,000/1,323,633: raw 3,206,413 -> kept 3,206,413 pairs, 34s
+13:21:12   block 750,000/1,323,633: queries 70s
+13:21:46   S1 730,000/1,323,633: raw 3,204,626 -> kept 3,204,626 pairs, 34s
+13:22:19   S1 740,000/1,323,633: raw 3,210,417 -> kept 3,210,417 pairs, 33s
+13:22:53   S1 750,000/1,323,633: raw 3,223,598 -> kept 3,223,598 pairs, 34s
+13:23:45   block 780,000/1,323,633: queries 52s
+13:24:21   S1 760,000/1,323,633: raw 3,199,800 -> kept 3,199,800 pairs, 36s
+13:24:58   S1 770,000/1,323,633: raw 3,199,166 -> kept 3,199,166 pairs, 36s
+13:25:34   S1 780,000/1,323,633: raw 3,227,080 -> kept 3,227,080 pairs, 36s
+13:26:20   block 810,000/1,323,633: queries 46s
+13:26:56   S1 790,000/1,323,633: raw 3,227,599 -> kept 3,227,599 pairs, 36s
+13:27:32   S1 800,000/1,323,633: raw 3,223,901 -> kept 3,223,901 pairs, 36s
+13:28:08   S1 810,000/1,323,633: raw 3,213,983 -> kept 3,213,983 pairs, 36s
+13:28:59   block 840,000/1,323,633: queries 52s
+13:29:37   S1 820,000/1,323,633: raw 3,213,563 -> kept 3,213,563 pairs, 38s
+13:30:15   S1 830,000/1,323,633: raw 3,207,536 -> kept 3,207,536 pairs, 38s
+13:30:52   S1 840,000/1,323,633: raw 3,193,102 -> kept 3,193,102 pairs, 37s
+13:31:42   block 870,000/1,323,633: queries 50s
+13:32:20   S1 850,000/1,323,633: raw 3,228,376 -> kept 3,228,376 pairs, 38s
+13:32:57   S1 860,000/1,323,633: raw 3,200,534 -> kept 3,200,534 pairs, 37s
+13:33:35   S1 870,000/1,323,633: raw 3,228,771 -> kept 3,228,771 pairs, 37s
+13:34:23   block 900,000/1,323,633: queries 48s
+13:35:00   S1 880,000/1,323,633: raw 3,208,333 -> kept 3,208,333 pairs, 37s
+13:35:37   S1 890,000/1,323,633: raw 3,209,108 -> kept 3,209,108 pairs, 37s
+13:36:15   S1 900,000/1,323,633: raw 3,208,895 -> kept 3,208,895 pairs, 38s
+13:37:03   block 930,000/1,323,633: queries 48s
+13:37:41   S1 910,000/1,323,633: raw 3,216,849 -> kept 3,216,849 pairs, 38s
+13:38:21   S1 920,000/1,323,633: raw 3,217,683 -> kept 3,217,683 pairs, 40s
+13:38:58   S1 930,000/1,323,633: raw 3,198,355 -> kept 3,198,355 pairs, 37s
+13:39:46   block 960,000/1,323,633: queries 48s
+13:40:26   S1 940,000/1,323,633: raw 3,225,922 -> kept 3,225,922 pairs, 40s
+13:41:03   S1 950,000/1,323,633: raw 3,206,686 -> kept 3,206,686 pairs, 37s
+13:41:42   S1 960,000/1,323,633: raw 3,194,523 -> kept 3,194,523 pairs, 39s
+13:42:34   block 990,000/1,323,633: queries 52s
+13:43:12   S1 970,000/1,323,633: raw 3,204,023 -> kept 3,204,023 pairs, 38s
+13:43:49   S1 980,000/1,323,633: raw 3,211,421 -> kept 3,211,421 pairs, 37s
+13:44:26   S1 990,000/1,323,633: raw 3,208,794 -> kept 3,208,794 pairs, 37s
+13:45:14   block 1,020,000/1,323,633: queries 48s
+13:45:51   S1 1,000,000/1,323,633: raw 3,220,877 -> kept 3,220,877 pairs, 38s
+13:46:29   S1 1,010,000/1,323,633: raw 3,215,231 -> kept 3,215,231 pairs, 38s
+13:47:09   S1 1,020,000/1,323,633: raw 3,212,952 -> kept 3,212,952 pairs, 40s
+13:47:57   block 1,050,000/1,323,633: queries 48s
+13:48:35   S1 1,030,000/1,323,633: raw 3,223,282 -> kept 3,223,282 pairs, 38s
+13:49:13   S1 1,040,000/1,323,633: raw 3,202,865 -> kept 3,202,865 pairs, 37s
+13:49:54   S1 1,050,000/1,323,633: raw 3,213,610 -> kept 3,213,610 pairs, 41s
+13:50:44   block 1,080,000/1,323,633: queries 50s
+13:51:25   S1 1,060,000/1,323,633: raw 3,211,555 -> kept 3,211,555 pairs, 41s
+13:52:04   S1 1,070,000/1,323,633: raw 3,218,090 -> kept 3,218,090 pairs, 39s
+13:52:42   S1 1,080,000/1,323,633: raw 3,225,302 -> kept 3,225,302 pairs, 39s
+13:53:32   block 1,110,000/1,323,633: queries 50s
+13:54:11   S1 1,090,000/1,323,633: raw 3,213,042 -> kept 3,213,042 pairs, 38s
+13:54:47   S1 1,100,000/1,323,633: raw 3,207,352 -> kept 3,207,352 pairs, 36s
+13:55:23   S1 1,110,000/1,323,633: raw 3,215,882 -> kept 3,215,882 pairs, 36s
+13:56:10   block 1,140,000/1,323,633: queries 47s
+13:56:46   S1 1,120,000/1,323,633: raw 3,214,105 -> kept 3,214,105 pairs, 36s
+13:57:22   S1 1,130,000/1,323,633: raw 3,203,998 -> kept 3,203,998 pairs, 36s
+13:57:58   S1 1,140,000/1,323,633: raw 3,186,720 -> kept 3,186,720 pairs, 36s
+13:58:45   block 1,170,000/1,323,633: queries 47s
+13:59:22   S1 1,150,000/1,323,633: raw 3,218,285 -> kept 3,218,285 pairs, 37s
+13:59:59   S1 1,160,000/1,323,633: raw 3,234,600 -> kept 3,234,600 pairs, 37s
+14:00:35   S1 1,170,000/1,323,633: raw 3,241,416 -> kept 3,241,416 pairs, 36s
+14:01:22   block 1,200,000/1,323,633: queries 47s
+14:01:59   S1 1,180,000/1,323,633: raw 3,226,468 -> kept 3,226,468 pairs, 37s
+14:02:52   S1 1,190,000/1,323,633: raw 3,216,857 -> kept 3,216,857 pairs, 52s
+14:03:55   S1 1,200,000/1,323,633: raw 3,230,528 -> kept 3,230,528 pairs, 63s
+14:05:09   block 1,230,000/1,323,633: queries 74s
+14:06:09   S1 1,210,000/1,323,633: raw 3,205,068 -> kept 3,205,068 pairs, 60s
+14:07:00   S1 1,220,000/1,323,633: raw 3,210,022 -> kept 3,210,022 pairs, 52s
+14:07:52   S1 1,230,000/1,323,633: raw 3,220,206 -> kept 3,220,206 pairs, 52s
+14:09:00   block 1,260,000/1,323,633: queries 68s
+14:10:04   S1 1,240,000/1,323,633: raw 3,208,448 -> kept 3,208,448 pairs, 64s
+14:10:54   S1 1,250,000/1,323,633: raw 3,228,782 -> kept 3,228,782 pairs, 50s
+14:11:45   S1 1,260,000/1,323,633: raw 3,215,533 -> kept 3,215,533 pairs, 51s
+14:12:47   block 1,290,000/1,323,633: queries 62s
+14:13:41   S1 1,270,000/1,323,633: raw 3,199,661 -> kept 3,199,661 pairs, 54s
+14:14:29   S1 1,280,000/1,323,633: raw 3,206,081 -> kept 3,206,081 pairs, 48s
+14:15:17   S1 1,290,000/1,323,633: raw 3,213,526 -> kept 3,213,526 pairs, 48s
+14:16:16   block 1,320,000/1,323,633: queries 58s
+14:17:04   S1 1,300,000/1,323,633: raw 3,226,054 -> kept 3,226,054 pairs, 48s
+14:18:05   S1 1,310,000/1,323,633: raw 3,214,943 -> kept 3,214,943 pairs, 61s
+14:19:01   S1 1,320,000/1,323,633: raw 3,221,056 -> kept 3,221,056 pairs, 56s
+14:19:13   block 1,323,633/1,323,633: queries 11s
+14:19:27   S1 1,323,633/1,323,633: raw 1,172,276 -> kept 1,172,276 pairs, 14s
+14:19:32 country India: 883,188 S1 rows vs 4,133,346 right rows
+14:19:32   index A: 16,795,639 nnz, 0s
+14:19:32   index B: 5,262,656 nnz, 0s
+14:19:33   index D: 47,127,396 nnz, 0s
+14:19:33   index E: 23,489,361 nnz, 0s
+14:19:33   index P: 15,569,099 nnz, 0s
+14:19:33   index X: 3,652,719 nnz, 0s
+14:19:34   index N: 16,512,905 nnz, 0s
+14:19:34   index G: 3,666,996 nnz, 0s
+14:19:34   index W: 16,955,866 nnz, 0s
+14:19:48   reverse RA: 122,794 right rows -> 3,097,029 hits, 14s
+14:19:50   signatures for India: 64 + 298 MB, 1s
+14:20:39   block 30,000/883,188: queries 50s
+14:21:56   S1 10,000/883,188: raw 4,048,358 -> kept 4,048,358 pairs, 77s
+14:23:11   S1 20,000/883,188: raw 4,044,484 -> kept 4,044,484 pairs, 75s
+14:24:23   S1 30,000/883,188: raw 4,047,226 -> kept 4,047,226 pairs, 72s
+14:25:13   block 60,000/883,188: queries 50s
+14:26:26   S1 40,000/883,188: raw 4,046,359 -> kept 4,046,359 pairs, 74s
+14:27:45   S1 50,000/883,188: raw 4,052,895 -> kept 4,052,895 pairs, 79s
+14:29:00   S1 60,000/883,188: raw 4,048,948 -> kept 4,048,948 pairs, 75s
+14:29:51   block 90,000/883,188: queries 51s
+14:31:06   S1 70,000/883,188: raw 4,032,310 -> kept 4,032,310 pairs, 75s
+14:32:17   S1 80,000/883,188: raw 4,046,183 -> kept 4,046,183 pairs, 71s
+14:33:28   S1 90,000/883,188: raw 4,049,052 -> kept 4,049,052 pairs, 71s
+14:34:16   block 120,000/883,188: queries 48s
+14:35:31   S1 100,000/883,188: raw 4,047,162 -> kept 4,047,162 pairs, 75s
+14:36:42   S1 110,000/883,188: raw 4,036,823 -> kept 4,036,823 pairs, 71s
+14:37:49   S1 120,000/883,188: raw 4,045,712 -> kept 4,045,712 pairs, 67s
+14:38:38   block 150,000/883,188: queries 49s
+14:40:35   S1 130,000/883,188: raw 4,059,191 -> kept 4,059,191 pairs, 117s
+14:41:44   S1 140,000/883,188: raw 4,053,155 -> kept 4,053,155 pairs, 69s
+14:42:52   S1 150,000/883,188: raw 4,054,275 -> kept 4,054,275 pairs, 68s
+14:43:42   block 180,000/883,188: queries 50s
+14:44:54   S1 160,000/883,188: raw 4,034,166 -> kept 4,034,166 pairs, 72s
+14:46:04   S1 170,000/883,188: raw 4,048,995 -> kept 4,048,995 pairs, 70s
+14:47:12   S1 180,000/883,188: raw 4,047,533 -> kept 4,047,533 pairs, 68s
+14:48:25   block 210,000/883,188: queries 73s
+14:49:38   S1 190,000/883,188: raw 4,035,420 -> kept 4,035,420 pairs, 72s
+14:50:48   S1 200,000/883,188: raw 4,054,360 -> kept 4,054,360 pairs, 71s
+14:52:05   S1 210,000/883,188: raw 4,044,809 -> kept 4,044,809 pairs, 77s
+14:52:55   block 240,000/883,188: queries 49s
+14:54:07   S1 220,000/883,188: raw 4,040,813 -> kept 4,040,813 pairs, 72s
+14:55:17   S1 230,000/883,188: raw 4,036,653 -> kept 4,036,653 pairs, 70s
+14:56:24   S1 240,000/883,188: raw 4,039,363 -> kept 4,039,363 pairs, 67s
+14:57:12   block 270,000/883,188: queries 48s
+14:58:22   S1 250,000/883,188: raw 4,049,646 -> kept 4,049,646 pairs, 70s
+14:59:30   S1 260,000/883,188: raw 4,048,721 -> kept 4,048,721 pairs, 68s
+15:00:40   S1 270,000/883,188: raw 4,048,961 -> kept 4,048,961 pairs, 70s
+15:01:28   block 300,000/883,188: queries 48s
+15:02:42   S1 280,000/883,188: raw 4,062,026 -> kept 4,062,026 pairs, 74s
+15:03:52   S1 290,000/883,188: raw 4,042,760 -> kept 4,042,760 pairs, 70s
+15:05:03   S1 300,000/883,188: raw 4,065,860 -> kept 4,065,860 pairs, 71s
+15:05:54   block 330,000/883,188: queries 51s
+15:07:05   S1 310,000/883,188: raw 4,045,437 -> kept 4,045,437 pairs, 71s
+15:08:14   S1 320,000/883,188: raw 4,056,603 -> kept 4,056,603 pairs, 69s
+15:09:23   S1 330,000/883,188: raw 4,040,115 -> kept 4,040,115 pairs, 70s
+15:10:13   block 360,000/883,188: queries 50s
+15:11:29   S1 340,000/883,188: raw 4,046,574 -> kept 4,046,574 pairs, 75s
+15:12:38   S1 350,000/883,188: raw 4,044,961 -> kept 4,044,961 pairs, 69s
+15:13:47   S1 360,000/883,188: raw 4,047,426 -> kept 4,047,426 pairs, 69s
+15:14:37   block 390,000/883,188: queries 50s
+15:15:49   S1 370,000/883,188: raw 4,067,986 -> kept 4,067,986 pairs, 72s
+15:16:58   S1 380,000/883,188: raw 4,045,474 -> kept 4,045,474 pairs, 70s
+15:18:08   S1 390,000/883,188: raw 4,057,693 -> kept 4,057,693 pairs, 69s
+15:18:55   block 420,000/883,188: queries 47s
+15:20:32   S1 400,000/883,188: raw 4,044,300 -> kept 4,044,300 pairs, 97s
+15:21:40   S1 410,000/883,188: raw 4,048,385 -> kept 4,048,385 pairs, 68s
+15:22:48   S1 420,000/883,188: raw 4,047,398 -> kept 4,047,398 pairs, 68s
+15:23:50   block 450,000/883,188: queries 62s
+15:25:18   S1 430,000/883,188: raw 4,057,681 -> kept 4,057,681 pairs, 88s
+15:26:29   S1 440,000/883,188: raw 4,038,040 -> kept 4,038,040 pairs, 71s
+15:27:39   S1 450,000/883,188: raw 4,048,005 -> kept 4,048,005 pairs, 70s
+15:29:11   block 480,000/883,188: queries 92s
+15:30:24   S1 460,000/883,188: raw 4,061,604 -> kept 4,061,604 pairs, 73s
+15:31:32   S1 470,000/883,188: raw 4,051,867 -> kept 4,051,867 pairs, 68s
+15:32:39   S1 480,000/883,188: raw 4,043,242 -> kept 4,043,242 pairs, 67s
+15:33:28   block 510,000/883,188: queries 48s
+15:34:39   S1 490,000/883,188: raw 4,043,560 -> kept 4,043,560 pairs, 71s
+15:35:52   S1 500,000/883,188: raw 4,043,508 -> kept 4,043,508 pairs, 74s
+15:37:02   S1 510,000/883,188: raw 4,048,907 -> kept 4,048,907 pairs, 69s
+15:37:46   block 540,000/883,188: queries 44s
+15:38:49   S1 520,000/883,188: raw 4,049,700 -> kept 4,049,700 pairs, 63s
+15:39:53   S1 530,000/883,188: raw 4,051,032 -> kept 4,051,032 pairs, 64s
+15:41:01   S1 540,000/883,188: raw 4,060,024 -> kept 4,060,024 pairs, 68s
+15:41:45   block 570,000/883,188: queries 44s
+15:42:48   S1 550,000/883,188: raw 4,043,685 -> kept 4,043,685 pairs, 63s
+15:43:49   S1 560,000/883,188: raw 4,057,118 -> kept 4,057,118 pairs, 61s
+15:44:51   S1 570,000/883,188: raw 4,044,716 -> kept 4,044,716 pairs, 63s
+15:45:36   block 600,000/883,188: queries 44s
+15:46:37   S1 580,000/883,188: raw 4,047,320 -> kept 4,047,320 pairs, 62s
+15:47:37   S1 590,000/883,188: raw 4,050,504 -> kept 4,050,504 pairs, 60s
+15:48:38   S1 600,000/883,188: raw 4,048,048 -> kept 4,048,048 pairs, 60s
+15:49:20   block 630,000/883,188: queries 42s
+15:50:25   S1 610,000/883,188: raw 4,040,135 -> kept 4,040,135 pairs, 65s
+15:51:34   S1 620,000/883,188: raw 4,043,154 -> kept 4,043,154 pairs, 69s
+15:52:36   S1 630,000/883,188: raw 4,054,381 -> kept 4,054,381 pairs, 62s
+15:53:21   block 660,000/883,188: queries 45s
+15:54:53   S1 640,000/883,188: raw 4,056,393 -> kept 4,056,393 pairs, 92s
+15:55:55   S1 650,000/883,188: raw 4,050,345 -> kept 4,050,345 pairs, 61s
+15:56:54   S1 660,000/883,188: raw 4,047,172 -> kept 4,047,172 pairs, 60s
+15:57:36   block 690,000/883,188: queries 42s
+15:58:40   S1 670,000/883,188: raw 4,044,336 -> kept 4,044,336 pairs, 63s
+15:59:41   S1 680,000/883,188: raw 4,059,952 -> kept 4,059,952 pairs, 62s
+16:00:43   S1 690,000/883,188: raw 4,052,054 -> kept 4,052,054 pairs, 62s
+16:01:25   block 720,000/883,188: queries 42s
+16:02:27   S1 700,000/883,188: raw 4,043,071 -> kept 4,043,071 pairs, 62s
+16:03:27   S1 710,000/883,188: raw 4,052,614 -> kept 4,052,614 pairs, 60s
+16:04:29   S1 720,000/883,188: raw 4,044,892 -> kept 4,044,892 pairs, 62s
+16:05:11   block 750,000/883,188: queries 42s
+16:06:13   S1 730,000/883,188: raw 4,058,585 -> kept 4,058,585 pairs, 62s
+16:07:18   S1 740,000/883,188: raw 4,048,197 -> kept 4,048,197 pairs, 65s
+16:08:20   S1 750,000/883,188: raw 4,042,274 -> kept 4,042,274 pairs, 62s
+16:09:02   block 780,000/883,188: queries 42s
+16:10:22   S1 760,000/883,188: raw 4,049,841 -> kept 4,049,841 pairs, 79s
+16:12:14   S1 770,000/883,188: raw 4,050,177 -> kept 4,050,177 pairs, 112s
+16:13:23   S1 780,000/883,188: raw 4,047,710 -> kept 4,047,710 pairs, 69s
+16:14:18   block 810,000/883,188: queries 55s
+16:16:13   S1 790,000/883,188: raw 4,055,108 -> kept 4,055,108 pairs, 114s
+16:17:28   S1 800,000/883,188: raw 4,052,832 -> kept 4,052,832 pairs, 75s
+16:18:36   S1 810,000/883,188: raw 4,055,881 -> kept 4,055,881 pairs, 69s
+16:19:28   block 840,000/883,188: queries 51s
+16:21:19   S1 820,000/883,188: raw 4,049,457 -> kept 4,049,457 pairs, 112s
+16:22:28   S1 830,000/883,188: raw 4,046,048 -> kept 4,046,048 pairs, 68s
+16:23:39   S1 840,000/883,188: raw 4,056,954 -> kept 4,056,954 pairs, 71s
+16:24:26   block 870,000/883,188: queries 47s
+16:25:37   S1 850,000/883,188: raw 4,050,384 -> kept 4,050,384 pairs, 71s
+16:26:46   S1 860,000/883,188: raw 4,054,356 -> kept 4,054,356 pairs, 69s
+16:27:58   S1 870,000/883,188: raw 4,058,901 -> kept 4,058,901 pairs, 72s
+16:28:59   block 883,188/883,188: queries 61s
+17:55:22 MODE=FINAL  fraction=1.0  folds=2  subset_seed=2026  cache=D:\Amzon ML\Dataset\student_resource\cache
+17:55:22 TRAIN: S1 entities=2,206,821  S2 entities=5,034,616  S3 entities=5,285,603  true pairs=7,638,365  singletons=123,247
+17:55:26 TEST: S1 entities=1,732,544  S2 entities=4,887,273  S3 entities=5,082,316
+17:55:26 ==== step cands_train_resume  (disk free 91.9 GB)
+17:55:37 train candidates resume: keeping 220 finished chunks (2,193,633 S1), 13,188 to go
+17:55:39 country India: 13,188 S1 rows vs 4,133,346 right rows
+17:55:39   index A: 16,795,639 nnz, 0s
+17:55:39   index B: 5,262,656 nnz, 0s
+17:55:40   index D: 47,127,396 nnz, 0s
+17:55:40   index E: 23,489,361 nnz, 0s
+17:55:40   index P: 15,569,099 nnz, 0s
+17:55:40   index X: 3,652,719 nnz, 0s
+17:55:40   index N: 16,512,905 nnz, 0s
+17:55:41   index G: 3,666,996 nnz, 0s
+17:55:41   index W: 16,955,866 nnz, 0s
+17:55:58   reverse RA: 122,794 right rows -> 46,986 hits, 17s
+17:56:00   signatures for India: 64 + 298 MB, 1s
+17:56:28   block 13,188/13,188: queries 28s
+17:57:52   S1 10,000/13,188: raw 4,062,188 -> kept 4,062,188 pairs, 85s
+17:58:15   S1 13,188/13,188: raw 1,302,710 -> kept 1,302,710 pairs, 23s
+17:58:54 train: candidate parts train_fin=222
+17:58:54 ==== step assemble_train  (disk free 91.9 GB)
+18:03:15   train_fin final candidates, all 2,206,821 labelled S1 (candidate-oracle F0.5): {'US': {'oracle': 0.99629, 'cands': 9.23, 'p95_cands': 15.0, 'recall': 0.98803}, 'India': {'oracle': 0.99447, 'cands': 10.87, 'p95_cands': 15.0, 'recall': 0.98197}, 'all': {'oracle': 0.99556, 'cands': 9.89, 'p95_cands': 15.0, 'recall': 0.9856}}
+18:03:15 train_fin: assembled 21,823,948 candidate pairs (candidate parts kept in D:\Amzon ML\Dataset\student_resource\cache\work\train_fin_cands)
+18:03:15 ==== step subsample_asm  (disk free 88.8 GB)
+18:03:48   sample: 662,026 S1 (30%), 6,550,397 candidate pairs; candidate-oracle F0.5: {'US': {'oracle': 0.99627, 'cands': 9.24, 'p95_cands': 15.0, 'recall': 0.98804}, 'India': {'oracle': 0.99449, 'cands': 10.87, 'p95_cands': 15.0, 'recall': 0.98185}, 'all': {'oracle': 0.99556, 'cands': 9.89, 'p95_cands': 15.0, 'recall': 0.98555}}
+18:03:48 ==== step feats_sub  (disk free 87.9 GB)
+18:09:29   train_sub features 400,000/6,550,397  (227 us/pair)
+18:11:18   train_sub features 800,000/6,550,397  (249 us/pair)
+18:12:26   train_sub features 1,200,000/6,550,397  (224 us/pair)
+18:15:13   train_sub features 1,600,000/6,550,397  (272 us/pair)
+18:16:57   train_sub features 2,000,000/6,550,397  (270 us/pair)
+18:18:08   train_sub features 2,400,000/6,550,397  (254 us/pair)
+18:19:06   train_sub features 2,800,000/6,550,397  (239 us/pair)
+18:20:03   train_sub features 3,200,000/6,550,397  (227 us/pair)
+18:20:58   train_sub features 3,600,000/6,550,397  (217 us/pair)
+18:22:25   train_sub features 4,000,000/6,550,397  (217 us/pair)
+18:23:24   train_sub features 4,400,000/6,550,397  (210 us/pair)
+18:24:18   train_sub features 4,800,000/6,550,397  (204 us/pair)
+18:25:13   train_sub features 5,200,000/6,550,397  (199 us/pair)
+18:26:07   train_sub features 5,600,000/6,550,397  (195 us/pair)
+18:27:01   train_sub features 6,000,000/6,550,397  (190 us/pair)
+18:27:55   train_sub features 6,400,000/6,550,397  (187 us/pair)
+18:28:17   train_sub features 6,550,397/6,550,397  (186 us/pair)
+18:28:17 ==== step stage3_sub  (disk free 85.2 GB)
+18:28:37 Stage 3 cross-validation (GroupKFold by S1, 2 folds): 6,550,397 pairs, 102 features; fold rows {0: [0, 3276545], 1: [3276545, 6550397]}
+18:46:25   Stage 3 fold model 0 (scores fold 0): 2047 trees (best 2047) in 1068s
+19:18:15   Stage 3 fold model 1 (scores fold 1): 2116 trees (best 2116) in 1234s
+19:35:19   top-25 features (gain): {'p1': 19245694.0, 'p0': 4632896.0, 'c1_gap_r': 690628.0, 'c1_rank_r': 572366.0, 'name_norm_tset': 380872.0, 'name_ntok_b': 292832.0, 'c1_second_gap_l': 213186.0, 'c1_gap_l': 213068.0, 'nums_jacc': 212641.0, 'c1_sum_l': 176194.0, 'addr_tset': 168547.0, 'name_idf_ovl': 166889.0, 'name_idf_ovl_min': 147494.0, 'c1_n_r': 146534.0, 'name_core_tsort': 127914.0, 'house_lev': 122494.0, 'name_len_b': 120405.0, 'sig_len_ratio': 117707.0, 'c1_lead_l': 116093.0, 'name_idf_max': 109103.0, 'score_RA': 107549.0, 'name_idf_jacc': 99261.0, 'addr_ntok_b': 98504.0, 'name_idf_min': 96871.0, 'score_D': 84755.0}
+19:48:11   STAGE 3 global assign=False: macro F0.5 0.97357 with {'t_open': 0.61, 't_add': 0.71, 'rel': 0.0, 'assign': False}
+20:01:19   STAGE 3 global assign=True: macro F0.5 0.97359 with {'t_open': 0.61, 't_add': 0.7, 'rel': 0.0, 'assign': True}
+20:08:11   STAGE 3 US assign=False: macro F0.5 0.97630 with {'t_open': 0.63, 't_add': 0.7, 'rel': 0.0, 'assign': False}
+20:15:36   STAGE 3 US assign=True: macro F0.5 0.97633 with {'t_open': 0.63, 't_add': 0.7, 'rel': 0.0, 'assign': True}
+20:22:01   STAGE 3 India assign=False: macro F0.5 0.96953 with {'t_open': 0.61, 't_add': 0.72, 'rel': 0.0, 'assign': False}
+20:26:57   STAGE 3 India assign=True: macro F0.5 0.96955 with {'t_open': 0.61, 't_add': 0.72, 'rel': 0.0, 'assign': True}
+20:26:59   STAGE 3 out-of-fold, global thresholds: {'US': {'f05': 0.97631, 'n_s1': 396613, 'singleton_acc': 0.96809, 'f_matched': 0.9768, 'pair_precision': 0.99259, 'pair_recall': 0.95039}, 'India': {'f05': 0.96953, 'n_s1': 265413, 'singleton_acc': 0.94199, 'f_matched': 0.97112, 'pair_precision': 0.98665, 'pair_recall': 0.94412}, 'all': {'f05': 0.97359, 'n_s1': 662026, 'singleton_acc': 0.95775, 'f_matched': 0.97452, 'pair_precision': 0.9902, 'pair_recall': 0.94787}}
+20:27:00   STAGE 3 out-of-fold, per-country thresholds: {'US': {'f05': 0.97633, 'n_s1': 396613, 'singleton_acc': 0.9703, 'f_matched': 0.97669, 'pair_precision': 0.99263, 'pair_recall': 0.95036}, 'India': {'f05': 0.96955, 'n_s1': 265413, 'singleton_acc': 0.94199, 'f_matched': 0.97114, 'pair_precision': 0.98733, 'pair_recall': 0.9424}, 'all': {'f05': 0.97361, 'n_s1': 662026, 'singleton_acc': 0.95909, 'f_matched': 0.97446, 'pair_precision': 0.9905, 'pair_recall': 0.94716}}
+20:27:00   STAGE 3: per-country thresholds adopted; out-of-fold macro F0.5 = 0.97361
+20:27:00   STAGE 3 out-of-fold errors: 20,819 false positives, 88,010 false negatives (inside candidates)
+20:27:11    FP categories: {'right_addr_empty': 0.246, 'right_web': 0.007, 'right_native': 0.089, 'generic_name (name_idf_min<8)': 0.006, 'same_core_name': 0.677, 'house_conflict': 0.446}
+20:27:34    FN categories: {'right_addr_empty': 0.469, 'right_web': 0.005, 'right_native': 0.039, 'generic_name (name_idf_min<8)': 0.005, 'same_core_name': 0.627, 'house_conflict': 0.405}

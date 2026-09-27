@@ -1,0 +1,24 @@
+﻿[200]	valid_0's binary_logloss: 0.0480906
+[400]	valid_0's binary_logloss: 0.0478002
+17:43:59   E1 baseline fold model 0 (scores fold 0): 335 trees (best 335) in 36s
+[200]	valid_0's binary_logloss: 0.0461431
+[400]	valid_0's binary_logloss: 0.0457609
+17:44:40   E1 baseline fold model 1 (scores fold 1): 345 trees (best 345) in 34s
+17:45:30   E1 baseline global assign=False: macro F0.5 0.98642 with {'t_open': 0.6, 't_add': 0.72, 'rel': 0.0, 'assign': False}
+17:46:11   E1 baseline global assign=True: macro F0.5 0.98648 with {'t_open': 0.5, 't_add': 0.72, 'rel': 0.0, 'assign': True}
+17:46:52   E1 baseline US assign=False: macro F0.5 0.98746 with {'t_open': 0.6, 't_add': 0.72, 'rel': 0.0, 'assign': False}
+17:47:20   E1 baseline US assign=True: macro F0.5 0.98748 with {'t_open': 0.5, 't_add': 0.72, 'rel': 0.0, 'assign': True}
+17:47:49   E1 baseline India assign=False: macro F0.5 0.98497 with {'t_open': 0.54, 't_add': 0.74, 'rel': 0.0, 'assign': False}
+17:48:13   E1 baseline India assign=True: macro F0.5 0.98505 with {'t_open': 0.54, 't_add': 0.74, 'rel': 0.0, 'assign': True}
+17:48:13   E1 baseline out-of-fold, global thresholds: {'US': {'f05': 0.98748, 'n_s1': 66182, 'singleton_acc': 0.97035, 'f_matched': 0.98848, 'pair_precision': 0.99356, 'pair_recall': 0.97736}, 'India': {'f05': 0.98497, 'n_s1': 44159, 'singleton_acc': 0.96624, 'f_matched': 0.98609, 'pair_precision': 0.99268, 'pair_recall': 0.97056}, 'all': {'f05': 0.98648, 'n_s1': 110341, 'singleton_acc': 0.96868, 'f_matched': 0.98752, 'pair_precision': 0.99321, 'pair_recall': 0.97464}}
+17:48:13   E1 baseline out-of-fold, per-country thresholds: {'US': {'f05': 0.98748, 'n_s1': 66182, 'singleton_acc': 0.97035, 'f_matched': 0.98848, 'pair_precision': 0.99356, 'pair_recall': 0.97736}, 'India': {'f05': 0.98505, 'n_s1': 44159, 'singleton_acc': 0.96825, 'f_matched': 0.98606, 'pair_precision': 0.99302, 'pair_recall': 0.9698}, 'all': {'f05': 0.98651, 'n_s1': 110341, 'singleton_acc': 0.96949, 'f_matched': 0.98751, 'pair_precision': 0.99335, 'pair_recall': 0.97433}}
+17:48:13   E1 baseline: per-country thresholds adopted; out-of-fold macro F0.5 = 0.98651
+E1 baseline {'oof_f05': 0.98651, 'US': 0.98748, 'India': 0.98505, 'all': 0.98651, 'trees': [335, 345]}
+[200]	valid_0's binary_logloss: 0.0483865
+[400]	valid_0's binary_logloss: 0.0479337
+17:48:51   E2 +transitivity(ref by p1) fold model 0 (scores fold 0): 341 trees (best 341) in 38s
+[200]	valid_0's binary_logloss: 0.0460395
+[400]	valid_0's binary_logloss: 0.045204
+17:49:36   E2 +transitivity(ref by p1) fold model 1 (scores fold 1): 321 trees (best 321) in 38s
+17:50:20   E2 +transitivity(ref by p1) global assign=False: macro F0.5 0.98644 with {'t_open': 0.56, 't_add': 0.77, 'rel': 0.0, 'assign': False}
+17:50:59   E2 +transitivity(ref by p1) global assign=True: macro F0.5 0.98648 with {'t_open': 0.56, 't_add': 0.76, 'rel': 0.0, 'assign': True}

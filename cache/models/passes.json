@@ -1,0 +1,105 @@
+{
+ "A": {
+  "field": "name_core_join",
+  "analyzer": "word",
+  "ngram": [
+   1,
+   2
+  ],
+  "k": 100,
+  "max_df": 2000
+ },
+ "B": {
+  "field": "street_keys",
+  "analyzer": "word",
+  "ngram": [
+   1,
+   1
+  ],
+  "k": 100,
+  "max_df": 300
+ },
+ "D": {
+  "field": "name_addr_keys",
+  "analyzer": "word",
+  "ngram": [
+   1,
+   1
+  ],
+  "k": 100,
+  "max_df": 300,
+  "v": 2
+ },
+ "E": {
+  "field": "addr_pair_keys",
+  "analyzer": "word",
+  "ngram": [
+   1,
+   1
+  ],
+  "k": 100,
+  "max_df": 300
+ },
+ "P": {
+  "field": "skeleton_tokens",
+  "analyzer": "word",
+  "ngram": [
+   1,
+   2
+  ],
+  "k": 100,
+  "max_df": 2000
+ },
+ "X": {
+  "field": "prefix_pair_keys",
+  "analyzer": "word",
+  "ngram": [
+   1,
+   1
+  ],
+  "k": 100,
+  "max_df": 300
+ },
+ "N": {
+  "field": "fullname_anchor_keys",
+  "analyzer": "word",
+  "ngram": [
+   1,
+   1
+  ],
+  "k": 100,
+  "max_df": 100
+ },
+ "G": {
+  "field": "exact_addr_key",
+  "analyzer": "word",
+  "ngram": [
+   1,
+   1
+  ],
+  "k": 100,
+  "max_df": 50
+ },
+ "W": {
+  "field": "join_prefix_keys",
+  "analyzer": "word",
+  "ngram": [
+   1,
+   1
+  ],
+  "k": 100,
+  "max_df": 300
+ },
+ "RA": {
+  "field": "name_core_join",
+  "analyzer": "word",
+  "ngram": [
+   1,
+   2
+  ],
+  "k": 30,
+  "max_df": 1000,
+  "reverse": true,
+  "right_filter": "addr_empty"
+ }
+}

@@ -1,0 +1,13 @@
+{
+ "oof_macro_f05": 0.97355,
+ "cfg": {
+  "t_open": 0.6,
+  "t_add": 0.72,
+  "rel": 0.0,
+  "assign": true
+ },
+ "n_s1": 662026,
+ "US": 0.97627,
+ "India": 0.96948,
+ "singleton_acc": 0.95609
+}

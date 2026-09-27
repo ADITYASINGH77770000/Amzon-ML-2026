@@ -1,0 +1,20 @@
+{
+  "US": {
+    "oracle": 0.99629,
+    "cands": 9.23,
+    "p95_cands": 15.0,
+    "recall": 0.98803
+  },
+  "India": {
+    "oracle": 0.99447,
+    "cands": 10.87,
+    "p95_cands": 15.0,
+    "recall": 0.98197
+  },
+  "all": {
+    "oracle": 0.99556,
+    "cands": 9.89,
+    "p95_cands": 15.0,
+    "recall": 0.9856
+  }
+}

@@ -1,0 +1,89 @@
+﻿A query 4.9 s 23.39625 pairs/row
+B query 1.8 s 7.60075 pairs/row
+D query 2.7 s 24.05275 pairs/row
+E query 1.1 s 13.0745 pairs/row
+union recall 0.9701686121919585 cands/row 59.57775
+  A alone 0.6427 without 0.9284
+  B alone 0.7331 without 0.9447
+  D alone 0.8369 without 0.946
+  E alone 0.6221 without 0.96
+S1: green delta auto | indianapolis in 11048 elmtree park dr | 11048_elmtree
+  R: green auto delta |  | 
+S1: titech | 5700 enid st ft smith ar | 5700_enid
+  R: titech |  | 
+S1: rapid national ses | 215 dogwood st jacksonville tx | 215_dogwood
+  R: rapidnationalses | tx jacksonivlle dogwood st | 
+S1: certified gulf farms | 5098 buffalo run bldg 7 columbus oh | 5098_buffalo 7_columbus
+  R: certified gulf failmrs |  | 
+S1: travue | 18 pomeroy dr pinehurst nc | 18_pomeroy
+  R: tmracoue | pinehurst nc 18 pomeroy dr | 18_pomeroy
+S1: lyrelle ncr | 3540 kinsrow av or unit unit 407 eugene | 3540_kinsrow 407_eugene
+  R: lyrellencr | kinsrow av eugene or | 
+S1: primary care bright physicians | 1301 de av unit n 212 wa dc | 212_wa
+  R: arcviokor | 1301 de av wa dc | 
+S1: quality modern partners group | 2053 lori ln fl 0 wichita ks | 0_wichita 2053_lori
+  R: quality modlern partners group www qualitymo com |  | 
+S1: vision pinnacle medicine | 340 vill dr frankfort ky | 
+  R: visionpinnaclemedicine | 34 vill dr frankfrt cdp ky | 
+S1: back alley tavern | 2110 eastland av nashville tn | 2110_eastland
+  R: back tavern alley |  | 
+S1: surgical metro physicians | 6419 hwy 270 malvern ar | 270_malvern
+  R: surgical maimmoto physicians | 6419 hwy 270 mavern ar | 270_mavern
+S1: light northern | 1 n st medford ma | 
+  R: light partners | 1 n st medfrd ma | 
+S1: ivenic physical | 212 territory trl ft worth tx | 212_territory
+  R: ivenic svc 4605739230 |  | 
+S1: galloway premier public | 9180 800 w middletown in | 9180_800
+  R: gallowaypremier | 9156 c 800 w middletown in | 
+S1: surgical care assoc | 9605 48 th st unit 3051 phoenix az | 3051_phoenix 9605_48
+  R: novideltanex | 48 th st pohenix az | 
+S1: rapid spectral | 20161 boulder dr silverhill al | 20161_boulder
+  R: rapid spettdrl |  | 
+S1: precision ridge electronic | 3063 portland rd salem or | 3063_portland
+  R: haloonyxdrex | 306 portland rd salem or | 306_portland
+S1: vision partners | 988 sandoval dr va beach city va | 988_sandoval
+  R: vision partners |  | 
+S1: rabe ace morgan | 14802 enterprise dr unit 43 d farmers branch tx | 14802_enterprise
+  R: rabe morgan ace |  | 
+S1: apex chemical ent | san bernardino 602 21 st st ca | 602_21
+  R: apex chedcmecl ent | 21 nd st san bernardno ca | 
+S1: cardiology crystal partners | 6828 2 nd st moorhead mn | 6828_2
+  R: cardiology crryocstal partners |  | 
+S1: interstate gsr | brazil in 232 kruzan st | 232_kruzan
+  R: interessaet gsr |  | 
+S1: armour | 142 ranger peak rd dripping springs tx | 142_ranger
+  R: armour svc |  | 
+S1: pipers engineering | 5725 25 th dr phoenix az | 5725_25
+  R: pipers engioneering |  | 
+S1: behavioral health partners | 3702 chartridge dr bldg 2 canal winchester oh | 2_canal 3702_chartridge
+  R: behavioral health partners ent |  | 
+S1: nguyen connecticut | 8071 station landing way midvale ut | 8071_station
+  R: nguyenconnecticut | 8073 station landing way sandy cdp ut | 8073_station
+S1: 1989 lake st owners | 1366 airport rhodhiss rd hickory nc | 1366_airport
+  R: 1989 lake st svc |  | 
+S1: consolidated financial ind | 1425 n st unit 807 wa dc | 807_wa
+  R: korfluxvantage | 1425 n st wa dc | 
+S1: delta irenic | 8 brand av ma wilmington | 8_brand
+  R: delta irebic |  | 
+S1: foot ankle partners | 11865 90 th pl fl 1 scottsdale az | 11865_90 1_scottsdale
+  R: foot ankle partners |  | 
+S1: temple lutheran church | 517 castlewood pl wenatchee wa | 517_castlewood
+  R: temple lutheran church |  | 
+S1: better safe etf | 110 va av unit unit 1309 ontario ca | 110_va 1309_ontario
+  R: bettersafeetf | va av ontario ca | 
+S1: martinez metropolitan farms | austin tx 3616 1 2 973 | 1_2 2_973 3616_1
+  R: martinezmetropolitanfarmscom | 973 austin tx | 973_austin
+S1: physical therapy total ctr assoc | 3147 pineapple rd san tan valley az | 3147_pineapple
+  R: physical tegecrap ctr total assoc | 3147 pineappe rd queen creek az | 3147_pineappe
+S1: trinity chapel | 1514 21 st st unit 5 wa dc | 1514_21 5_wa
+  R: trinity chapel | 1514 twenty first st 5 wa dc | 1514_twenty 5_wa
+S1: internal medicine group | 53 chardonnay dr brookhaven ny | 53_chardonnay
+  R: internal medicine | 53 chardonny dr ny coramc dp | 53_chardonny
+S1: east omega | 511 143 st bronx ny | 511_143
+  R: east svc |  | 
+S1: ewing daedalus | 900 grand av beardstown il | 900_grand
+  R: ewingdaedalus | 900 gland av beardstown il | 900_gland
+S1: oncology diamond health | 325 ratley st raeford nc | 325_ratley
+  R: oncology health diamond |  | 
+S1: custom supply collective | 2800 erwin rd poolville tx | 2800_erwin
+  R: supplycollective | 280 erwin rd pooolville cdp tx | 280_erwin

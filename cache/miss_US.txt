@@ -1,0 +1,81 @@
+﻿union recall 0.9071912379305376 cands/row 29.332
+S1: prime sunstone | 1436 picadilly st norfolk city va | 1436_picadilly
+  R: prime ctr | picadilly st norfolk va | 
+S1: tracy pinnacle system | 1023 hampton st atlanta ga | 1023_hampton
+  R: tracy pinnade system | 1023 hampton st atlanta ga | 1023_hampton
+S1: primary care group | 2153 wa st wilmington nc | 2153_wa
+  R: group cmeore primary | wa st wilmington nc | 
+S1: continental health ctr | 3103 ravenwood av baltimore md | 3103_ravenwood
+  R: lumviotavo | baltimore md ravenwood av | 
+S1: birch | 105 h av wapanucka ok | 
+  R: birch ctr | ok 1 h av wapanucka | 
+S1: lopes rocky publishing | 2368 palmyra rd bedford ky | 2368_palmyra
+  R: lopes rhcory publishing |  | 
+S1: urology specialists | 220 8 th st unit unit 6 cottage grove or | 220_8 6_cottage
+  R: urology specialists | 220 d 8 th st cottage grove or | 
+S1: eastern diagnostics | 1100 24 campbell tx | 1100_24 24_campbell
+  R: eastern diaggosfdsc |  | 
+S1: frontier ministries iv | 135 pleasant st unit 3 berlin ma | 135_pleasant 3_berlin
+  R: frontier minisoies iv | 13 pleasant st berlin ma | 13_pleasant
+S1: primary care physicians | 19934 cronese ln apple valley ca | 19934_cronese
+  R: primary care physicians | 1993 cronese ln apple valley ca | 1993_cronese
+S1: valliere shaffer raposa | fuquay varina nc 6709 wavcott dr | 6709_wavcott
+  R: valliere shaffer | 709 wavcott dr fuquay varina nc | 709_wavcott
+S1: light northern | 1 n st medford ma | 
+  R: light partners | 1 n st medfrd ma | 
+S1: valley america | 2820 canoe rd jackson ky | 2820_canoe
+  R: valley svc | canoe rd jacksoon ky | 
+S1: bay ministries | 2055 stonebrook dr murfreesboro tn | 2055_stonebrook
+  R: bministries | 205 stonebrook dr murfreesboro tn | 205_stonebrook
+S1: red ice cream | 338 fillmore st edwardsville il | 338_fillmore
+  R: red ice csrm | 339 fillmore st po box 6090 edwardsville il | 339_fillmore 6090_edwardsville
+S1: community assoc | 8141 loma ter rd city of el paso tx | 8141_loma
+  R: community ctr | loma ter rd city of el paso tx | 
+S1: cure 6 all | 203 ledgewood rd watertown ct | 203_ledgewood
+  R: cure 6 all | 53 ledgewood rd watertown ity ct | 53_ledgewood
+S1: cobalt | wa kelso unit 85 900 grade st | 85_900 85_grade 900_grade
+  R: cobalt | wa kelso 900 gade st | 900_gade
+S1: national institute | unit 167 4747 99 th av az phoenix | 167_4747 4747_99
+  R: national insitfudte | 747 99 th av phoenix az | 747_99
+S1: physical therapy care assoc | 3773 bay pt cove new haven in | 3773_bay
+  R: physical therapy care assoc | 3775 bay pt cv in new haven | 3775_bay
+S1: corporate network ent | w chester oh 6735 maverick dr | 6735_maverick
+  R: corporate netrsk ent |  | 
+S1: great atlantic clinic | 19717 mt bachelor dr unit unit 218 bend or | 19717_bachelor 218_bend
+  R: greatatlanticclinic | 9717 mt bachelor dr bend or | 9717_bachelor
+S1: heart league | 4839 r southside dr louisville ky | 4839_southside
+  R: heart league | 4746 southside dr pmb 4781 louisville ky | 4746_southside 4781_louisville
+S1: wilson united target | 243 grannaman dr mocksville nc | 243_grannaman
+  R: wilson united tat | grannaman dr mocksville nc | 
+S1: granite | 1316 calle crisantemo thousand oaks ca | 1316_calle
+  R: granite | 1316 clale crisantemo thousand oaks ca | 1316_clale
+S1: beque | 2184 yahara cir city of de pere wi | 2184_yahara
+  R: beque svc |  | 
+S1: nadler neuberger | 5335 fm 2412 gatesville tx | 2412_gatesville 5335_fm
+  R: nadlerneuberger | fm 2412 gatesville tx | 2412_gatesville
+S1: vision specialists | 1837 fury way va beach city va | 1837_fury
+  R: vision specialists | fury way va beach city va | 
+S1: clear long | 28407 138 th pl scottsdale az | 28407_138
+  R: clear ctr | 28165 138 st pl po box 137 scottsdalecity az | 137_scottsdalecity 28165_138
+S1: oncology medicine | 30 lake st unit unit 3 b white plains ny | 30_lake
+  R: omedicine | lake st white plains ny | 
+S1: abdullah digital partners | 605 overstreet av kingfisher ok | 605_overstreet
+  R: abdullahdigitalpartners | 60 overstreet av kingfisher ok | 60_overstreet
+S1: urban hypnosis | 5115 22 nd st sioux falls sd | 5115_22
+  R: urban hypnosis | 5115 d 22 nd st sioux falls sd | 
+S1: metropolitan federation | 134 ewing av s bend in | 134_ewing
+  R: mfederation | in southh bend 34 ewing av | 34_ewing
+S1: behavioral health physicians | az glendale 8623 68 th dr | 8623_68
+  R: behavioral health physicians |  | 
+S1: dennis heartland mines | 5514 33 rd av city of kenosha wi | 5514_33
+  R: dennis haertliand mines | 5514 b 33 rd av city of kenosha wi | 
+S1: health institute | 17319 dahlia dr surprise az | 17319_dahlia
+  R: health institute |  | 
+S1: midwest montessori school | 1702 3 rd st greenville nc | 1702_3
+  R: midwest montessori svc | nc greenville 170 3 rd st | 170_3
+S1: human rights trust | 5623 berkeley dr tyler tx | 5623_berkeley
+  R: human trust rights |  | 
+S1: sheffer coastal cms | tn memphis 2089 shenandoah dr | 2089_shenandoah
+  R: sheffer cms coastal | 2234 shenandoah dr memphis tn | 2234_shenandoah
+S1: interfaith ministries | 374 main st helper city ut | 
+  R: interfaith ministries | 102 main st helper city ut | 
