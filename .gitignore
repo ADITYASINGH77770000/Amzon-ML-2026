@@ -13,6 +13,17 @@ dataset/
 !/cache/runs/*/*.txt
 steps_done/
 code/cache/
+# key matcher: fold models, thresholds and logs are versioned; feature matrices / scores (~7 GB) are not
+!/cache/*.log
+!/cache/key_matcher/
+/cache/key_matcher/*.npy
+
+# candidate_pairs.tsv (253 MB) is over GitHub's 100 MB limit: it ships in the submission ZIP only
+output/candidate_pairs.tsv
+output/*.gz
+output_km/
+output_km2/
+*_submission.zip
 
 __pycache__/
 *.pyc

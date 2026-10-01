@@ -1,0 +1,56 @@
+{
+ "thresholds": {
+  "global": {
+   "t_open": 0.5,
+   "t_add": 0.7,
+   "all": 0.9291738502290187,
+   "US": 0.9515045228341692,
+   "India": 0.8957068928288158
+  },
+  "US": {
+   "t_open": 0.45,
+   "t_add": 0.65,
+   "all": 0.9291004325888789,
+   "US": 0.951577753031292,
+   "India": 0.8954136942170342
+  },
+  "India": {
+   "t_open": 0.5,
+   "t_add": 0.7,
+   "all": 0.9291738502290187,
+   "US": 0.9515045228341692,
+   "India": 0.8957068928288158
+  }
+ },
+ "cols": [
+  "p",
+  "pmax_r",
+  "gap_r",
+  "rank_r",
+  "psum_r",
+  "pmax_l",
+  "gap_l",
+  "rank_l",
+  "psum_l",
+  "p2_l",
+  "gap2_l",
+  "nhi_l",
+  "own",
+  "own_sum_l",
+  "own_nhi_l",
+  "n_keys",
+  "amb",
+  "n_cand_l",
+  "n_cand_r",
+  "nc_tset",
+  "nj_ratio",
+  "ad_tset",
+  "house_cf",
+  "house_eq",
+  "addr_empty_a",
+  "addr_empty_b",
+  "is_s3",
+  "city_cf",
+  "postal_cf"
+ ]
+}

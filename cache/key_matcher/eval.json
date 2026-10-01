@@ -1,0 +1,72 @@
+{
+ "thresholds": {
+  "global": {
+   "t_open": 0.6,
+   "t_add": 0.65,
+   "all": 0.9337471031594011,
+   "US": 0.9567194327768546,
+   "India": 0.8993184950164698
+  },
+  "US": {
+   "t_open": 0.6,
+   "t_add": 0.65,
+   "all": 0.9337471031594011,
+   "US": 0.9567194327768546,
+   "India": 0.8993184950164698
+  },
+  "India": {
+   "t_open": 0.6,
+   "t_add": 0.7,
+   "all": 0.9337397255789639,
+   "US": 0.9565842307964844,
+   "India": 0.8995026877403796
+  }
+ },
+ "names": [
+  "k_nj_street",
+  "k_nj_house",
+  "k_nj_city",
+  "k_nj_state",
+  "k_nj",
+  "k_alt",
+  "k_street_city",
+  "k_addr",
+  "k_house_city",
+  "k_pre6_house",
+  "k_suf6_house",
+  "k_pre6_city",
+  "k_pre6_postal",
+  "n_keys",
+  "amb",
+  "n_cand_l",
+  "n_cand_r",
+  "nc_tset",
+  "nj_ratio",
+  "nj_partial",
+  "nn_tsort",
+  "ad_tset",
+  "ad_ratio",
+  "nc_tset_gap_r",
+  "ad_tset_gap_r",
+  "nc_tset_gap_l",
+  "ad_tset_gap_l",
+  "house_eq",
+  "house_cf",
+  "city_eq",
+  "city_cf",
+  "state_eq",
+  "state_cf",
+  "postal_eq",
+  "postal_cf",
+  "postal_miss",
+  "addr_empty_a",
+  "addr_empty_b",
+  "is_web_b",
+  "native_b",
+  "is_s3",
+  "len_a",
+  "len_b"
+ ],
+ "n_pairs": 20256267,
+ "pair_recall": 0.8841249403504546
+}

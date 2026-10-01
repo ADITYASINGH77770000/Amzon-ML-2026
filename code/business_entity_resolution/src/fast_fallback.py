@@ -1,10 +1,9 @@
 """Fast exact-key fallback matcher (used when there is no time for the full pipeline).
 
-Keys on the normalised fields, inside a country: (joined name + house number),
-(joined name + city), and (joined name alone, only for right records with no address).
-A key links a right record to an S1 only if exactly ONE S1 carries that key
-(unambiguous); keys are applied in that priority order and every S2/S3 record goes
-to at most one S1. All joins run on dictionary-encoded Arrow keys (no Python loops).
+Exact keys on the normalised fields, inside a country (see SPECS). A key links a right
+record to an S1 only if exactly ONE S1 carries that key (unambiguous); keys are applied
+in priority order and every S2/S3 record goes to at most one S1. All joins run on
+dictionary-encoded Arrow keys (no Python loops). Needs `run_pipeline.py prepare` first.
 
     python fast_fallback.py eval     # macro F0.5 on the full labelled training data
     python fast_fallback.py test     # write output/matching_results.tsv + candidate_pairs.tsv

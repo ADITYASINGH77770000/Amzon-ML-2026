@@ -1,0 +1,21 @@
+﻿[21:52:12 +   16s] train: 2,206,821 S1, 10,320,219 S2+S3, 7,638,365 true pairs
+[21:52:39 +   43s]   key nj_street: 2,669,000 pairs
+[21:52:54 +   58s]   key nj_house: 3,884,543 pairs
+[21:53:10 +   74s]   key nj_city: 4,331,977 pairs
+[21:53:26 +   90s]   key nj_state: 6,041,623 pairs
+[21:53:43 +  107s]   key nj: 6,363,411 pairs
+[21:53:47 +  111s]   key alt: 133,507 pairs
+[21:54:00 +  124s]   key street_city: 3,533,683 pairs
+[21:54:17 +  141s]   key addr: 2,087,290 pairs
+[21:54:33 +  157s]   key house_city: 4,662,312 pairs
+[21:54:51 +  175s]   key pre6_house: 5,874,611 pairs
+[21:55:08 +  192s]   key suf6_house: 4,825,944 pairs
+[21:55:25 +  209s]   key pre6_city: 5,818,593 pairs
+[21:55:29 +  213s]   key pre6_postal: 334,850 pairs
+[21:56:32 +  276s] candidates: 20,256,267 pairs, 9.18 per S1, pair recall 0.8841
+[22:08:18 +  983s]   string similarities for 20,256,267 pairs
+[22:10:29 + 1113s]   features done: (20256267, 43)
+[22:11:29 + 1173s]   binned dataset constructed
+[22:23:36 + 1900s]   fold model 0: trained on 10,125,723 pairs, scored 10,130,544
+[22:35:19 + 2603s]   fold model 1: trained on 10,130,544 pairs, scored 10,125,723
+[22:38:51 + 2815s] OOF macro F0.5: {"global": {"t_open": 0.6, "t_add": 0.65, "all": 0.9337471031594011, "US": 0.9567194327768546, "India": 0.8993184950164698}, "US": {"t_open": 0.6, "t_add": 0.65, "all": 0.9337471031594011, "US": 0.9567194327768546, "India": 0.8993184950164698}, "India": {"t_open": 0.6, "t_add": 0.7, "all": 0.9337397255789639, "US": 0.9565842307964844, "India": 0.8995026877403796}}

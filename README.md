@@ -10,10 +10,12 @@
 >
 > The pipeline's working cache (`cache/`, ~21 GB of normalised tables, blocking indexes and
 > feature arrays) is rebuilt from that data; only the trained models, metrics and logs are
-> versioned. `output/` holds the submitted files, which were produced by the fast exact-key
-> fallback (`code/business_entity_resolution/src/fast_fallback.py`, macro F0.5 0.774 on the
-> training data), not by the full pipeline (0.974 out-of-fold on a 30% sample of the training S1). See
-> `code/business_entity_resolution/README.md` for how to run it.
+> versioned. `output/matching_results.tsv` is the best submission (public leaderboard **0.920**),
+> produced by the key-candidate matcher (`code/business_entity_resolution/src/key_matcher.py`,
+> macro F0.5 0.934 out-of-fold on the training data); the full pipeline (0.974 out-of-fold on a 30%
+> sample of the training S1) did not finish its test pass in time. `output/candidate_pairs.tsv`
+> (253 MB) is over GitHub's file limit and ships only in the submission ZIP; `key_matcher.py test`
+> regenerates it. See `code/business_entity_resolution/README.md` for how to run everything.
 
 # ML Challenge 2026 Problem Statement
 

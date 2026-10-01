@@ -1,0 +1,18 @@
+﻿[23:14:04 +   88s]   key nj_street: 2,669,000 pairs
+[23:14:28 +  112s]   key nj_house: 3,884,543 pairs
+[23:14:44 +  128s]   key nj_city: 4,331,977 pairs
+[23:15:03 +  147s]   key nj_state: 6,041,623 pairs
+[23:15:18 +  162s]   key nj: 6,363,411 pairs
+[23:15:22 +  166s]   key alt: 133,507 pairs
+[23:15:47 +  191s]   key street_city: 3,533,683 pairs
+[23:16:03 +  207s]   key addr: 2,087,290 pairs
+[23:16:19 +  223s]   key house_city: 4,662,312 pairs
+[23:16:39 +  243s]   key pre6_house: 5,874,611 pairs
+[23:16:55 +  259s]   key suf6_house: 4,825,944 pairs
+[23:17:11 +  275s]   key pre6_city: 5,818,593 pairs
+[23:17:14 +  278s]   key pre6_postal: 334,850 pairs
+[23:22:34 +  598s]   stage-2 features (20256267, 29)
+[23:27:50 +  914s]   stage-2 fold 0 done
+[23:32:51 + 1215s]   stage-2 fold 1 done
+[23:36:19 + 1423s] STAGE-2 OOF macro F0.5: {"global": {"t_open": 0.5, "t_add": 0.7, "all": 0.9291738502290187, "US": 0.9515045228341692, "India": 0.8957068928288158}, "US": {"t_open": 0.45, "t_add": 0.65, "all": 0.9291004325888789, "US": 0.951577753031292, "India": 0.8954136942170342}, "India": {"t_open": 0.5, "t_add": 0.7, "all": 0.9291738502290187, "US": 0.9515045228341692, "India": 0.8957068928288158}}
+[23:36:19 + 1423s] stage-1 was: {"t_open": 0.6, "t_add": 0.65, "all": 0.9337471031594011, "US": 0.9567194327768546, "India": 0.8993184950164698}

@@ -1,0 +1,23 @@
+﻿[22:39:41 +    3s] test: 1,732,544 S1, 9,969,589 S2+S3
+[22:39:58 +   21s]   key nj_street: 2,191,552 pairs
+[22:40:11 +   34s]   key nj_house: 3,350,681 pairs
+[22:40:25 +   48s]   key nj_city: 3,559,863 pairs
+[22:40:39 +   62s]   key nj_state: 4,499,533 pairs
+[22:40:53 +   76s]   key nj: 5,211,824 pairs
+[22:40:56 +   79s]   key alt: 89,561 pairs
+[22:41:08 +   91s]   key street_city: 2,702,414 pairs
+[22:41:23 +  106s]   key addr: 1,484,644 pairs
+[22:41:35 +  118s]   key house_city: 3,111,678 pairs
+[22:41:51 +  134s]   key pre6_house: 4,940,609 pairs
+[22:42:06 +  148s]   key suf6_house: 3,983,364 pairs
+[22:42:20 +  163s]   key pre6_city: 4,821,185 pairs
+[22:42:24 +  166s]   key pre6_postal: 178,588 pairs
+[22:43:18 +  220s] candidates: 17,921,598 pairs
+[22:56:20 + 1003s]   string similarities for 17,921,598 pairs
+[22:57:47 + 1090s]   features done: (17921598, 43)
+[22:57:47 + 1090s]   scoring with ['fold0.txt', 'fold1.txt']
+[23:10:38 + 1861s]   US: t_open 0.6 t_add 0.65
+[23:10:38 + 1861s]   France: t_open 0.6 t_add 0.65
+[23:10:38 + 1861s]   India: t_open 0.6 t_add 0.7
+[23:11:08 + 1890s]   wrote matching_results.tsv: 5,175,252 pairs for 1,610,826 S1
+[23:12:09 + 1952s]   wrote candidate_pairs.tsv: 17,921,598 pairs for 1,716,814 S1
