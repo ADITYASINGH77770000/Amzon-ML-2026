@@ -1,126 +1,126 @@
 # ML Challenge 2026: Business Entity Resolution Solution
 
-**Team Name:** Quantum &nbsp;·&nbsp; **Team Members:** Aditya Singh (leader), Achita Parmar, Akshita Singh, Anuj Gupta &nbsp;·&nbsp; **Submission Date:** 27 September 2026
+**Team Name:** Quantum &nbsp;·&nbsp; **Team Members:** Aditya Singh (leader), Achita Parmar, Akshita Singh, Anuj Gupta &nbsp;·&nbsp; **Best submission:** public leaderboard macro F0.5 **0.920** (27 Sep 2026, 11:22 PM IST)
 
 ## 1. Executive Summary
 
-We built a recall-guarded cascade:
-1. Text normalisation with a transliteration map learned from the training pairs.
-2. Ten complementary sparse TF-IDF blocking passes, including one reverse pass.
-3. Two LightGBM rankers that shrink ~100 candidates per Source 1 record (S1) to ~10.
-4. A 101-feature LightGBM matcher with a decision layer tuned for macro F0.5.
+Our best submission is a **blocking + classifier** system that runs end to end in about 2–3 hours on an 8 GB, 2-core laptop:
+1. **Normalisation:** a native-script → Latin transliteration dictionary learned from the training pairs, plus parsed name and address components.
+2. **Blocking:** 13 exact keys on the *normalised* fields generate candidates, with a cap on how many S1 may share a key.
+3. **Pair scoring:** a 43-feature LightGBM model scores every candidate.
+4. **Decision:** a one-owner accept rule, tuned directly for macro F0.5.
 
-On the full labelled data the candidate recall ceiling (candidate-oracle F0.5) is **0.9956**. Out-of-fold, the matcher reaches **0.9736**. Its test-side feature pass needed ~6 more hours than we had on an 8 GB laptop. The **submitted file therefore comes from a lighter key-candidate matcher**: 13 exact normalised keys generate candidates, and a 43-feature LightGBM with the same decision layer scores them. It reaches **0.934** out-of-fold on the training data and **0.920** on the public leaderboard.
+It scores **0.934** out-of-fold over all 2.21 M labelled Source 1 entities (S1), and **0.920** on the public leaderboard. We also built a heavier pipeline that scores 0.974 out-of-fold (Section 6). Its test pass did not fit our compute budget, so it was not submitted.
 
 ## 2. Methodology
 
 ### 2.1 Problem Analysis
 
-- **Scale:** 2.21 M S1, 5.03 M S2 and 5.29 M S3 training records, with 7.64 M true pairs. 5.6 % of S1 are singletons, and a matched S1 has 3.5 matches on average. The test set has 1.73 M S1, including the unseen country France.
-- **Structure:** every S2/S3 record matches **at most one** S1, and country labels always agree on true pairs. We therefore block within country, treating country as an open set, and enforce a one-owner assignment.
-- **Noise:**
-  - Names: abbreviations and legal suffixes; `|`-separated and d/b/a alternate names; website-style joined names.
-  - Scripts: Indic native script (Devanagari and others) in India records.
-  - Addresses: empty addresses, landmark addresses ("Near SBI ATM"), PO boxes, state abbreviations, typos in house numbers.
-- **The hardest case is chains:** many branches share a name and differ only in address.
+- **Scale:** 2.21 M S1, 5.03 M S2 and 5.29 M S3 training records, with 7.64 M true pairs. 5.6 % of S1 are singletons. The test set has 1.73 M S1, including France, which is unseen in training.
+- **Structure:** every S2/S3 record matches **at most one** S1, and country labels always agree on true pairs. So we block within country, treating country as an open set, and enforce one owner per record.
+- **Noise:** most of it is *systematic* and can be removed by normalisation:
+  - Names: legal suffixes, abbreviations, `|`- or d/b/a-separated alternate names, spacing ("Sun Rise Traders" vs "sunrisetraders.com").
+  - Scripts: Devanagari and other Indic native-script names.
+  - Addresses: state abbreviations, PO boxes, landmarks.
+- **Remaining noise:** typos, missing address parts, and chains whose branches share a name.
 
 ### 2.2 Solution Strategy
 
-**Approach type:** blocking, then cascaded rankers, then a classifier, then a constrained decision (hybrid).
+**Approach type:** blocking + classifier + constrained decision.
 
-**Core innovation:** every pruning stage is accepted only if it loses ≤ 0.0005 candidate-oracle F0.5. A monotone-constrained pre-ranker uses MinHash record signatures. The decision layer is tuned directly on macro F0.5, singletons included.
+**Core idea:** normalise aggressively so that most true pairs become *exact* equalities on some field combination. Cheap exact joins then replace expensive fuzzy blocking, and a learned scorer separates true pairs from sibling branches.
 
 **Normalisation:**
 - Case and accent folding.
-- Indic transliteration via Unicode character names, plus a native→Latin token dictionary learned **only from training pairs** (no external data).
-- Name variants: a legal-suffix-free core name, a joined (spaceless) name and an alternate name.
-- Address parsing into house number, street keys, city, state code, postal code and landmark. PO boxes are removed.
+- Indic transliteration via Unicode character names, plus a native → Latin token dictionary learned **only from the training pairs**. No external data or APIs are used.
+- Name variants: a suffix-free *core* name, a *joined* spaceless name and an *alternate* name.
+- Address parsing into house number, street keys, city, state code, postal code and landmark.
+
+**Data flow:** `prepare` (normalise) → `key_matcher.py train` (candidates, features, 2-fold model, thresholds) → `key_matcher.py test` (candidates, features, scores, decision, `output/`).
 
 ## 3. Candidate Generation (Blocking)
 
-**Blocking keys:** ten hashed TF-IDF sparse top-k joins per country (k = 100). IDF is computed on S2 ∪ S3, and very frequent features are purged (max_df):
+**Blocking keys:** 13 exact keys, each prefixed with the country:
 
-| Pass | Key | Pass | Key |
-|---|---|---|---|
-| A | name tokens and bigrams | X | 3-letter name-prefix pairs |
-| B | house number × street keys | N | whole name × address word |
-| D | name × address-word conjunctions | G | exact order-free address |
-| E | address-word pairs | W | joined-name prefixes, for websites |
-| P | phonetic consonant skeletons | RA | reverse: address-less S2/S3 records query an S1 name index (k = 30) |
+| Group | Keys (cap = maximum S1 that may share a key) |
+|---|---|
+| Name + address | name+street (3), name+house no. (3), name+city (5), name+state (5) |
+| Name only | joined name (5), alternate name of S2/S3 = S1 core name (5) — address-less records |
+| Address only | street+city (3), full address (3), house no.+city (3) — garbled or renamed businesses |
+| Typo-tolerant | first 6 name chars + house / city / postal (3), last 6 name chars + house (3) |
 
-**Candidate pairs:** the union of all passes is cut in two steps:
-1. The Stage 1.5 pre-ranker keeps the top M candidates. M is 20 for US and 40 for India; unseen countries use the maximum.
-2. The Stage 2 cheap-feature ranker keeps at most 15 candidates, dropping any with p below τ = 0.001.
+**How a key links records:** it links an S2/S3 record to *every* S1 that carries the same key, as long as no more than `cap` S1 share it. Keys shared by more S1 are too ambiguous and are skipped. The union over keys keeps, for each pair, which keys hit and how ambiguous they were; both are features. The joins run on dictionary-encoded Arrow columns with no Python loops, about 5 minutes for 12 M records.
 
-The result is **21.8 M pairs for all 2.21 M training S1**: 9.9 per S1, 95th percentile 15. Pair recall is 0.9856 and candidate-oracle F0.5 is 0.9956.
+**Candidate pairs:**
 
-**Protecting true matches:**
-- Each M, budget and τ was the tightest setting within 0.0005 oracle loss of the raw union.
-- Pass RA reaches address-less records that forward top-k loses among hundreds of ties.
-- Monotone constraints stop the pre-ranker from discarding identical pairs (without them, identical pairs got p ≈ 1e-9).
-- Char-3-gram blocking was profiled and dropped, since it was slow and low-yield.
+| | Pairs | Per S1 | Pair recall | Candidate-oracle F0.5 |
+|---|---|---|---|---|
+| Train | 20.26 M | 9.2 | 0.884 | 0.956 |
+| Test | 17.92 M | 10.3 | – | – |
+
+**How we kept true matches:**
+- Each key's precision and *unique* true-pair contribution was measured on the training data. Three redundant keys added (almost) no unique true pairs and were dropped.
+- True pairs found by no other key: about 460 k from the prefix/suffix keys and about 140 k from the address-only keys.
+- Allowing shared keys up to the cap, and adding the typo-tolerant and address-only keys, raised pair recall from 0.62 (v1, unique keys only) to 0.88.
 
 ## 4. Matching Model
 
-**Features (101).** No IDs, no raw strings and no country one-hot, so the model works unchanged for France.
-- **Name features:**
-  - String similarity: token-set, token-sort and partial ratios; Jaro-Winkler; joined-name prefix length.
-  - Token weighting: IDF-weighted overlap and Jaccard; rare shared tokens; initials.
-  - Variants: phonetic-skeleton similarity; best alternate-name match.
-- **Address features:**
-  - String similarity: token-set, token-sort and partial ratios; Jaro-Winkler; IDF overlap.
-  - Numbers: house-number match, conflict and Levenshtein distance; number-set Jaccard and conflict; street-key conflict.
-  - Components: postal match, conflict and 3-digit prefix; city and state match, conflict and missing flags; landmark similarity.
-- **Other features:**
-  - All ten pass scores and the pass count; Stage 1.5 and Stage 2 probabilities.
-  - MinHash signature agreements on name, trigrams, skeleton, address and numbers.
-  - Rival/context features: rank, gap to the best candidate, and candidate count per S1 and per right record.
-  - Source flags: S2 vs S3, web name, native script and empty address.
+**Features (43).** No IDs, no raw strings and no country one-hot, so the model applies unchanged to France.
+- **Key evidence:** 13 key-hit flags, number of keys, ambiguity, and the candidate count per S1 and per S2/S3 record.
+- **Name features:** rapidfuzz token-set ratio on the core name; ratio and partial ratio on the joined name; token-sort ratio on the normalised name; name lengths.
+- **Address features:** token-set ratio and ratio on the address core.
+- **Agreement features:** house number, city, state and postal code — equal / conflict, plus a postal-code-missing flag.
+- **Rival features:** a pair's name and address similarity minus the best among the same S1's, and the same S2/S3 record's, other candidates.
+- **Source flags:** S3 vs S2, empty address on either side, web-style name, native-script name.
 
-**Model type:** LightGBM binary classifier (MIT licence), about 2,100 trees. It is cross-fitted with GroupKFold by S1, with early stopping inside each training fold. The final models are retrained on **all** labelled data; cross-validation is used only for evaluation.
+**Model type:** LightGBM binary classifier (MIT licence): 300 trees, 127 leaves, learning rate 0.1, 63 bins. Training uses 2-fold GroupKFold by S1 over **all** labelled S1. Each fold model scores the half it did not see; these out-of-fold scores are used for evaluation and threshold tuning. Test pairs are scored with the **average of the two fold models**, which together were trained on all labelled data.
 
-**Threshold selection:**
-1. Each S2/S3 record may be assigned only to its best-scoring S1.
-2. An S1 is opened if its best candidate has p ≥ t_open. Further candidates are added if p ≥ t_add.
-3. t_open and t_add were grid-searched on out-of-fold predictions to maximise macro F0.5, singletons included. The chosen values are US 0.63 / 0.70 and India 0.61 / 0.72; unseen countries use the global values 0.61 / 0.70.
-
-We also tried an expected-F0.5 decision, a stacker and transitivity features; none helped.
+**Threshold selection (decision layer):**
+1. Each S2/S3 record keeps only its best-scoring S1 (one owner).
+2. An S1 is "opened" if its best owned candidate has p ≥ t_open. It then accepts every owned candidate with p ≥ t_add.
+3. t_open and t_add were grid-searched on the out-of-fold scores to maximise macro F0.5, singletons included, separately per country: US 0.60 / 0.65 and India 0.60 / 0.70. Unseen countries (France) use the global values, 0.60 / 0.65.
 
 ## 5. Results & Error Analysis
 
-| Macro F0.5 | US | India | All |
-|---|---|---|---|
-| Candidate-oracle, all 2.21 M training S1 | 0.9963 | 0.9945 | 0.9956 |
-| **Full pipeline, out-of-fold** (30 % S1 sample, 662 k; full-data candidates) | 0.9763 | 0.9696 | **0.9736** |
-| — pair precision / recall | 0.993 / 0.950 | 0.987 / 0.942 | 0.990 / 0.947 |
-| — singletons correctly left empty | 0.970 | 0.942 | 0.959 |
-| **Submitted key matcher**, out-of-fold, all 2.21 M training S1 | 0.957 | 0.899 | **0.934** |
-| — public leaderboard (with France) | | | **0.920** |
+| Version (macro F0.5) | US | India | All (out-of-fold) | Leaderboard |
+|---|---|---|---|---|
+| v1: unique exact keys, no model | 0.838 | 0.678 | 0.774 | 0.762 |
+| **v2: key candidates + LightGBM (best submission)** | **0.957** | **0.899** | **0.934** | **0.920** |
+| v2 + rival-score second stage | 0.952 | 0.896 | 0.929 | not submitted |
+| Full pipeline (Section 6; 30 % S1 sample) | 0.976 | 0.970 | 0.974 | test pass not finished |
 
-A 5 % development run scored 0.9865. On that run, ranking is nearly perfect: accepting exactly the top-#true candidates would score 0.995. **Most of the remaining loss is in deciding how many candidates to accept.**
+v2 has pair precision **0.989** and recall 0.853, and leaves 94.4 % of singletons correctly empty. The 0.014 gap to the leaderboard most likely comes from France, which is absent from training.
 
-The error categories below overlap.
-- **False positives (wrong merges, 20.8 k out-of-fold):** in 68 % the pair shares a core name, i.e. a sibling branch of the same chain. 45 % carry conflicting house numbers, and 25 % involve a right record with no address.
-- **False negatives (missed matches, 88.0 k out-of-fold):** in 47 % the right record has no address. In 63 % a same-name sibling outranks the true branch. In 40 % the house number differs through typos or formatting.
+- **False positives (wrong merges), 75 k out-of-fold:** in 62 % the two records share the same core name, i.e. a *sibling branch of a chain*. 31 % have conflicting house numbers.
+- **False negatives (missed matches), 1.13 M:**
+  - **79 % never became candidates.** In 84 % of these the joined names differ (typos, abbreviations, reordering), and in 69 % the city differs or is missing. Exact keys cannot reach them.
+  - The remaining 21 % were candidates but rejected. 81 % of those have identical core names, and 53 % also show a house-number conflict. The model could not tell which of several same-name branches the record belongs to.
 
-## 6. Conclusion
+## 6. Conclusion and Further Work
 
-Careful normalisation plus many cheap, complementary blocking passes gave a 0.9956 recall ceiling. Recall-guarded pruning kept that ceiling at ~10 candidates per S1, and the matcher reaches 0.974 out-of-fold. The main lesson: on an 8 GB machine, test-time inference must be budgeted as early as training. With about 6 more hours of compute, the same code (`ER_MODE=FINAL`) would produce the ~0.97 submission instead of the 0.92 key matcher.
+Aggressive normalisation turns most of the noise into exact equalities. That let a cheap key-join blocker and a small LightGBM reach 0.92 on the leaderboard within a laptop's budget. Our main limit is blocking recall (0.884), not scoring.
+
+**We also built the fuller pipeline**, sharing the same normalisation, folds and decision layer:
+- **Blocking:** ten hashed TF-IDF sparse top-k blocking passes covering name, name × address, address pairs, phonetic skeletons, name prefixes, exact address, and a reverse pass for address-less records.
+- **Pruning:** a monotone-constrained LightGBM pre-ranker with MinHash record signatures, then a cheap-feature ranker. Each pruning step was accepted only if it lost ≤ 0.0005 of oracle F0.5.
+- **Matcher:** 101 features.
+- **Results:** it raises the candidate ceiling from 0.956 to **0.9956** and reaches **0.974** out-of-fold. Its test pass takes about 6 hours on our hardware.
+
+**Lesson:** budget test-time inference as early as training.
 
 ## Appendix
 
 ### A. Code Artefacts
 
-The code is in `code/business_entity_resolution/`: source in `src/`, with a `README.md` and a pinned `requirements.txt`. Python 3.13; numpy, pandas, pyarrow, scipy, scikit-learn, LightGBM and rapidfuzz.
+The code is in `code/business_entity_resolution/`: all source in `src/`, with a `README.md` and a pinned `requirements.txt` (Python 3.13; numpy, pandas, pyarrow, scipy, scikit-learn, LightGBM 4.6, rapidfuzz). Place the competition data in `dataset/train` and `dataset/test`, then run from `src/`:
 
-**Submitted files.** Run from `src/`:
-1. `python run_pipeline.py prepare` normalises the data.
-2. `python key_matcher.py train` gives the 2-fold out-of-fold score (0.934) and thresholds, and saves the fold models.
-3. `python key_matcher.py test` writes `output_km/matching_results.tsv` and `candidate_pairs.tsv`, which were copied to `output/`.
+1. `python run_pipeline.py prepare` (~1 h): TSV → parquet; learn the transliteration dictionary; write normalised Arrow tables.
+2. `python key_matcher.py train` (~45 min): training candidates and features; 2-fold models; out-of-fold F0.5 and thresholds.
+3. `python key_matcher.py test` (~30 min): writes `output/matching_results.tsv` and `output/candidate_pairs.tsv`.
 
-**How the key matcher works:**
-- **Candidates:** 13 exact within-country keys, among them name + street, name + house, name + city/state, alternate name, street + city, full address, and 6-character name prefix/suffix + house/city/postal. A key links a right record to every S1 carrying it, up to 3–5 S1. This gives 20.3 M training pairs (9.2 per S1), pair recall 0.884, candidate-oracle F0.5 0.956; on test, 17.9 M pairs.
-- **Features (43):** key-hit flags and ambiguity; token-set, ratio and partial similarities of names and addresses, with gaps to the best rival; house, city, state and postal agreement or conflict; source flags.
-- **Model and decision:** LightGBM, 2-fold GroupKFold by S1; test is scored with the average of the two fold models. The decision is the same one-owner, t_open / t_add rule as the full pipeline (t_open 0.6; t_add 0.65 for US, 0.70 for India).
+`candidate_pairs.tsv` is the exact candidate set the model scores, and every matched ID is one of its candidates.
 
-**Full pipeline.** `ER_MODE=FINAL python run_pipeline.py auto` is resumable and writes the same two files from Stage 3. `DEV_FAST`, `DEV_MEDIUM` and `VALIDATION` modes (5 %, 20 % and GroupKFold) share the same code path and never touch the test set.
+**Other source files:**
+- `run_pipeline.py`: the full pipeline from Section 6 (`ER_MODE=FINAL python run_pipeline.py auto`).
+- `fast_fallback.py`: v1.
+- `key_stage2.py`: the unused second stage.
